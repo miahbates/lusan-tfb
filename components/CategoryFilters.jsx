@@ -7,7 +7,7 @@ export default function CategoryFilters() {
       <button id="all">All</button>
       <button id="veg">Veg</button>
       <button id="flower">Flowers</button>
-      <button id="herbs">herbs</button>
+      <button id="herbs">Herbs</button>
     </div>
   );
 }
