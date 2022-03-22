@@ -3,10 +3,10 @@ import SearchBar from "../components/SearchBar";
 import ConditionFilters from "../components/ConditionFilters";
 import PriceFilters from "../components/PriceFilters";
 import ProductDisplay from "../components/ProductDisplay";
-// import products from "../database/dummy-data";
+import products from "../database/products";
 
 export default function AllSeeds() {
-  // console.log(products);
+  console.log(products);
   return (
     <div>
       <CategoryFilters></CategoryFilters>
