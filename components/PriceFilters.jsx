@@ -14,7 +14,7 @@ export default function PriceFilters() {
             min="0.5"
             max="9"
             step="0.25"
-            value="value"
+            defaultValue="value"
           />
         </label>
         <label htmlFor="max-price">
@@ -25,7 +25,7 @@ export default function PriceFilters() {
             min="0.5"
             max="9"
             step="0.25"
-            value="value"
+            defaultValue="value"
           />
         </label>
       </fieldset>

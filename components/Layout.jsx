@@ -25,7 +25,7 @@ export default function Layout({ children }) {
           <Link href="/">
             <a>Lusan</a>
           </Link>
-          <Link href="/allseeds">
+          <Link href="/all-seeds">
             <a>
               <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
             </a>

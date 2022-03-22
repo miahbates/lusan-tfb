@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 export default function SearchBar() {
   return (
     <div className="box">
-      <input type="text" Enter a crop name />
+      <input type="text" placeholder="Enter a crop name" />
       <FontAwesomeIcon className="icon" icon={faSearch} />
     </div>
   );

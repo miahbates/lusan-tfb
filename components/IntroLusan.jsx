@@ -5,7 +5,7 @@ export default function IntroLusan() {
   return (
     <div className="box">
       <h1>Intro stuff here</h1>
-      <Link href="/allseeds">
+      <Link href="/all-seeds">
         <a>Click here for all seeds</a>
       </Link>
     </div>
