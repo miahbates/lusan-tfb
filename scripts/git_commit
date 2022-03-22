@@ -1,0 +1,7 @@
+#! /bin/sh
+
+# make vscode the default editor for commit messages in this repo
+git config --local core.editor "code -w"
+
+# configure commit message template to commit-message file in this repo
+git config commit.template .commit-message

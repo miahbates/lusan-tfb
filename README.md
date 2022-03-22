@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Founders and Coders](https://www.foundersandcoders.com/) (apprenticeship)
 
-## Getting Started
+## Lusan 🌻
 
-First, run the development server:
+_Co-authored by [Juliette](https://github.com/julietteorpen), [Milly](https://github.com/millipede-cpu), [Orian](https://github.com/OrianP) and [Miah](https://github.com/miahbates)._
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+An e-commerce style site to streamline buying seeds by signposting to sellers.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Deployed version here!](https://lusan.vercel.app/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Team members
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Miah- Scrum Facilitator.
+- Milly - DevOps.
+- Orian - Quality Assurance.
+- Juliette - User Experience.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## How to install 🛠️
 
-## Learn More
+- Git clone `https://github.com/fac23/lusan`
+- Run command `npm install` in terminal.
+- Start sever run command `npm run dev`.
+- Run cypress testing run command `npm run test`.
 
-To learn more about Next.js, take a look at the following resources:
+## User Stories :busts_in_silhouette:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Core
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Stretch
 
-## Deploy on Vercel
+## Features: 🌟
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Learning 🌱
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Improvements and future ideas ✨
+
+## Coauthoring: 👯‍♀️
+
+Co-authored-by: Miah <78933903+miahbates@users.noreply.github.com>
+Co-authored-by: Milly <62570785+millipede-cpu@users.noreply.github.com>
+Co-authored-by: Juliette <53294140+julietteorpen@users.noreply.github.com>
+Co-authored-by: Orian <77785778+OrianP@users.noreply.github.com>
