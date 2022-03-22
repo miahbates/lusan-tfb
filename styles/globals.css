@@ -1,0 +1,34 @@
+html body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --dark-color: #016b58;
+  --mid-color: #1fa58d;
+  --light-color: #f4f9f5;
+  --dark-secondary-color: #565858;
+  --light-secondary-color: #ebebf0;
+  --font-color: black;
+  --title-font: Helvetica;
+  --body-font: Roboto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.icon {
+  height: 1.8rem;
+  width: 1.8rem;
+}
