@@ -14,10 +14,10 @@ const StyledIntro = styled.div`
   }
   @media only screen and (min-width: 678px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
     p {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
   }
 `;

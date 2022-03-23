@@ -8,8 +8,8 @@ const StyledSearchBar = styled.div`
 
   input[type="text"] {
     font-family: "Poppins";
-    font-size: 1.5rem;
-    margin: 1rem 0 1rem 1rem;
+    font-size: 1rem;
+    margin: 1rem 0;
     padding: 0.5rem 1rem;
     border-radius: 10px;
     background-color: var(--light-color);
@@ -20,9 +20,8 @@ const StyledSearchBar = styled.div`
 
   @media only screen and (min-width: 678px) {
     input[type="text"] {
-      font-size: 1.8rem;
-      margin: 3rem 0;
-      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      margin: 2rem 0;
     }
   }
 `;
