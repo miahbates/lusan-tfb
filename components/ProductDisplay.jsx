@@ -9,7 +9,7 @@ const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
 
-export default function ProductDisplay({ category }) {
+export default function ProductDisplay({ category, searchTerm }) {
   return (
     <div className="box">
       <h2>Product Name</h2>
@@ -19,6 +19,12 @@ export default function ProductDisplay({ category }) {
           products
             .filter((product) =>
               category === "All" ? product : product.category === category
+            )
+            .filter((product) =>
+              searchTerm
+                ? product.variety.includes(searchTerm) ||
+                  product.subCategory.includes(searchTerm)
+                : product
             )
             .map((product) => (
               <li key={product.variety}>

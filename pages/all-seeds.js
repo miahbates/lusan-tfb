@@ -7,9 +7,13 @@ import products from "../database/products";
 import { useEffect, useState } from "react";
 
 export default function AllSeeds() {
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState(null);
 
-  useEffect(() => console.log(category));
+  useEffect(() => {
+    console.log(category);
+    console.log(searchTerm);
+  });
 
   console.log(products);
   return (
@@ -18,10 +22,13 @@ export default function AllSeeds() {
         category={category}
         setCategory={setCategory}
       ></CategoryFilters>
-      <SearchBar></SearchBar>
+      <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
       <ConditionFilters></ConditionFilters>
       <PriceFilters></PriceFilters>
-      <ProductDisplay category={category}></ProductDisplay>
+      <ProductDisplay
+        category={category}
+        searchTerm={searchTerm}
+      ></ProductDisplay>
     </div>
   );
 }
