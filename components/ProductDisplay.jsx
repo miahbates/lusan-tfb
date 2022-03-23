@@ -9,28 +9,30 @@ const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
 
-export default function ProductDisplay() {
+export default function ProductDisplay({ category }) {
   return (
     <div className="box">
       <h2>Product Name</h2>
       <p>Display all products here</p>
       <ul>
         {products &&
-          products.map((product) => (
-            <li key={product.variety}>
-              <DynamicProductCard
-                category={product.category}
-                subCategory={product.subCategory}
-                variety={product.variety}
-                img={product.imgs[0]}
-                price={product.providers[0].price}
-                typeTags={generateTags(product.type)}
-                climateTags={generateTags(product.climate)}
-                waterTags={generateTags(product.water)}
-                soilTags={generateTags(product.soil)}
-              ></DynamicProductCard>
-            </li>
-          ))}
+          products
+            .filter((product) => product.category === category)
+            .map((product) => (
+              <li key={product.variety}>
+                <DynamicProductCard
+                  category={product.category}
+                  subCategory={product.subCategory}
+                  variety={product.variety}
+                  img={product.imgs[0]}
+                  price={product.providers[0].price}
+                  typeTags={generateTags(product.type)}
+                  climateTags={generateTags(product.climate)}
+                  waterTags={generateTags(product.water)}
+                  soilTags={generateTags(product.soil)}
+                ></DynamicProductCard>
+              </li>
+            ))}
       </ul>
     </div>
   );
