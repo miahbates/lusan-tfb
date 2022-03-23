@@ -23,6 +23,7 @@ export default function ProductDisplay() {
                 subCategory={product.subCategory}
                 variety={product.variety}
                 img={product.imgs[0]}
+                price={product.providers[0].price}
                 typeTags={generateTags(product.type)}
                 climateTags={generateTags(product.climate)}
                 waterTags={generateTags(product.water)}
