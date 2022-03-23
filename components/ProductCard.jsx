@@ -1,8 +1,10 @@
 import StyledLink from "./styled-components/StyledLink";
 import StyledProductCard from "./styled-components/StyledProductCard";
+import Link from "next/link";
+import { products } from "../database/products";
 
 // change to return a styled product card
-export default function ProductCard({ subCategory, variety, img }) {
+export default function ProductCard({ subCategory, variety, img, products }) {
   return (
     <div>
       <StyledProductCard>
@@ -13,7 +15,13 @@ export default function ProductCard({ subCategory, variety, img }) {
         <div className="info-container">
           <h2>{variety}</h2>
           <p>{subCategory}</p>
-          <StyledLink>More info</StyledLink>
+          <Link
+            href={`/products/${products.variety}`}
+            key={products.variety}
+            passHref
+          >
+            <StyledLink>More info</StyledLink>
+          </Link>
         </div>
       </StyledProductCard>
     </div>
