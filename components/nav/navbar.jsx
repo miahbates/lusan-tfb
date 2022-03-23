@@ -1,9 +1,9 @@
 import Burger from "./Burger";
 
-export default function Navbar({ open, setOpen }) {
+export default function Navbar() {
   return (
     <div className="flex-row">
-      <Burger open={open} setOpen={setOpen}></Burger>
+      <Burger></Burger>
     </div>
   );
 }

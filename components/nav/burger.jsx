@@ -36,12 +36,12 @@ const StyledBurger = styled.div`
   }
 `;
 
-export default function Burger({ open, setOpen }) {
+export default function Burger() {
+  const [open, setOpen] = React.useState(false);
   return (
     <div>
       <StyledBurger
         open={open}
-        setOpen={setOpen}
         onClick={() => {
           setOpen(!open);
         }}
@@ -50,7 +50,7 @@ export default function Burger({ open, setOpen }) {
         <div />
         <div />
       </StyledBurger>
-      <LeftNav open={open} setOpen={setOpen}></LeftNav>
+      <LeftNav open={open}></LeftNav>
     </div>
   );
 }

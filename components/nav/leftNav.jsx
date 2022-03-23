@@ -33,7 +33,7 @@ export default function LeftNav({ open }) {
     <StyledNavLink open={open} className="flex-row">
       <Link href="/about-page" passHref>
         <li>
-          <a>About Us</a>git
+          <a>About Us</a>
         </li>
       </Link>
       <li>All Seeds</li>

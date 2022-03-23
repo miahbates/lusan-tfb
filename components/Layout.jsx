@@ -17,7 +17,7 @@ export default function Layout({ children, setOpen, open }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="flex-row">
-        <Navbar open={open} setOpen={setOpen}></Navbar>
+        <Navbar></Navbar>
         <div className="search-wishlist-icons">
           <Link href="/allseeds">
             <a>
