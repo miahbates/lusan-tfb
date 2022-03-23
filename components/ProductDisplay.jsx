@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import products from "../database/products";
 import ProductCard from "./ProductCard";
+import { generateTags } from "../database/database-functions";
 
 export default function ProductDisplay() {
   return (
@@ -17,6 +18,10 @@ export default function ProductDisplay() {
                 subCategory={product.subCategory}
                 variety={product.variety}
                 img={product.imgs[0]}
+                typeTags={generateTags(product.type)}
+                climateTags={generateTags(product.climate)}
+                waterTags={generateTags(product.water)}
+                soilTags={generateTags(product.soil)}
               ></ProductCard>
             </li>
           ))}
