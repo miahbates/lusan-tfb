@@ -17,7 +17,9 @@ export default function ProductDisplay({ category }) {
       <ul>
         {products &&
           products
-            .filter((product) => product.category === category)
+            .filter((product) =>
+              category === "All" ? product : product.category === category
+            )
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
