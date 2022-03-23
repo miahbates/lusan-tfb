@@ -10,7 +10,7 @@ export default function ProductDisplay() {
       <p>Display all products here</p>
       <ul>
         {products &&
-          products.map((product) => {
+          products.map((product) => (
             <li key={product.variety}>
               <ProductCard
                 category={product.category}
@@ -18,8 +18,8 @@ export default function ProductDisplay() {
                 variety={product.variety}
                 img={product.imgs[0]}
               ></ProductCard>
-            </li>;
-          })}
+            </li>
+          ))}
       </ul>
     </div>
   );

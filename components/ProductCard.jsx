@@ -1,13 +1,21 @@
 import StyledLink from "./styled-components/StyledLink";
+import StyledProductCard from "./styled-components/StyledProductCard";
 
 // change to return a styled product card
 export default function ProductCard({ subCategory, variety, img }) {
   return (
     <div>
-      <h2>{variety}</h2>
-      <StyledLink>More info</StyledLink>
-      {/*eslint-disable-next-line @next/next/no-img-element*/}
-      <img alt={subCategory} src={img} height={200} width={200} />
+      <StyledProductCard>
+        <div className="product-img-container">
+          {/*eslint-disable-next-line @next/next/no-img-element*/}
+          <img alt={subCategory} src={img} />
+        </div>
+        <div className="info-container">
+          <h2>{variety}</h2>
+          <p>{subCategory}</p>
+          <StyledLink>More info</StyledLink>
+        </div>
+      </StyledProductCard>
     </div>
   );
 }
