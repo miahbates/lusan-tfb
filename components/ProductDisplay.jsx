@@ -9,7 +9,7 @@ const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
 
-export default function ProductDisplay({ category, searchTerm }) {
+export default function ProductDisplay({ category, searchTerm, organic }) {
   return (
     <div className="box">
       <h2>Product Name</h2>
@@ -25,6 +25,9 @@ export default function ProductDisplay({ category, searchTerm }) {
                 ? product.variety.includes(searchTerm) ||
                   product.subCategory.includes(searchTerm)
                 : product
+            )
+            .filter((product) =>
+              organic === true ? product.type.organic : product
             )
             .map((product) => (
               <li key={product.variety}>

@@ -9,10 +9,13 @@ import { useEffect, useState } from "react";
 export default function AllSeeds() {
   const [category, setCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState(null);
+  const [conditions, setConditions] = useState({
+    organic: false,
+    openPollinated: false,
+  });
 
   useEffect(() => {
-    console.log(category);
-    console.log(searchTerm);
+    console.log(conditions);
   });
 
   console.log(products);
@@ -23,11 +26,12 @@ export default function AllSeeds() {
         setCategory={setCategory}
       ></CategoryFilters>
       <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
-      <ConditionFilters></ConditionFilters>
+      <ConditionFilters setConditions={setConditions}></ConditionFilters>
       <PriceFilters></PriceFilters>
       <ProductDisplay
         category={category}
         searchTerm={searchTerm}
+        conditions={conditions}
       ></ProductDisplay>
     </div>
   );
