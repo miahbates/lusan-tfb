@@ -3,6 +3,11 @@ import React from "react";
 import products from "../database/products";
 import ProductCard from "./ProductCard";
 import { generateTags } from "../database/database-functions";
+import dynamic from "next/dynamic";
+
+const DynamicProductCard = dynamic(() => import("./ProductCard"), {
+  ssr: false,
+});
 
 export default function ProductDisplay() {
   return (
@@ -13,7 +18,7 @@ export default function ProductDisplay() {
         {products &&
           products.map((product) => (
             <li key={product.variety}>
-              <ProductCard
+              <DynamicProductCard
                 category={product.category}
                 subCategory={product.subCategory}
                 variety={product.variety}
@@ -22,7 +27,7 @@ export default function ProductDisplay() {
                 climateTags={generateTags(product.climate)}
                 waterTags={generateTags(product.water)}
                 soilTags={generateTags(product.soil)}
-              ></ProductCard>
+              ></DynamicProductCard>
             </li>
           ))}
       </ul>
