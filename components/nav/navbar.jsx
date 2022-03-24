@@ -1,4 +1,4 @@
-import Burger from "./Burger.jsx";
+import Burger from "./burger.jsx";
 
 export default function Navbar() {
   return (

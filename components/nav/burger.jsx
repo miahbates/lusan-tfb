@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import LeftNav from "./LeftNav.jsx";
+import LeftNav from "./leftNav.jsx";
 
 const StyledBurger = styled.div`
   @media (max-width: 768px) {
