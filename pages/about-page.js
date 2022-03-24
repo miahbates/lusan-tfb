@@ -1,8 +1,3 @@
-// import Head from "next/head";
-// import Image from "next/image";
-// import StyledButton from "../components/styled-components/StyledButton";
-// import Layout from "../components/layout";
-// import StyledLink from "../components/styled-components/StyledLink";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,19 +9,32 @@ import {
 
 export default function AboutPage() {
   return (
-    <div>
+    <div className="about">
       <h1>About Us</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
-        veniam, quis nostrud htyehfki miahsb Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. incididunt ut.
-      </p>
+      {/* <Image
+        src="https://unsplash.com/photos/x8ZStukS2PM"
+        alt="seeds"
+        width={200}
+        height={200}
+      /> */}
+      <div className="text-box">
+        <p className="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad
+          minim veniam, quis nostrud htyehfki miahsb Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. incididunt ut.
+        </p>
+      </div>
       <h2>Our Values</h2>
-      <FontAwesomeIcon icon={faSeedling} className="icon"></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faEarthEurope} className="icon"></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faHandshake} className="icon"></FontAwesomeIcon>
+      <div className="logos">
+        <FontAwesomeIcon icon={faSeedling} className="icon"></FontAwesomeIcon>
+        <FontAwesomeIcon
+          icon={faEarthEurope}
+          className="icon"
+        ></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faHandshake} className="icon"></FontAwesomeIcon>
+      </div>
       <Link href={"/"}>
         <a>⏎ Back to home</a>
       </Link>
