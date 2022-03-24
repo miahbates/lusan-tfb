@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "./Nav/navbar";
+import Navbar from "./Nav/Navbar";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
