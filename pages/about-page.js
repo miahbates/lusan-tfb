@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="about">
       <h1>About Us</h1>
       {/* <Image
-        src=""
+        src="https://unsplash.com/photos/x8ZStukS2PM"
         alt="seeds"
         width={200}
         height={200}
