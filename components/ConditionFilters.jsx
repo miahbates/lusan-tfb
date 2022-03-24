@@ -10,8 +10,9 @@ import {
 import { updateObjState } from "../helper-functions";
 
 export default function ConditionFilters({
-  setTypeConditions,
-  setClimateConditions,
+  setOrganic,
+  setOpenPollinated,
+  setHybrid,
 }) {
   return (
     <div className="box">
@@ -24,7 +25,7 @@ export default function ConditionFilters({
             value="organic"
             name="type"
             onChange={(event) => {
-              setTypeConditions((prevObj) => updateObjState(prevObj, event));
+              setOrganic(event.target.checked);
             }}
           />
           <label htmlFor="type">Organic</label>
@@ -35,7 +36,7 @@ export default function ConditionFilters({
             value="openPollinated"
             name="type"
             onChange={(event) => {
-              setTypeConditions((prevObj) => updateObjState(prevObj, event));
+              setOpenPollinated(event.target.checked);
             }}
           />
           <label htmlFor="type">Open Pollinated</label>
@@ -46,7 +47,7 @@ export default function ConditionFilters({
             value="hybrid"
             name="type"
             onChange={(event) => {
-              setTypeConditions((prevObj) => updateObjState(prevObj, event));
+              setHybrid(event.target.checked);
             }}
           />
           <label htmlFor="type">Hybrid</label>

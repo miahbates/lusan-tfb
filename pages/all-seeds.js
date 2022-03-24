@@ -9,20 +9,23 @@ import { useEffect, useState } from "react";
 export default function AllSeeds() {
   const [category, setCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState(null);
-  const [typeConditions, setTypeConditions] = useState({
-    organic: false,
-    openPollinated: false,
-    hybrid: false,
-  });
-  const [climateConditions, setClimateConditions] = useState({
-    sunny: false,
-    dry: false,
-    shady: false,
-  });
+  const [organic, setOrganic] = useState(false);
+  const [openPollinated, setOpenPollinated] = useState(false);
+  const [hybrid, setHybrid] = useState(false);
+
+  // const [typeConditions, setTypeConditions] = useState({
+  //   organic: false,
+  //   openPollinated: false,
+  //   hybrid: false,
+  // });
+  // const [climateConditions, setClimateConditions] = useState({
+  //   sunny: false,
+  //   dry: false,
+  //   shady: false,
+  // });
 
   useEffect(() => {
     console.log(products[0]);
-    console.log(typeConditions);
   });
 
   // console.log(products);
@@ -34,15 +37,17 @@ export default function AllSeeds() {
       ></CategoryFilters>
       <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
       <ConditionFilters
-        setTypeConditions={setTypeConditions}
-        setClimateConditions={setClimateConditions}
+        setOrganic={setOrganic}
+        setOpenPollinated={setOpenPollinated}
+        setHybrid={setHybrid}
       ></ConditionFilters>
       <PriceFilters></PriceFilters>
       <ProductDisplay
         category={category}
         searchTerm={searchTerm}
-        typeConditions={typeConditions}
-        climateConditions={climateConditions}
+        organic={organic}
+        openPollinated={openPollinated}
+        hybrid={hybrid}
       ></ProductDisplay>
     </div>
   );

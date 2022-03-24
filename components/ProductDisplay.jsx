@@ -13,10 +13,11 @@ const DynamicProductCard = dynamic(() => import("./ProductCard"), {
 export default function ProductDisplay({
   category,
   searchTerm,
-  typeConditions,
-  climateConditions,
+  organic,
+  openPollinated,
+  hybrid,
 }) {
-  // useEffect(() => console.log(typeConditions));
+  // useEffect(() => console.log(openPollinated));
   return (
     <div className="box">
       <h2>Product Name</h2>
@@ -33,40 +34,11 @@ export default function ProductDisplay({
                   product.subCategory.includes(searchTerm)
                 : product
             )
-            .filter((product) => {
-              const keys = Object.keys(typeConditions);
-              const trueKeys = keys.filter((key) => {
-                if (typeConditions[key]) {
-                  return key;
-                }
-              });
-              console.log("truKeys", trueKeys);
-              // console.log(product.type);
-              // check if our product type object includes the truKeys
-              // return an array of products that include the true keys
-              const array = [];
-              for (const key in product.type) {
-                for (let i = 0; i < trueKeys.length; i++) {
-                  if (key === trueKeys[i]) {
-                    array.push(product);
-                  }
-                }
-              }
-              console.log("array", array);
-              return array;
-
-              // console.log(
-              //   "filter",
-              //   keys.filter((key) => typeConditions[key] === product.type[key])
-              // );
-              // console.log(keys);
-              // keys.forEach((key) =>
-              //   console.log("condition", {
-              //     key: typeConditions[key],
-              //     productKey: product.type[key],
-              //   })
-              // );
-            })
+            .filter((product) => (organic ? product.type.organic : product))
+            .filter((product) =>
+              openPollinated ? product.type.openPollinated : product
+            )
+            .filter((product) => (hybrid ? product.type.hybrid : product))
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
