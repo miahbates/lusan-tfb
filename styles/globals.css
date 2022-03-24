@@ -257,3 +257,21 @@ img {
   background-color: var(--light-secondary-color);
   border: 1px solid var(--dark-color);
 } */
+
+.contact {
+  text-align: center;
+  color: #016b58;
+  margin: 5rem 0 0 1rem;
+  padding: 1rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  font-style: bold;
+  text-align: center;
+}
+
+.contact .icon {
+  padding: 0.8rem;
+  text-align: center;
+}
