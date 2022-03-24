@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import StyledTab from "./styled-components/StyledTab";
 
 export default function CategoryFilters({ setCategory }) {
   return (
-    <div className="box">
+    <StyledTab className="box">
       <button id="all" onClick={() => setCategory("All")}>
         All
       </button>
@@ -16,6 +17,6 @@ export default function CategoryFilters({ setCategory }) {
       <button id="herbs" onClick={() => setCategory("Herbs")}>
         Herbs
       </button>
-    </div>
+    </StyledTab>
   );
 }

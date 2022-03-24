@@ -8,6 +8,8 @@ const StyledLink = styled.a`
   cursor: pointer;
   text-align: center;
   transition: all 400ms;
+  border: 2px solid var(--dark-color);
+
   :hover {
     background: var(--dark-color);
     color: var(--light-color);

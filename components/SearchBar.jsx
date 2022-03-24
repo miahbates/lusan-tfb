@@ -17,6 +17,6 @@ export default function SearchBar({ setSearchTerm }) {
         }
       />
       <FontAwesomeIcon className="icon-search" icon={faSearch} />
- </StyledSearchBar>
+    </StyledSearchBar>
   );
 }
