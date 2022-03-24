@@ -7,6 +7,7 @@ import {
   faDroplet,
   faEarthEurope,
 } from "@fortawesome/free-solid-svg-icons";
+import { updateObjState } from "../helper-functions";
 
 export default function ConditionFilters({ conditions, setConditions }) {
   return (
@@ -20,12 +21,7 @@ export default function ConditionFilters({ conditions, setConditions }) {
             value="organic"
             name="type"
             onChange={(event) => {
-              setConditions((prevObj) => {
-                return {
-                  ...prevObj,
-                  [event.target.value]: event.target.checked,
-                };
-              });
+              setConditions((prevObj) => updateObjState(prevObj, event));
             }}
           />
           <label htmlFor="type">Organic</label>
