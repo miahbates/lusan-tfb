@@ -50,6 +50,8 @@ export default function AllSeeds() {
         setMax={setMax}
       ></PriceFilters>
       <ProductDisplay
+        min={min}
+        max={max}
         category={category}
         searchTerm={searchTerm}
         organic={organic}

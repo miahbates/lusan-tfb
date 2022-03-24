@@ -16,6 +16,8 @@ export default function ProductDisplay({
   organic,
   openPollinated,
   hybrid,
+  min,
+  max,
 }) {
   // useEffect(() => console.log(openPollinated));
   return (
@@ -39,7 +41,7 @@ export default function ProductDisplay({
               openPollinated ? product.type.openPollinated : product
             )
             .filter((product) => (hybrid ? product.type.hybrid : product))
-            
+            .filter((product) => product.price >= min && product.price <= max)
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
