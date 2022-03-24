@@ -6,6 +6,7 @@ export default function ProductCard({
   subCategory,
   variety,
   img,
+  price,
   typeTags,
   climateTags,
   waterTags,
@@ -47,6 +48,7 @@ export default function ProductCard({
               ))}
           </div>
           <p>{subCategory}</p>
+          <p>Price: £{price}</p>
           <StyledLink>More info</StyledLink>
         </div>
       </StyledProductCard>

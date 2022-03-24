@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import Link from "next/link";
+import React from "react";
 
-const Ul = styled.ul`
+const StyledNavLink = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   list-style: none;
@@ -12,27 +14,33 @@ const Ul = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: var(--dark-color);
-    color: white;
+    background-color: var(--light-color);
+    color: black;
     position: fixed;
-    top: 0;
+    top: -1rem;
     left: 0;
     height: 50vh;
     width: 300px;
-    padding: 1.5rem;
-    display: none;
+    padding: 3.5rem;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(1000%)")};
+    transition: transform 0.3s ease0-in-out;
   }
 `;
 
-export default function LeftNav() {
+export default function LeftNav({ open }) {
+  console.log("open", open);
   return (
-    <Ul className="flex-row">
-      <li>About Us</li>
+    <StyledNavLink open={open} className="flex-row">
+      <Link href="/about-page" passHref>
+        <li>
+          <a>About Us</a>
+        </li>
+      </Link>
       <li>All Seeds</li>
       <li>Flowers</li>
       <li>Herbs</li>
       <li>Vegetables</li>
       <li>Contact Us</li>
-    </Ul>
+    </StyledNavLink>
   );
 }
