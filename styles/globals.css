@@ -259,10 +259,32 @@ img {
 
   [class*="box-"] {
     height: 30vw;
-}
+  }
 }
 
 /* .productCard {
   background-color: var(--light-secondary-color);
   border: 1px solid var(--dark-color);
 } */
+
+.wishlist {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  text-align: center;
+}
+
+.wishlist .emptyBox {
+  margin: 0 auto;
+  text-align: center;
+  border: 0.15rem dashed black;
+  padding: 1rem;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.wishlist .compare {
+  text-align: center;
+  border-radius: 10%;
+}
