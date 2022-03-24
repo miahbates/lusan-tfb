@@ -260,6 +260,7 @@ img {
   [class*="box-"] {
     height: 30vw;
 }
+}
 
 /* .productCard {
   background-color: var(--light-secondary-color);
