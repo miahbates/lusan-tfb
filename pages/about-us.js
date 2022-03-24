@@ -11,12 +11,15 @@ export default function AboutPage() {
   return (
     <div className="about">
       <h1>About Us</h1>
-      {/* <Image
-        src="https://unsplash.com/photos/x8ZStukS2PM"
-        alt="seeds"
-        width={200}
-        height={200}
-      /> */}
+      <div className="seeds-box">
+        <Image
+          className="seeds"
+          src="/seeds.jpg"
+          alt="seeds"
+          width={200}
+          height={200}
+        />
+      </div>
       <div className="text-box">
         <p className="text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
