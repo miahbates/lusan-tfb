@@ -41,11 +41,20 @@ li {
   width: 1.8rem;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-wishlist-icons {
+  padding-top: 1rem;
+}
+
 .icon-search {
   height: 1.8rem;
   width: 1.8rem;
   color: var(--dark-secondary-color);
-
   margin: 0;
   padding: 0.4rem;
 }
@@ -250,7 +259,7 @@ img {
 
   [class*="box-"] {
     height: 30vw;
-  }
+}
 }
 
 /* .productCard {
