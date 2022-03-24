@@ -155,6 +155,29 @@ img {
   background-size: cover;
 }
 
+.type-tag {
+  background-color: var(--mid-color);
+}
+
+.water-tag {
+  background-color: rgb(54, 106, 141);
+}
+
+.climate-tag {
+  background-color: var(--dark-color);
+}
+
+.soil-tag {
+  background-color: rgb(77, 59, 47);
+}
+
+.tag-container span {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: var(--light-color);
+}
+
 @media screen and (min-width: 375px) {
   .container {
     display: flex;
@@ -259,7 +282,7 @@ img {
 
   [class*="box-"] {
     height: 30vw;
-}
+  }
 }
 
 /* .productCard {
