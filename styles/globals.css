@@ -271,6 +271,9 @@ img {
   text-align: center;
 }
 
+.contact .grow {
+  border-radius: 10%;
+}
 .contact .icon {
   padding: 0.8rem;
   text-align: center;
