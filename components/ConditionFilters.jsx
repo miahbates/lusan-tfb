@@ -9,7 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { updateObjState } from "../helper-functions";
 
-export default function ConditionFilters({ conditions, setConditions }) {
+export default function ConditionFilters({
+  setTypeConditions,
+  setClimateConditions,
+}) {
   return (
     <div className="box">
       <form method="POST" action="/api/condition-filters">
@@ -21,15 +24,31 @@ export default function ConditionFilters({ conditions, setConditions }) {
             value="organic"
             name="type"
             onChange={(event) => {
-              setConditions((prevObj) => updateObjState(prevObj, event));
+              setTypeConditions((prevObj) => updateObjState(prevObj, event));
             }}
           />
           <label htmlFor="type">Organic</label>
 
-          <input type="checkbox" id="type" value="openPollinated" name="type" />
+          <input
+            type="checkbox"
+            id="type"
+            value="openPollinated"
+            name="type"
+            onChange={(event) => {
+              setTypeConditions((prevObj) => updateObjState(prevObj, event));
+            }}
+          />
           <label htmlFor="type">Open Pollinated</label>
 
-          <input type="checkbox" id="type" value="hybrid" name="type" />
+          <input
+            type="checkbox"
+            id="type"
+            value="hybrid"
+            name="type"
+            onChange={(event) => {
+              setTypeConditions((prevObj) => updateObjState(prevObj, event));
+            }}
+          />
           <label htmlFor="type">Hybrid</label>
 
           <button type="submit">Save</button>
@@ -39,13 +58,37 @@ export default function ConditionFilters({ conditions, setConditions }) {
       <form method="POST" action="/api/condition-filters">
         <div className="box">
           <FontAwesomeIcon className="icon" icon={faCloudSunRain} />
-          <input type="checkbox" id="climate" value="sunny" name="climate" />
+          <input
+            type="checkbox"
+            id="climate"
+            value="sunny"
+            name="climate"
+            onChange={(event) => {
+              setClimateConditions((prevObj) => updateObjState(prevObj, event));
+            }}
+          />
           <label htmlFor="type">Sunny</label>
 
-          <input type="checkbox" id="climate" value="dry" name="climate" />
+          <input
+            type="checkbox"
+            id="climate"
+            value="dry"
+            name="climate"
+            onChange={(event) => {
+              setClimateConditions((prevObj) => updateObjState(prevObj, event));
+            }}
+          />
           <label htmlFor="type">Dry</label>
 
-          <input type="checkbox" id="climate" value="shady" name="climate" />
+          <input
+            type="checkbox"
+            id="climate"
+            value="shady"
+            name="climate"
+            onChange={(event) => {
+              setClimateConditions((prevObj) => updateObjState(prevObj, event));
+            }}
+          />
           <label htmlFor="type">Shady</label>
 
           <button type="submit">Save</button>

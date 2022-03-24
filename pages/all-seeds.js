@@ -9,16 +9,23 @@ import { useEffect, useState } from "react";
 export default function AllSeeds() {
   const [category, setCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState(null);
-  const [conditions, setConditions] = useState({
+  const [typeConditions, setTypeConditions] = useState({
     organic: false,
     openPollinated: false,
+    hybrid: false,
+  });
+  const [climateConditions, setClimateConditions] = useState({
+    sunny: false,
+    dry: false,
+    shady: false,
   });
 
   useEffect(() => {
-    console.log(conditions);
+    console.log(products[0]);
+    console.log(typeConditions);
   });
 
-  console.log(products);
+  // console.log(products);
   return (
     <div>
       <CategoryFilters
@@ -26,12 +33,16 @@ export default function AllSeeds() {
         setCategory={setCategory}
       ></CategoryFilters>
       <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
-      <ConditionFilters setConditions={setConditions}></ConditionFilters>
+      <ConditionFilters
+        setTypeConditions={setTypeConditions}
+        setClimateConditions={setClimateConditions}
+      ></ConditionFilters>
       <PriceFilters></PriceFilters>
       <ProductDisplay
         category={category}
         searchTerm={searchTerm}
-        conditions={conditions}
+        typeConditions={typeConditions}
+        climateConditions={climateConditions}
       ></ProductDisplay>
     </div>
   );

@@ -4,12 +4,19 @@ import products from "../database/products";
 import ProductCard from "./ProductCard";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
 
-export default function ProductDisplay({ category, searchTerm, organic }) {
+export default function ProductDisplay({
+  category,
+  searchTerm,
+  typeConditions,
+  climateConditions,
+}) {
+  useEffect(() => console.log(typeConditions));
   return (
     <div className="box">
       <h2>Product Name</h2>
@@ -26,9 +33,20 @@ export default function ProductDisplay({ category, searchTerm, organic }) {
                   product.subCategory.includes(searchTerm)
                 : product
             )
-            .filter((product) =>
-              organic === true ? product.type.organic : product
-            )
+            .filter((product) => {
+              const keys = Object.keys(typeConditions);
+              console.log(
+                "filter",
+                keys.filter((key) => typeConditions[key] === product.type[key])
+              );
+              console.log(keys);
+              keys.forEach((key) =>
+                console.log("condition", {
+                  key: typeConditions[key],
+                  productKey: product.type[key],
+                })
+              );
+            })
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
