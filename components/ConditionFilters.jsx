@@ -8,13 +8,26 @@ import {
   faEarthEurope,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function ConditionFilters() {
+export default function ConditionFilters({ conditions, setConditions }) {
   return (
     <div className="box">
       <form method="POST" action="/api/condition-filters">
         <div className="box">
           <FontAwesomeIcon className="icon" icon={faList} />
-          <input type="checkbox" id="type" value="organic" name="type" />
+          <input
+            type="checkbox"
+            id="type"
+            value="organic"
+            name="type"
+            onChange={(event) => {
+              setConditions((prevObj) => {
+                return {
+                  ...prevObj,
+                  [event.target.value]: event.target.checked,
+                };
+              });
+            }}
+          />
           <label htmlFor="type">Organic</label>
 
           <input type="checkbox" id="type" value="openPollinated" name="type" />
