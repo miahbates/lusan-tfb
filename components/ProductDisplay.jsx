@@ -39,6 +39,7 @@ export default function ProductDisplay({
               openPollinated ? product.type.openPollinated : product
             )
             .filter((product) => (hybrid ? product.type.hybrid : product))
+            
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard

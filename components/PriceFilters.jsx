@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function PriceFilters() {
+export default function PriceFilters({ min, max, setMin, setMax }) {
   return (
     <div className="box">
       <fieldset>
@@ -12,9 +12,10 @@ export default function PriceFilters() {
             type="range"
             id="min-price"
             min="0.5"
-            max="9"
+            max="10"
             step="0.25"
-            defaultValue="value"
+            value={min}
+            onChange={(event) => setMin(event.target.value)}
           />
         </label>
         <label htmlFor="max-price">
@@ -23,9 +24,10 @@ export default function PriceFilters() {
             type="range"
             id="max-price"
             min="0.5"
-            max="9"
+            max="10"
             step="0.25"
-            defaultValue="value"
+            value={max}
+            onChange={(event) => setMax(event.target.value)}
           />
         </label>
       </fieldset>

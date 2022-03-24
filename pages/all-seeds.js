@@ -12,6 +12,8 @@ export default function AllSeeds() {
   const [organic, setOrganic] = useState(false);
   const [openPollinated, setOpenPollinated] = useState(false);
   const [hybrid, setHybrid] = useState(false);
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(10);
 
   // const [typeConditions, setTypeConditions] = useState({
   //   organic: false,
@@ -41,7 +43,12 @@ export default function AllSeeds() {
         setOpenPollinated={setOpenPollinated}
         setHybrid={setHybrid}
       ></ConditionFilters>
-      <PriceFilters></PriceFilters>
+      <PriceFilters
+        min={min}
+        setMin={setMin}
+        max={max}
+        setMax={setMax}
+      ></PriceFilters>
       <ProductDisplay
         category={category}
         searchTerm={searchTerm}
