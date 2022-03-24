@@ -53,4 +53,15 @@ function generateProviders() {
   });
 }
 
-module.exports = { generateFilters, generateProviders };
+// takes an object and returns an array of product tags
+// returns an array containing the keys which have a 'true' value
+function generateTags(obj) {
+  const keys = Object.keys(obj);
+  return keys.filter((key) => {
+    if (obj[key]) {
+      return key;
+    }
+  });
+}
+
+module.exports = { generateFilters, generateProviders, generateTags };
