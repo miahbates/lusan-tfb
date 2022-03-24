@@ -3,6 +3,7 @@
 // import StyledButton from "../components/styled-components/StyledButton";
 // import Layout from "../components/layout";
 // import StyledLink from "../components/styled-components/StyledLink";
+import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
