@@ -1,37 +1,38 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import StyledGridTile from "./styled-components/StyledGridTile";
 
 export default function GridGallery() {
   return (
     <div className="container">
-      <div className="box-one background-pears">
-        <p>Brocolli</p>
-      </div>
-      <div className="box-two background-beetroot">
-        <p>Beetroot</p>
-      </div>
-      <div className="box-three background-tomatoes">
-        <p>Cauliflower</p>
-      </div>
-      <div className="box-four background-tomatoes">
-        <p>Tomatoes</p>
-      </div>
-      <div className="box-five background-rosemary">
-        <p>Rosemary</p>
-      </div>
-      <div className="box-six background-basil">
-        <p>Basil</p>
-      </div>
-      <div className="box-seven background-apples">
-        <p>Apples</p>
-      </div>
-      <div className="box-eight background-broccoli">
-        <p>Broccoli</p>
-      </div>
-      <div className="box-nine background-carrot">
-        <p>Carrot</p>
-      </div>
+      <StyledGridTile className="box-one background-sweetpea">
+        <a>Sweet Peas</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-two background-beetroot">
+        <a>Beetroot</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-three background-tomatoes">
+        <a>Tomatoes</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-four background-cauliflower">
+        <a>Cauliflower</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-five background-rosemary">
+        <a>Rosemary</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-eight background-petunia">
+        <a>Petunia</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-seven background-carrot">
+        <a>Carrot</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-six background-broccoli">
+        <a>Broccoli</a>
+      </StyledGridTile>
+      <StyledGridTile className="box-nine background-basil">
+        <a>Basil</a>
+      </StyledGridTile>
     </div>
   );
 }

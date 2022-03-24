@@ -66,11 +66,12 @@ li {
 }
 
 .background-veg {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?1");
+  background-image: url("../public/background.jpg");
   height: 30vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
 }
 
 .flex-row {
@@ -92,67 +93,73 @@ img {
   object-fit: cover;
 }
 
-.background-pears {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?2");
+.background-sweetpea {
+  background-image: url("https://images.unsplash.com/photo-1598954559987-23e614224d30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-beetroot {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?3");
+  background-image: url("https://images.unsplash.com/photo-1627738668643-1c166aecbf3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
 }
 
 .background-tomatoes {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?4");
+  background-image: url("https://images.unsplash.com/photo-1598512752271-33f913a5af13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-cauliflower {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?5");
+  background-image: url("https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-rosemary {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?6");
+  background-image: url("https://images.unsplash.com/photo-1582745741856-1a5d68158ba3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.background-basil {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?7");
+.background-petunia {
+  background-image: url("https://images.unsplash.com/photo-1629727434632-34d73efb9cb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-carrot {
+  background-image: url("https://images.unsplash.com/photo-1579584828095-494884160804?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-broccoli {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?8");
+  background-image: url("https://images.unsplash.com/photo-1628773822503-930a7eaecf80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.background-apples {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?9");
+.background-basil {
+  background-image: url("https://images.unsplash.com/photo-1600598307622-9165bfa2ae42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.background-carrot {
-  background-image: url("https://source.unsplash.com/collection/190727/800x600?10");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
+.container {
+  background-color: var(--dark-secondary-color);
 }
 
 @media screen and (min-width: 375px) {
@@ -259,7 +266,7 @@ img {
 
   [class*="box-"] {
     height: 30vw;
-}
+  }
 }
 
 /* .productCard {
