@@ -40,12 +40,59 @@ li {
   height: 1.8rem;
   width: 1.8rem;
 }
+.logos .icon {
+  padding: 0.8rem;
+  background-color: #f4f9f5;
+  border-radius: 10%;
+  margin: 0.8rem;
+  text-align: center;
+}
+
+.about {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  color: #016b58;
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+
+.text-box {
+  font-size: 1rem;
+  color: #016b58;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  grid-auto-rows: 200px;
+  grid-template-areas:
+    " . a a ."
+    " . a a .";
+  text-align: center;
+}
+
+.text {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-wishlist-icons {
+  padding-top: 1rem;
+}
 
 .icon-search {
   height: 1.8rem;
   width: 1.8rem;
   color: var(--dark-secondary-color);
-
   margin: 0;
   padding: 0.4rem;
 }
@@ -277,4 +324,25 @@ img {
 .contact .icon {
   padding: 0.8rem;
   text-align: center;
+
+.wishlist {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  text-align: center;
+}
+
+.wishlist .emptyBox {
+  margin: 0 auto;
+  text-align: center;
+  border: 0.15rem dashed black;
+  padding: 1rem;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.wishlist .compare {
+  text-align: center;
+  border-radius: 10%;
 }
