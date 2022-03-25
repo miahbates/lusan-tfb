@@ -9,16 +9,28 @@ import { useEffect, useState } from "react";
 export default function AllSeeds() {
   const [category, setCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState(null);
-  const [conditions, setConditions] = useState({
-    organic: false,
-    openPollinated: false,
-  });
+  const [organic, setOrganic] = useState(false);
+  const [openPollinated, setOpenPollinated] = useState(false);
+  const [hybrid, setHybrid] = useState(false);
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(10);
+
+  // const [typeConditions, setTypeConditions] = useState({
+  //   organic: false,
+  //   openPollinated: false,
+  //   hybrid: false,
+  // });
+  // const [climateConditions, setClimateConditions] = useState({
+  //   sunny: false,
+  //   dry: false,
+  //   shady: false,
+  // });
 
   useEffect(() => {
-    console.log(conditions);
+    console.log(products[0]);
   });
 
-  console.log(products);
+  // console.log(products);
   return (
     <div>
       <CategoryFilters
@@ -26,12 +38,25 @@ export default function AllSeeds() {
         setCategory={setCategory}
       ></CategoryFilters>
       <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
-      <ConditionFilters setConditions={setConditions}></ConditionFilters>
-      <PriceFilters></PriceFilters>
+      <ConditionFilters
+        setOrganic={setOrganic}
+        setOpenPollinated={setOpenPollinated}
+        setHybrid={setHybrid}
+      ></ConditionFilters>
+      <PriceFilters
+        min={min}
+        setMin={setMin}
+        max={max}
+        setMax={setMax}
+      ></PriceFilters>
       <ProductDisplay
+        min={min}
+        max={max}
         category={category}
         searchTerm={searchTerm}
-        conditions={conditions}
+        organic={organic}
+        openPollinated={openPollinated}
+        hybrid={hybrid}
       ></ProductDisplay>
     </div>
   );
