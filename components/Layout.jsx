@@ -19,7 +19,7 @@ export default function Layout({ children, setOpen, open }) {
       <div className="flex-row navbar">
         <Navbar></Navbar>
         <div className="search-wishlist-icons">
-          <Link href="/allseeds">
+          <Link href="/all-seeds">
             <a>
               <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
             </a>
