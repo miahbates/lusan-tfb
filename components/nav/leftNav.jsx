@@ -35,11 +35,12 @@ export default function LeftNav({ open }) {
           <a>Home</a>
         </li>
       </Link>
-      <Link href="/about-page" passHref>
+      <Link href="/about-us" passHref>
         <li>
           <a>About Us</a>
         </li>
       </Link>
+
       <Link href="/all-seeds" passHref>
         <li>
           <a>All Seeds</a>
@@ -61,6 +62,7 @@ export default function LeftNav({ open }) {
         </li>
       </Link>
       <li>Contact Us</li>
+
     </StyledNavLink>
   );
 }

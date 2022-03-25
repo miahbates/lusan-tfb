@@ -49,6 +49,47 @@ ul {
   height: 1.8rem;
   width: 1.8rem;
 }
+.logos .icon {
+  padding: 0.8rem;
+  background-color: #f4f9f5;
+  border-radius: 10%;
+  margin: 0.8rem;
+  text-align: center;
+}
+
+.about {
+  display: grid;
+  text-align: center;
+  color: #016b58;
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+.seeds-box .seeds {
+  border-radius: 10%;
+  margin: 0 auto;
+}
+
+.text-box {
+  font-size: 1rem;
+  color: #016b58;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-auto-rows: 200px;
+  grid-template-areas:
+    " . a a ."
+    " . a a .";
+  text-align: center;
+}
+
+.text {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+  font-weight: bold;
+  margin: 2rem;
+}
 
 .flex-row {
   display: flex;
@@ -186,6 +227,28 @@ ul {
 .container {
   background-color: var(--light-color);
 }
+.type-tag {
+  background-color: var(--mid-color);
+}
+
+.water-tag {
+  background-color: rgb(54, 106, 141);
+}
+
+.climate-tag {
+  background-color: var(--dark-color);
+}
+
+.soil-tag {
+  background-color: rgb(77, 59, 47);
+}
+
+.tag-container span {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: var(--light-color);
+}
 
 /* [class*="box-"] {
   justify-content: center;
@@ -296,4 +359,52 @@ ul {
   [class*="box-"] {
     height: 30vw;
   }
+}
+
+/*-------------------------------------  CONTACT ------------------------------*/
+
+
+.contact {
+  text-align: center;
+  color: #016b58;
+  margin: 5rem 0 0 1rem;
+  padding: 1rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  font-style: bold;
+  text-align: center;
+}
+
+.contact .grow {
+  border-radius: 10%;
+}
+.contact .icon {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+/*-------------------------------------  WISHLIST ------------------------------*/
+
+.wishlist {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  text-align: center;
+}
+
+.wishlist .emptyBox {
+  margin: 0 auto;
+  text-align: center;
+  border: 0.15rem dashed black;
+  padding: 1rem;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.wishlist .compare {
+  text-align: center;
+  border-radius: 10%;
 }
