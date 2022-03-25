@@ -6,6 +6,9 @@ import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
 
+console.log(products[0], "p");
+console.log(products[0].providers[0].price, "p2");
+
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
@@ -41,7 +44,11 @@ export default function ProductDisplay({
               openPollinated ? product.type.openPollinated : product
             )
             .filter((product) => (hybrid ? product.type.hybrid : product))
-            .filter((product) => product.price >= min && product.price <= max)
+            .filter(
+              (product) =>
+                product.providers[0].price >= min &&
+                product.providers[0].price <= max
+            )
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
