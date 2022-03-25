@@ -1,10 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import products from "../database/products";
-import ProductCard from "./ProductCard";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
 
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
