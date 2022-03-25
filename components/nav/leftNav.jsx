@@ -61,8 +61,11 @@ export default function LeftNav({ open }) {
           <a>Vegetables</a>
         </li>
       </Link>
-      <li>Contact Us</li>
-
+      <Link href="/contact-us" passHref>
+        <li>
+          <a>Contact Us</a>
+        </li>
+      </Link>
     </StyledNavLink>
   );
 }

@@ -73,20 +73,16 @@ ul {
 .text-box {
   font-size: 1rem;
   color: #016b58;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  grid-auto-rows: 200px;
-  grid-template-areas:
-    " . a a ."
-    " . a a .";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
   text-align: center;
 }
 
 .text {
-  grid-area: a;
-  align-self: center;
-  justify-self: center;
+  width: 200px;
+  white-space: normal;
   font-weight: bold;
   margin: 2rem;
 }
@@ -363,7 +359,6 @@ ul {
 
 /*-------------------------------------  CONTACT ------------------------------*/
 
-
 .contact {
   text-align: center;
   color: #016b58;
@@ -390,21 +385,14 @@ ul {
 .wishlist {
   display: flex;
   flex-direction: column;
-  margin: 5rem;
-  text-align: center;
+  align-items: center;
 }
 
 .wishlist .emptyBox {
-  margin: 0 auto;
   text-align: center;
+  margin: 2rem;
   border: 0.15rem dashed black;
-  padding: 1rem;
   border-radius: 10%;
   width: 200px;
   height: 200px;
-}
-
-.wishlist .compare {
-  text-align: center;
-  border-radius: 10%;
 }
