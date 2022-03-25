@@ -9,15 +9,12 @@ export default function Home() {
   return (
     <div>
       <IntroLusan></IntroLusan>
-      <Link href="/all-seeds">
-        <a>Click here for all seeds</a>
-      </Link>
-      <Link href="/contact-us">
-        <a>Click here for all seeds</a>
-      </Link>
+      <div className="landing-row landing-gap stack">
+        <StyledLink href="/all-seeds">
+          <a>Click here for all seeds</a>
+        </StyledLink>
+      </div>
       <GridGallery></GridGallery>
-      <StyledButton>Browse All</StyledButton>
-      <StyledLink>Link</StyledLink>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export default function Layout({ children, setOpen, open }) {
         <title>Lusan</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="flex-row">
+      <div className="flex-row navbar">
         <Navbar></Navbar>
         <div className="search-wishlist-icons">
           <Link href="/allseeds">

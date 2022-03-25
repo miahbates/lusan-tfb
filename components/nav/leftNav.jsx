@@ -28,21 +28,41 @@ const StyledNavLink = styled.ul`
 `;
 
 export default function LeftNav({ open }) {
-  console.log("open", open);
   return (
     <StyledNavLink open={open} className="flex-row">
+      <Link href="/" passHref>
+        <li>
+          <a>Home</a>
+        </li>
+      </Link>
       <Link href="/about-us" passHref>
         <li>
           <a>About Us</a>
         </li>
       </Link>
-      <li>All Seeds</li>
-      <li>Flowers</li>
-      <li>Herbs</li>
-      <li>Vegetables</li>
-      <Link href="/contact-us" passHref>
-        <li>Contact Us</li>
+
+      <Link href="/all-seeds" passHref>
+        <li>
+          <a>All Seeds</a>
+        </li>
       </Link>
+      <Link href="/all-seeds" passHref>
+        <li>
+          <a>Flowers</a>
+        </li>
+      </Link>
+      <Link href="/all-seeds" passHref>
+        <li>
+          <a>Herbs</a>
+        </li>
+      </Link>
+      <Link href="/all-seeds" passHref>
+        <li>
+          <a>Vegetables</a>
+        </li>
+      </Link>
+      <li>Contact Us</li>
+
     </StyledNavLink>
   );
 }

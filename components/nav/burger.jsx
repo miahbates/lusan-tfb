@@ -3,6 +3,11 @@ import React from "react";
 import LeftNav from "./leftNav.jsx";
 
 const StyledBurger = styled.div`
+  background-color: var(--light-color);
+  max-width: 2.5rem;
+  align-items: center;
+  box-shadow: 1px -1px 1px var(--light-color);
+
   @media (max-width: 768px) {
     display: flex;
     width: 4rem;

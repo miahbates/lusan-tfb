@@ -11,7 +11,7 @@ export default function IntroLusan() {
     <StyledIntro className="background-veg">
       <SearchBar></SearchBar>
       <h1>Selecting seeds made simple</h1>
-      <div className="flex-row">
+      <div className="landing-row">
         <div className="flex-column">
           <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
           <p>Eco-friendly</p>

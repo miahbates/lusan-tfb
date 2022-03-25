@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const StyledIntro = styled.div`
+  gap: 1rem;
+
   h1 {
     color: white;
     font-family: "Lora";

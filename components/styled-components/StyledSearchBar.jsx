@@ -21,7 +21,8 @@ const StyledSearchBar = styled.div`
   @media only screen and (min-width: 678px) {
     input[type="text"] {
       font-size: 1.2rem;
-      margin: 1.5rem 0;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
       padding: 0.25;
     }
   }
