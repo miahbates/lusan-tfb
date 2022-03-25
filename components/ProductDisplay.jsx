@@ -3,6 +3,9 @@ import products from "../database/products";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
 
+console.log(products[0], "p");
+console.log(products[0].providers[0].price, "p2");
+
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
@@ -58,6 +61,11 @@ export default function ProductDisplay({
             .filter((product) => (chalky ? product.soil.chalky : product))
             .filter((product) => (peaty ? product.soil.peaty : product))
             .filter((product) => (sandy ? product.soil.sandy : product))
+            .filter(
+              (product) =>
+                product.providers[0].price >= min &&
+                product.providers[0].price <= max
+            )
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
