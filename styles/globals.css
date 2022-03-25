@@ -51,18 +51,21 @@ li {
 .about {
   display: grid;
   text-align: center;
-  align-items: center;
   color: #016b58;
   font-size: 1rem;
   margin: 2rem;
 }
 
+.seeds-box .seeds {
+  border-radius: 10%;
+  margin: 0 auto;
+}
 
 .text-box {
   font-size: 1rem;
   color: #016b58;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   grid-auto-rows: 200px;
   grid-template-areas:
@@ -195,7 +198,6 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 .container {
   background-color: var(--dark-secondary-color);

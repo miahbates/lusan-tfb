@@ -31,7 +31,7 @@ export default function LeftNav({ open }) {
   console.log("open", open);
   return (
     <StyledNavLink open={open} className="flex-row">
-      <Link href="/about-page" passHref>
+      <Link href="/about-us" passHref>
         <li>
           <a>About Us</a>
         </li>
@@ -40,7 +40,9 @@ export default function LeftNav({ open }) {
       <li>Flowers</li>
       <li>Herbs</li>
       <li>Vegetables</li>
-      <li>Contact Us</li>
+      <Link href="/contact-us" passHref>
+        <li>Contact Us</li>
+      </Link>
     </StyledNavLink>
   );
 }

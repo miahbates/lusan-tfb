@@ -12,6 +12,9 @@ export default function Home() {
       <Link href="/all-seeds">
         <a>Click here for all seeds</a>
       </Link>
+      <Link href="/contact-us">
+        <a>Click here for all seeds</a>
+      </Link>
       <GridGallery></GridGallery>
       <StyledButton>Browse All</StyledButton>
       <StyledLink>Link</StyledLink>
