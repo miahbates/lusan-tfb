@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="landing-page">
       <IntroLusan></IntroLusan>
       <div className="landing-row landing-gap stack">
         <StyledLink href="/all-seeds">

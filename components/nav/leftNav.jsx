@@ -1,31 +1,6 @@
-import styled from "styled-components";
 import Link from "next/link";
 import React from "react";
-
-const StyledNavLink = styled.ul`
-  display: flex;
-  flex-flow: row nowrap;
-  list-style: none;
-  li {
-    padding: 0 1rem;
-    margin: 0 2rem;
-    justify-content: flex-start;
-  }
-
-  @media (max-width: 768px) {
-    flex-flow: column nowrap;
-    background-color: var(--light-color);
-    color: black;
-    position: fixed;
-    top: -1rem;
-    left: 0;
-    height: 50vh;
-    width: 300px;
-    padding: 3.5rem;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(1000%)")};
-    transition: transform 0.3s ease0-in-out;
-  }
-`;
+import StyledNavLink from "../styled-components/StyledNavLink";
 
 export default function LeftNav({ open }) {
   return (
@@ -62,7 +37,6 @@ export default function LeftNav({ open }) {
         </li>
       </Link>
       <li>Contact Us</li>
-
     </StyledNavLink>
   );
 }
