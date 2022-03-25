@@ -1,10 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import products from "../database/products";
-import ProductCard from "./ProductCard";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
 
 console.log(products[0], "p");
 console.log(products[0].providers[0].price, "p2");
@@ -19,6 +16,16 @@ export default function ProductDisplay({
   organic,
   openPollinated,
   hybrid,
+  sunny,
+  shady,
+  humid,
+  lotsOfWater,
+  dry,
+  clay,
+  drained,
+  chalky,
+  peaty,
+  sandy,
   min,
   max,
 }) {
@@ -44,6 +51,16 @@ export default function ProductDisplay({
               openPollinated ? product.type.openPollinated : product
             )
             .filter((product) => (hybrid ? product.type.hybrid : product))
+            .filter((product) => (sunny ? product.climate.sunny : product))
+            .filter((product) => (shady ? product.climate.shady : product))
+            .filter((product) => (humid ? product.climate.humid : product))
+            .filter((product) => (lotsOfWater ? product.water.water : product))
+            .filter((product) => (dry ? product.water.dry : product))
+            .filter((product) => (clay ? product.soil.clay : product))
+            .filter((product) => (drained ? product.soil.drained : product))
+            .filter((product) => (chalky ? product.soil.chalky : product))
+            .filter((product) => (peaty ? product.soil.peaty : product))
+            .filter((product) => (sandy ? product.soil.sandy : product))
             .filter(
               (product) =>
                 product.providers[0].price >= min &&
