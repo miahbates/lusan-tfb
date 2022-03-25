@@ -7,16 +7,18 @@ import StyledSearchBar from "./styled-components/StyledSearchBar";
 export default function SearchBar({ setSearchTerm }) {
   return (
     <StyledSearchBar>
-      <input
-        type="text"
-        placeholder="Enter a crop name"
-        onChange={(event) =>
-          setSearchTerm(
-            event.target.value.replace(/^\w/, (c) => c.toUpperCase())
-          )
-        }
-      />
-      <FontAwesomeIcon className="icon-search" icon={faSearch} />
+      <div className="search-border">
+        <input
+          type="text"
+          placeholder="Enter a crop name"
+          onChange={(event) =>
+            setSearchTerm(
+              event.target.value.replace(/^\w/, (c) => c.toUpperCase())
+            )
+          }
+        />
+        <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+      </div>
     </StyledSearchBar>
   );
 }

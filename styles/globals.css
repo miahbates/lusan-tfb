@@ -104,10 +104,14 @@ ul {
   align-items: center;
 }
 
-/* ---------------------------------  NAVBAR ---------------------------------*/
+/* --------------------------------- LAYOUT & NAVBAR ---------------------------------*/
+.layout {
+  background-color: var(--light-color);
+}
 
 .navbar {
   margin-bottom: 0.5rem;
+  background-color: var(--light-color);
 }
 
 .search-wishlist-icons {
@@ -118,7 +122,15 @@ ul {
 
 .icon-search {
   height: 1.8rem;
-  width: 1.8rem;
+  width: auto;
+  color: var(--dark-secondary-color);
+  margin: 0;
+  padding: 0.4rem;
+}
+
+.icon-wishlist {
+  height: 1.8rem;
+  width: auto;
   color: var(--dark-secondary-color);
   margin: 0;
   padding: 0.4rem;
@@ -222,6 +234,9 @@ ul {
   margin: 1.5rem;
 }
 
+.landing-page {
+  background-color: var(--light-color);
+}
 /*-------------------------------------  LANDING-PG GRID AND MEDIA QUERIES ------------------------------*/
 
 .container {
@@ -362,7 +377,6 @@ ul {
 }
 
 /*-------------------------------------  CONTACT ------------------------------*/
-
 
 .contact {
   text-align: center;
