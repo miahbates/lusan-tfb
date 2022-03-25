@@ -112,6 +112,7 @@ ul {
 .navbar {
   margin-bottom: 0.5rem;
   background-color: var(--light-color);
+  align-items: center;
 }
 
 .search-wishlist-icons {
@@ -123,7 +124,7 @@ ul {
 .icon-search {
   height: 1.8rem;
   width: auto;
-  color: var(--dark-secondary-color);
+  color: var(--dark-color);
   margin: 0;
   padding: 0.4rem;
 }
@@ -131,7 +132,7 @@ ul {
 .icon-wishlist {
   height: 1.8rem;
   width: auto;
-  color: var(--dark-secondary-color);
+  color: var(--dark-color);
   margin: 0;
   padding: 0.4rem;
 }
