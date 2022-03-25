@@ -11,7 +11,7 @@ import styled from "styled-components";
 
 export default function Layout({ children, setOpen, open }) {
   return (
-    <div>
+    <div className="layout">
       <Head>
         <title>Lusan</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -19,14 +19,17 @@ export default function Layout({ children, setOpen, open }) {
       <div className="flex-row navbar">
         <Navbar></Navbar>
         <div className="search-wishlist-icons">
-          <Link href="/allseeds">
+          <Link href="/all-seeds">
             <a>
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className="icon-search"
+              />
             </a>
           </Link>
           <Link href="/wishlist">
             <a>
-              <FontAwesomeIcon icon={faHeart} className="icon" />
+              <FontAwesomeIcon icon={faHeart} className="icon-wishlist" />
             </a>
           </Link>
         </div>

@@ -5,14 +5,14 @@ const chance = new Chance();
 // assign random booleans to an object's properties
 function assignBoolean(obj) {
   const keys = Object.keys(obj);
-  keys.forEach((key) => (obj[key] = chance.bool()));
+  keys.forEach((key) => (obj[key] = chance.bool({ likelihood: 30 })));
 }
 
 function generateFilters() {
   let filtersObj = {
     type: { organic: null, openPollinated: null, hybrid: null },
-    climate: { sunny: null, dry: null, shady: null },
-    water: { water: null, humid: null, dry: null },
+    climate: { sunny: null, shady: null, humid: null },
+    water: { water: null, dry: null },
     soil: { clay: null, drained: null, chalky: null, peaty: null, sandy: null },
   };
 
