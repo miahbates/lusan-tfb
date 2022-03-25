@@ -61,8 +61,6 @@ export default function ConditionFilters({
             }}
           />
           <label htmlFor="type">Hybrid</label>
-
-          <button type="submit">Save</button>
         </div>
       </form>
 
@@ -101,8 +99,6 @@ export default function ConditionFilters({
             }}
           />
           <label htmlFor="type">Humid</label>
-
-          <button type="submit">Save</button>
         </div>
       </form>
 
@@ -130,8 +126,6 @@ export default function ConditionFilters({
             }}
           />
           <label htmlFor="type">Dry</label>
-
-          <button type="submit">Save</button>
         </div>
       </form>
 
@@ -192,8 +186,6 @@ export default function ConditionFilters({
             }}
           />
           <label htmlFor="type">Sandy</label>
-
-          <button type="submit">Save</button>
         </div>
       </form>
     </div>
