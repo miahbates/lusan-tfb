@@ -6,7 +6,11 @@ import styled from "styled-components";
 const StyledProductCard = styled.div`
   border: 4px solid var(--mid-color);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  margin: 2rem;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 
   .title-wishlist {
     display: flex;
@@ -16,18 +20,20 @@ const StyledProductCard = styled.div`
 
   .info-container {
     padding: 1rem 1rem 1.5rem 1rem;
+    flex: 1;
   }
 
   img {
-    max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 200px;
   }
 
   h2 {
     font-family: var(--sora-font);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .tag-container {
@@ -39,8 +45,8 @@ const StyledProductCard = styled.div`
 
   span {
     margin: 0.125rem;
-    font-family: var(--raj-font);
-    font-size: 1rem;
+    font-family: var(--sora-font);
+    font-size: 0.9rem;
   }
 
   p {
@@ -51,32 +57,16 @@ const StyledProductCard = styled.div`
 
   a {
     padding: 0.5rem;
-    margin-left: 0.25rem;
+    margin: 1rem;
+    font-size: 1.1rem;
+    font-family: var(--sora-font);
+  }
+
+  @media screen and (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: repeat(1, 100%);
+    }
   }
 `;
 
 export default StyledProductCard;
-
-// display: flex;
-//   background-color: var(--light-secondary-color);
-//   border: 1px solid var(--dark-color);
-
-//   img {
-//     max-width: 100%;
-//     display: block;
-//   }
-
-//   .product-img-container {
-//     width: 30%;
-//   }
-
-//   .tag-container {
-//     display: flex;
-//     flex-wrap: wrap;
-//     width: 100%;
-//   }
-
-//   .info-container {
-//     padding-left: 15px;
-//     max-width: 80%;
-//   }

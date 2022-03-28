@@ -294,7 +294,17 @@ ul {
   }
 }
 
-@media screen and (min-width: 470px) {
+.product-grid {
+  margin: 2.5rem;
+}
+
+.product-card {
+  margin: 1rem 0;
+}
+
+/* ------------------ GRID FOR PRODUCT DISPLAY PAGE/MIDDLE GRID FOR HOMEPAGE ------------------- */
+
+@media screen and (min-width: 670px) {
   .container {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(2, 1fr);
@@ -313,6 +323,22 @@ ul {
 
   .background-veg {
     height: 50vh;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 0.5rem));
+    gap: 1rem;
+    margin: 4rem;
+  }
+
+  .product-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
   }
 }
 
@@ -378,6 +404,14 @@ ul {
 
   [class*="box-"] {
     height: 30vw;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33% - 0.5rem));
+    gap: 2rem;
+    justify-content: center;
+    margin: 3rem;
   }
 }
 
