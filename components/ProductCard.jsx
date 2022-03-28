@@ -20,18 +20,22 @@ export default function ProductCard({
   return (
     <div>
       <StyledProductCard>
-        <div className="product-img-container">
-          {/*eslint-disable-next-line @next/next/no-img-element*/}
-          <img alt={subCategory} src={img} />
-        </div>
+        <img alt={subCategory} src={img} />
         <div className="info-container">
-          <h2>{variety}</h2>
-          <WishlistToggle
+
+          <div className="title-wishlist">
+            <h2>
+              {variety} {subCategory}
+            </h2>
+            <WishlistToggle
             product={product}
             wishList={wishList}
             setWishList={setWishList}
             variety={variety}
           ></WishlistToggle>
+          </div>
+          <p>From £{price}</p>
+
           <div className="tag-container">
             {typeTags &&
               typeTags.map((tag) => (
@@ -58,8 +62,7 @@ export default function ProductCard({
                 </span>
               ))}
           </div>
-          <p>{subCategory}</p>
-          <p>Price: £{price}</p>
+
           <Link href={`/products/${variety}`} key={variety} passHref>
             <StyledLink>More info</StyledLink>
           </Link>
