@@ -6,8 +6,16 @@ import {
   faMagnifyingGlass,
   faBars,
   faHeart,
+  faEnvelope,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
+import {
+  faInstagram,
+  faLinkedin,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+// import styled from "styled-components";
+// import StyledFooter from "styled-components";
 
 export default function Layout({ children, setOpen, open }) {
   return (
@@ -35,6 +43,34 @@ export default function Layout({ children, setOpen, open }) {
         </div>
       </div>
       <main>{children}</main>
+      {/* <StyledFooter> */}
+      <footer className="footer">
+        <div className="footer-about">
+          <Link href="/about-us">
+            <a className="footer-links">About Us</a>
+          </Link>
+          <a
+            className="footer-links"
+            href="https://www.instagram.com/growlusan/"
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="icon"
+            ></FontAwesomeIcon>
+          </a>
+          {/* <FontAwesomeIcon icon={faLinkedin} className="icon"></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faFacebook} className="icon"></FontAwesomeIcon> */}
+        </div>
+        <div className="footer-contact">
+          <Link href="/contact-us">
+            <a className="footer-links">Contact</a>
+          </Link>
+          <a className="footer-links" href="mailto:rachel@growlusan.com">
+            rachel@growlusan.com
+          </a>
+          {/* <p>01903 765431</p> */}
+        </div>
+      </footer>
     </div>
   );
 }

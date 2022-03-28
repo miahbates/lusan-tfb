@@ -412,3 +412,29 @@ ul {
   width: 200px;
   height: 200px;
 }
+
+/*-------------------------------------  FOOTER ------------------------------*/
+
+.footer {
+  margin-top: 1rem;
+  gap: 4rem;
+  background-color: var(--dark-color);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 99;
+  align-items: center;
+}
+
+.footer > * {
+  color: white;
+  text-align: center;
+}
+
+.footer-links {
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+}
