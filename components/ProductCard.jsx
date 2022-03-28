@@ -22,8 +22,6 @@ export default function ProductCard({
   wishList,
   setWishList,
 }) {
-  // set state to toggle heart icon
-
   return (
     <div>
       <StyledProductCard>
@@ -37,6 +35,7 @@ export default function ProductCard({
             product={product}
             wishList={wishList}
             setWishList={setWishList}
+            variety={variety}
           ></WishlistToggle>
           <div className="tag-container">
             {typeTags &&
