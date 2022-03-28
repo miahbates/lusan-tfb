@@ -45,7 +45,7 @@ const ProductPages = () => {
         </h2>
 
         <p>
-          From €
+          From £
           {productDetailsObject && productDetailsObject.providers[0].price}
         </p>
 
