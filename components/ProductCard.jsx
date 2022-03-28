@@ -33,7 +33,11 @@ export default function ProductCard({
         </div>
         <div className="info-container">
           <h2>{variety}</h2>
-          <WishlistToggle></WishlistToggle>
+          <WishlistToggle
+            product={product}
+            wishList={wishList}
+            setWishList={setWishList}
+          ></WishlistToggle>
           <div className="tag-container">
             {typeTags &&
               typeTags.map((tag) => (
@@ -65,21 +69,6 @@ export default function ProductCard({
           <Link href={`/products/${variety}`} key={variety} passHref>
             <StyledLink>More info</StyledLink>
           </Link>
-          <button
-            onClick={() => {
-              const localStorageWishList =
-                JSON.parse(localStorage.getItem("wishlist")) || [];
-              localStorageWishList.push(product);
-              console.log("local storage", localStorageWishList);
-              localStorage.setItem(
-                "wishlist",
-                JSON.stringify(localStorageWishList)
-              );
-              setWishList([...wishList, product]);
-            }}
-          >
-            Add to wishlist
-          </button>
         </div>
       </StyledProductCard>
     </div>
