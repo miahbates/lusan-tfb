@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   :hover {
     background-color: var(--dark-color);
     color: var(--light-color);
-    mous
+    cursor: pointer;
   }
 `;
 
