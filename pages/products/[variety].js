@@ -8,7 +8,6 @@ import StyledLink from "../../components/styled-components/StyledLink";
 
 const ProductPages = () => {
   const router = useRouter();
-  // const { variety } = router.query;
 
   const [variety, setVariety] = useState(null);
   const [object, setObject] = useState(null);
@@ -28,9 +27,9 @@ const ProductPages = () => {
     setObject(findContent(capitalisedVariety));
   }, [variety, capitalisedVariety]);
 
-  useEffect(() => {
-    console.log("roma", object);
-  }, [object]);
+  // useEffect(() => {
+  //   console.log("roma", object);
+  // }, [object]);
 
   return (
     <StyledProductPage>
@@ -78,7 +77,6 @@ function findContent(capitalisedVariety) {
     return productObject.variety === capitalisedVariety;
   });
   return foundObject;
-  // find index of this variety
 }
 
 export default ProductPages;
