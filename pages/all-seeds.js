@@ -5,10 +5,15 @@ import PriceFilters from "../components/PriceFilters";
 import ProductDisplay from "../components/ProductDisplay";
 import products from "../database/products";
 import { useEffect, useState } from "react";
+import {
+  useSearchContext,
+  SearchContext,
+} from "../components/context/SearchbarContext";
 
 export default function AllSeeds() {
+  const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
+  console.log("all seeds 11", searchTerm);
   const [category, setCategory] = useState("All");
-  const [searchTerm, setSearchTerm] = useState(null);
   // type states
   const [organic, setOrganic] = useState(false);
   const [openPollinated, setOpenPollinated] = useState(false);
@@ -40,7 +45,7 @@ export default function AllSeeds() {
         category={category}
         setCategory={setCategory}
       ></CategoryFilters>
-      <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
+      <SearchBar></SearchBar>
       <ConditionFilters
         setOrganic={setOrganic}
         setOpenPollinated={setOpenPollinated}
@@ -63,10 +68,10 @@ export default function AllSeeds() {
         setMax={setMax}
       ></PriceFilters>
       <ProductDisplay
+        searchTerm={searchTerm}
         min={min}
         max={max}
         category={category}
-        searchTerm={searchTerm}
         organic={organic}
         openPollinated={openPollinated}
         hybrid={hybrid}
