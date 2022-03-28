@@ -28,6 +28,8 @@ export default function ProductDisplay({
   sandy,
   min,
   max,
+  wishList,
+  setWishList,
 }) {
   // useEffect(() => console.log(openPollinated));
   return (
@@ -69,6 +71,9 @@ export default function ProductDisplay({
             .map((product) => (
               <li key={product.variety}>
                 <DynamicProductCard
+                  product={product}
+                  wishList={wishList}
+                  setWishList={setWishList}
                   category={product.category}
                   subCategory={product.subCategory}
                   variety={product.variety}

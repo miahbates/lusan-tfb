@@ -12,6 +12,9 @@ export default function ProductCard({
   climateTags,
   waterTags,
   soilTags,
+  product,
+  wishList,
+  setWishList,
 }) {
   return (
     <div>
@@ -53,6 +56,21 @@ export default function ProductCard({
           <Link href={`/products/${variety}`} key={variety} passHref>
             <StyledLink>More info</StyledLink>
           </Link>
+          <button
+            onClick={() => {
+              const localStorageWishList =
+                JSON.parse(localStorage.getItem("wishlist")) || [];
+              localStorageWishList.push(product);
+              console.log("local storage", localStorageWishList);
+              localStorage.setItem(
+                "wishlist",
+                JSON.stringify(localStorageWishList)
+              );
+              setWishList([...wishList, product]);
+            }}
+          >
+            Add to wishlist
+          </button>
         </div>
       </StyledProductCard>
     </div>

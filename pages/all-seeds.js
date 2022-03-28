@@ -5,6 +5,7 @@ import PriceFilters from "../components/PriceFilters";
 import ProductDisplay from "../components/ProductDisplay";
 import products from "../database/products";
 import { useEffect, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function AllSeeds() {
   const [category, setCategory] = useState("All");
@@ -29,9 +30,18 @@ export default function AllSeeds() {
   // price states
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(10);
+  // wishlist
+  const [wishList, setWishList] = useState([]);
 
   useEffect(() => {
-    console.log(products[0]);
+    setWishList(() => {
+      const saved = JSON.parse(localStorage.getItem("wishlist"));
+      return saved || [];
+    });
+  }, []);
+
+  useEffect(() => {
+    console.log("wishlist", wishList);
   });
 
   return (
@@ -63,6 +73,8 @@ export default function AllSeeds() {
         setMax={setMax}
       ></PriceFilters>
       <ProductDisplay
+        wishList={wishList}
+        setWishList={setWishList}
         min={min}
         max={max}
         category={category}
