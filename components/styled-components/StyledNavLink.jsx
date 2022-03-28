@@ -16,6 +16,7 @@ const StyledNavLink = styled.ul`
   li:hover {
     color: var(--dark-secondary-color);
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
