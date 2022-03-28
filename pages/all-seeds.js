@@ -3,9 +3,7 @@ import SearchBar from "../components/SearchBar";
 import ConditionFilters from "../components/ConditionFilters";
 import PriceFilters from "../components/PriceFilters";
 import ProductDisplay from "../components/ProductDisplay";
-import products from "../database/products";
 import { useEffect, useState } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function AllSeeds() {
   const [category, setCategory] = useState("All");
