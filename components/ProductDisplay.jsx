@@ -3,9 +3,6 @@ import products from "../database/products";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
 
-console.log(products[0], "p");
-console.log(products[0].providers[0].price, "p2");
-
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
 });
