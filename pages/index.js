@@ -5,7 +5,7 @@ import StyledButton from "../components/styled-components/StyledButton";
 import StyledLink from "../components/styled-components/StyledLink";
 import Link from "next/link";
 
-export default function Home() {
+export default function Home({ props }) {
   return (
     <div className="landing-page">
       <IntroLusan></IntroLusan>
