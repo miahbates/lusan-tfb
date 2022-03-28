@@ -14,8 +14,7 @@ import {
   faLinkedin,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-// import styled from "styled-components";
-// import StyledFooter from "styled-components";
+import StyledFooter from "./styled-components/StyledFooter";
 
 export default function Layout({ children, setOpen, open }) {
   return (
@@ -28,7 +27,7 @@ export default function Layout({ children, setOpen, open }) {
         <Navbar></Navbar>
         <div className="search-wishlist-icons">
           <Link href="/all-seeds">
-            <a>
+            <a aria-label="search">
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}
                 className="icon-search"
@@ -36,41 +35,50 @@ export default function Layout({ children, setOpen, open }) {
             </a>
           </Link>
           <Link href="/wishlist">
-            <a>
+            <a aria-label="wishlist">
               <FontAwesomeIcon icon={faHeart} className="icon-wishlist" />
             </a>
           </Link>
         </div>
       </div>
       <main>{children}</main>
-      {/* <StyledFooter> */}
-      <footer className="footer">
+      <StyledFooter className="footer">
         <div className="footer-about">
           <Link href="/about-us">
             <a className="footer-links">About Us</a>
           </Link>
-          <a
-            className="footer-links"
-            href="https://www.instagram.com/growlusan/"
-          >
+          <a aria-label="instagram" href="https://www.instagram.com/growlusan/">
             <FontAwesomeIcon
               icon={faInstagram}
-              className="icon"
+              className="icon footer-links"
             ></FontAwesomeIcon>
           </a>
-          {/* <FontAwesomeIcon icon={faLinkedin} className="icon"></FontAwesomeIcon>
-          <FontAwesomeIcon icon={faFacebook} className="icon"></FontAwesomeIcon> */}
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            className="icon footer-links"
+          ></FontAwesomeIcon>
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className="icon footer-links"
+          ></FontAwesomeIcon>
         </div>
         <div className="footer-contact">
           <Link href="/contact-us">
             <a className="footer-links">Contact</a>
           </Link>
           <a className="footer-links" href="mailto:rachel@growlusan.com">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="icon"
+            ></FontAwesomeIcon>
             rachel@growlusan.com
           </a>
-          {/* <p>01903 765431</p> */}
+          <p>
+            <FontAwesomeIcon icon={faPhone} className="icon"></FontAwesomeIcon>
+            01903 765431
+          </p>
         </div>
-      </footer>
+      </StyledFooter>
     </div>
   );
 }

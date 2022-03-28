@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,700&family=Poppins:wght@300;700&display=swap"
