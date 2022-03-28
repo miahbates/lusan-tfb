@@ -8,13 +8,7 @@ export const SearchContext = React.createContext({
 
 // searchbar provider
 export function SearchbarProvider({ children }) {
-  const [searchTerm, setSearchTerm] = React.useState("tomatoes");
-  const value = React.useMemo(
-    () => ({ searchTerm, setSearchTerm }),
-    [searchTerm]
-  );
-  // const searchState = { searchTerm: "tomatoes" };
-  // console.log(value);
+  const [searchTerm, setSearchTerm] = React.useState(null);
   return (
     <SearchContext.Provider value={[searchTerm, setSearchTerm]}>
       {children}
