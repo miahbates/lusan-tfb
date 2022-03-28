@@ -7,9 +7,9 @@ import {
   faBars,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
 import { SearchContext, SearchbarProvider } from "./context/SearchbarContext";
 import { useEffect, useState, useContext } from "react";
+
 
 export default function Layout({ children }) {
   const state = useContext(SearchContext);

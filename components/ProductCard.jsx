@@ -1,6 +1,7 @@
 import StyledLink from "./styled-components/StyledLink";
 import StyledProductCard from "./styled-components/StyledProductCard";
 import Link from "next/link";
+import WishlistToggle from "./WishlistToggle";
 
 // pass in an array of tags to render
 export default function ProductCard({
@@ -12,16 +13,29 @@ export default function ProductCard({
   climateTags,
   waterTags,
   soilTags,
+  product,
+  wishList,
+  setWishList,
 }) {
   return (
     <div>
       <StyledProductCard>
-        <div className="product-img-container">
-          {/*eslint-disable-next-line @next/next/no-img-element*/}
-          <img alt={subCategory} src={img} />
-        </div>
+        <img alt={subCategory} src={img} />
         <div className="info-container">
-          <h2>{variety}</h2>
+
+          <div className="title-wishlist">
+            <h2>
+              {variety} {subCategory}
+            </h2>
+            <WishlistToggle
+            product={product}
+            wishList={wishList}
+            setWishList={setWishList}
+            variety={variety}
+          ></WishlistToggle>
+          </div>
+          <p>From £{price}</p>
+
           <div className="tag-container">
             {typeTags &&
               typeTags.map((tag) => (
@@ -48,8 +62,7 @@ export default function ProductCard({
                 </span>
               ))}
           </div>
-          <p>{subCategory}</p>
-          <p>Price: £{price}</p>
+
           <Link href={`/products/${variety}`} key={variety} passHref>
             <StyledLink>More info</StyledLink>
           </Link>
