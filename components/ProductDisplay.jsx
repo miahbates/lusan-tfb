@@ -31,9 +31,8 @@ export default function ProductDisplay({
 }) {
   // useEffect(() => console.log(openPollinated));
   return (
-    <div className="box">
-      <h2>Product Name</h2>
-      <p>Display all products here</p>
+    <div>
+      <h2>Results</h2>
       <ul>
         {products &&
           products

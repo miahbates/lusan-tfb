@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledToggleButton = styled.button`
   padding: 0;
   border: none;
   background: none;
 `;
 
-export default StyledButton;
+export default StyledToggleButton;
