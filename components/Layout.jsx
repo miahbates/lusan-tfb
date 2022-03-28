@@ -7,7 +7,6 @@ import {
   faBars,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
 
 export default function Layout({ children, setOpen, open }) {
   return (

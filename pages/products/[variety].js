@@ -8,10 +8,9 @@ import StyledLink from "../../components/styled-components/StyledLink";
 
 const ProductPages = () => {
   const router = useRouter();
-  // const { variety } = router.query;
 
   const [variety, setVariety] = useState(null);
-  const [object, setObject] = useState(null);
+  const [productDetailsObject, setproductDetailsObject] = useState(null);
 
   useEffect(() => {
     if (router.isReady) {
@@ -25,37 +24,41 @@ const ProductPages = () => {
     variety && variety.replace(/^\w/, (c) => c.toUpperCase());
 
   useEffect(() => {
-    setObject(findContent(capitalisedVariety));
+    setproductDetailsObject(findContent(capitalisedVariety));
   }, [variety, capitalisedVariety]);
 
-  useEffect(() => {
-    console.log("roma", object);
-  }, [object]);
+  // useEffect(() => {
+  //   console.log("roma", object);
+  // }, [object]);
 
   return (
     <StyledProductPage>
       <div className="flex-row">
-        <img src={object && object.imgs[0]}></img>
-        <img src={object && object.imgs[1]}></img>
-        <img src={object && object.imgs[2]}></img>
+        <img src={productDetailsObject && productDetailsObject.imgs[0]}></img>
+        <img src={productDetailsObject && productDetailsObject.imgs[1]}></img>
+        <img src={productDetailsObject && productDetailsObject.imgs[2]}></img>
       </div>
       <div>
         <h2>
-          {capitalisedVariety} {object && object.subCategory}
+          {capitalisedVariety}{" "}
+          {productDetailsObject && productDetailsObject.subCategory}
         </h2>
 
-        <p>From €{object && object.providers[0].price}</p>
+        <p>
+          From €
+          {productDetailsObject && productDetailsObject.providers[0].price}
+        </p>
 
         <div className="tag-container">
-          {object &&
-            generateTags(object.type).map((tag) => {
+          {productDetailsObject &&
+            generateTags(productDetailsObject.type).map((tag) => {
               return (
                 <span className="type-tag" key={tag}>
                   {tag}
                 </span>
               );
             })}
-          <p>{object && object.description}</p>
+          <p>{productDetailsObject && productDetailsObject.description}</p>
         </div>
 
         <div>
@@ -78,7 +81,6 @@ function findContent(capitalisedVariety) {
     return productObject.variety === capitalisedVariety;
   });
   return foundObject;
-  // find index of this variety
 }
 
 export default ProductPages;
