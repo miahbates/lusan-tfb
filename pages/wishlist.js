@@ -17,8 +17,6 @@ export default function Wishlist() {
     });
   }, [setWishList]);
 
-  useEffect(() => console.log("wishlist in wishlist page", wishList));
-
   return (
     <div className="wishlist">
       <h1>Your Wishlist</h1>
