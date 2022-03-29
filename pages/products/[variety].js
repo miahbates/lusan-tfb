@@ -6,12 +6,20 @@ import { generateTags } from "../../database/database-functions";
 import StyledProductPage from "../../components/styled-components/StyledProductPage";
 import Link from "next/link";
 import StyledLink from "../../components/styled-components/StyledLink";
+import {
+  useWishListContext,
+  WishListContext,
+} from "../../components/context/WishListContext";
+import WishlistToggle from "../../components/WishlistToggle";
 
-const ProductPages = () => {
+export default function ProductPages() {
   const router = useRouter();
 
   const [variety, setVariety] = useState(null);
-  const [productDetailsObject, setProductDetailsObject] = useState(null);
+  const [product, setProduct] = useState(null);
+  const [wishList, setWishList] = useWishListContext(WishListContext);
+  const capitalisedVariety =
+    variety && variety.replace(/^\w/, (c) => c.toUpperCase());
 
   useEffect(() => {
     if (router.isReady) {
@@ -19,56 +27,72 @@ const ProductPages = () => {
     }
   }, [router]);
 
-  const capitalisedVariety =
-    variety && variety.replace(/^\w/, (c) => c.toUpperCase());
+  useEffect(() => {
+    setProduct(findContent(capitalisedVariety));
+  }, [variety, capitalisedVariety]);
 
   useEffect(() => {
-    setProductDetailsObject(findContent(capitalisedVariety));
-  }, [variety, capitalisedVariety]);
+    setWishList(() => {
+      const saved = JSON.parse(localStorage.getItem("wishlist"));
+      return saved || [];
+    });
+  }, [setWishList]);
+
+  useEffect(
+    () => console.log("wishlist in product page", wishList),
+    [wishList]
+  );
 
   return (
     <StyledProductPage>
       <div className="flex-row">
-        <img src={productDetailsObject && productDetailsObject.imgs[0]}></img>
-        <img src={productDetailsObject && productDetailsObject.imgs[1]}></img>
-        <img src={productDetailsObject && productDetailsObject.imgs[2]}></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[0]}
+        ></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[1]}
+        ></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[2]}
+        ></img>
       </div>
       <div>
-        <h2>
-          {capitalisedVariety}{" "}
-          {productDetailsObject && productDetailsObject.subCategory}
-        </h2>
+        <div className="title-wishlist">
+          <h2>
+            {capitalisedVariety} {product && product.subCategory}
+          </h2>
+          <WishlistToggle
+            product={product && product}
+            wishList={wishList}
+            setWishList={setWishList}
+            variety={product && product.variety}
+          />
+        </div>
 
-        <p>
-          From €
-          {productDetailsObject && productDetailsObject.providers[0].price}
-        </p>
+        <p>From €{product && product.providers[0].price}</p>
 
         <div className="tag-container">
-          {productDetailsObject &&
-            generateTags(productDetailsObject.type).map((tag) => {
+          {product &&
+            generateTags(product.type).map((tag) => {
               return (
                 <span className="type-tag" key={tag}>
                   {tag}
                 </span>
               );
             })}
-          <p>{productDetailsObject && productDetailsObject.description}</p>
         </div>
+        <p>{product && product.description}</p>
 
-        <div>
-          <Link href="/all-seeds" passHref>
-            <StyledLink>Back to search</StyledLink>
-          </Link>
-
-          <Link href="/wishlist" passHref>
-            <StyledLink>Add to wishlist</StyledLink>
-          </Link>
-        </div>
+        <Link href="/all-seeds" passHref>
+          <StyledLink>Back to search</StyledLink>
+        </Link>
       </div>
     </StyledProductPage>
   );
-};
+}
 
 function findContent(capitalisedVariety) {
   // find variety
@@ -77,5 +101,3 @@ function findContent(capitalisedVariety) {
   });
   return foundObject;
 }
-
-export default ProductPages;
