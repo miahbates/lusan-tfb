@@ -270,10 +270,6 @@ ul {
   color: var(--light-color);
 }
 
-/* [class*="box-"] {
-  justify-content: center;
-} */
-
 @media screen and (min-width: 375px) {
   .container {
     display: flex;
@@ -295,7 +291,7 @@ ul {
 }
 
 .product-grid {
-  margin: 2.5rem;
+  margin: 2rem;
 }
 
 .product-card {
@@ -304,7 +300,7 @@ ul {
 
 /* ------------------ GRID FOR PRODUCT DISPLAY PAGE/MIDDLE GRID FOR HOMEPAGE ------------------- */
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 500px) {
   .container {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(2, 1fr);
@@ -342,7 +338,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
   .container {
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
@@ -351,55 +347,46 @@ ul {
   .box-one {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background-color: blue;
   }
 
   .box-two {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
-    background-color: red;
   }
 
   .box-three {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
-    background-color: purple;
   }
 
   .box-four {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background-color: lightblue;
   }
 
   .box-five {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    background-color: orange;
   }
 
   .box-six {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    background-color: navy;
   }
 
   .box-seven {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
-    background-color: pink;
   }
 
   .box-eight {
     grid-column: 1 / 3;
     grid-row: 4 / 5;
-    background-color: yellow;
   }
 
   .box-nine {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
-    background-color: green;
   }
 
   [class*="box-"] {
@@ -409,6 +396,27 @@ ul {
   .product-grid {
     display: grid;
     grid-template-columns: repeat(3, calc(33% - 0.5rem));
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+/* ------------ PRODUCT DISPLAY GRID LARGER SCREENS MEDIA QUERY --------------- */
+
+@media screen and (min-width: 1024px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, calc(25% - 0.5rem));
+    gap: 2rem;
+    justify-content: center;
+    margin: 3rem;
+  }
+}
+
+@media screen and (min-width: 1490px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, calc(20% - 0.5rem));
     gap: 2rem;
     justify-content: center;
     margin: 3rem;

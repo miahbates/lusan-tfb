@@ -8,6 +8,7 @@ const StyledProductCard = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   height: 100%;
   width: 100%;
+  max-width: 300px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -60,12 +61,6 @@ const StyledProductCard = styled.div`
     margin: 1rem;
     font-size: 1.1rem;
     font-family: var(--sora-font);
-  }
-
-  @media screen and (max-width: 600px) {
-    .product-grid {
-      grid-template-columns: repeat(1, 100%);
-    }
   }
 `;
 
