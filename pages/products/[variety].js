@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import products from "../../database/products";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
