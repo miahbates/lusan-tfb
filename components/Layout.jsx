@@ -11,9 +11,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
+import { SearchContext, SearchbarProvider } from "./context/SearchbarContext";
+import { useEffect, useState, useContext } from "react";
 
-export default function Layout({ children, setOpen, open }) {
+
+export default function Layout({ children }) {
+  const state = useContext(SearchContext);
+  // const searchValue = state.searchState.searchTerm;
+  //console.log("11 state", state.setSearchTerm);
+  // console.log(12, state.searchState.searchTerm);
   return (
+  <SearchbarProvider>
     <div className="layout">
       <Head>
         <title>Lusan</title>
@@ -80,5 +88,6 @@ export default function Layout({ children, setOpen, open }) {
         </div>
       </StyledFooter>
     </div>
+   </SearchbarProvider>
   );
 }
