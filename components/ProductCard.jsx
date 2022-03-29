@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import StyledLink from "./styled-components/StyledLink";
 import StyledProductCard from "./styled-components/StyledProductCard";
 import Link from "next/link";
