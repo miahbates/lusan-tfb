@@ -11,6 +11,8 @@ import {
   WishListContext,
 } from "../../components/context/WishListContext";
 import WishlistToggle from "../../components/WishlistToggle";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 export default function ProductPages() {
   const router = useRouter();
@@ -46,18 +48,20 @@ export default function ProductPages() {
   return (
     <StyledProductPage>
       <div className="flex-row">
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[0]}
-        ></img>
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[1]}
-        ></img>
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[2]}
-        ></img>
+        <Carousel className="slider">
+          <img
+            alt={product && product.subCategory}
+            src={product && product.imgs[0]}
+          ></img>
+          <img
+            alt={product && product.subCategory}
+            src={product && product.imgs[1]}
+          ></img>
+          <img
+            alt={product && product.subCategory}
+            src={product && product.imgs[2]}
+          ></img>
+        </Carousel>
       </div>
       <div>
         <div className="title-wishlist">
