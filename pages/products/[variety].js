@@ -10,7 +10,7 @@ const ProductPages = () => {
   const router = useRouter();
 
   const [variety, setVariety] = useState(null);
-  const [productDetailsObject, setproductDetailsObject] = useState(null);
+  const [productDetailsObject, setProductDetailsObject] = useState(null);
 
   useEffect(() => {
     if (router.isReady) {
@@ -24,12 +24,8 @@ const ProductPages = () => {
     variety && variety.replace(/^\w/, (c) => c.toUpperCase());
 
   useEffect(() => {
-    setproductDetailsObject(findContent(capitalisedVariety));
+    setProductDetailsObject(findContent(capitalisedVariety));
   }, [variety, capitalisedVariety]);
-
-  // useEffect(() => {
-  //   console.log("roma", object);
-  // }, [object]);
 
   return (
     <StyledProductPage>
