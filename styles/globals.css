@@ -276,9 +276,15 @@ ul {
     flex-direction: column;
     justify-content: center;
   }
+  .product-grid {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 469px) {
+@media screen and (max-width: 677px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -288,19 +294,29 @@ ul {
   [class*="box-"] {
     height: 75vw;
   }
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .product-grid {
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .product-card {
   margin: 1rem 0;
+  max-width: 400px;
 }
 
 /* ------------------ GRID FOR PRODUCT DISPLAY PAGE/MIDDLE GRID FOR HOMEPAGE ------------------- */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 678px) {
   .container {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(2, 1fr);

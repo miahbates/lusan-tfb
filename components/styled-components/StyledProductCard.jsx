@@ -9,9 +9,9 @@ const StyledProductCard = styled.div`
   height: 100%;
   width: 100%;
   max-width: 300px;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   .title-wishlist {
     display: flex;
