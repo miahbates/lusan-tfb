@@ -4,10 +4,18 @@ import ConditionFilters from "../components/ConditionFilters";
 import PriceFilters from "../components/PriceFilters";
 import ProductDisplay from "../components/ProductDisplay";
 import { useEffect, useState } from "react";
+import {
+  useSearchContext,
+  SearchContext,
+} from "../components/context/SearchbarContext";
+import {
+  useWishListContext,
+  WishListContext,
+} from "../components/context/WishListContext";
 
 export default function AllSeeds() {
+  const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
   const [category, setCategory] = useState("All");
-  const [searchTerm, setSearchTerm] = useState(null);
   // type states
   const [organic, setOrganic] = useState(false);
   const [openPollinated, setOpenPollinated] = useState(false);
@@ -29,14 +37,16 @@ export default function AllSeeds() {
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(10);
   // wishlist
-  const [wishList, setWishList] = useState([]);
+  const [wishList, setWishList] = useWishListContext(WishListContext);
+
 
   useEffect(() => {
     setWishList(() => {
       const saved = JSON.parse(localStorage.getItem("wishlist"));
       return saved || [];
-    });
-  }, []);
+      
+    }, [setWishList]
+                });
 
   useEffect(() => {
     console.log("wishlist", wishList);
@@ -48,7 +58,7 @@ export default function AllSeeds() {
         category={category}
         setCategory={setCategory}
       ></CategoryFilters>
-      <SearchBar setSearchTerm={setSearchTerm}></SearchBar>
+      <SearchBar></SearchBar>
       <ConditionFilters
         setOrganic={setOrganic}
         setOpenPollinated={setOpenPollinated}
@@ -71,12 +81,12 @@ export default function AllSeeds() {
         setMax={setMax}
       ></PriceFilters>
       <ProductDisplay
+        searchTerm={searchTerm}
         wishList={wishList}
         setWishList={setWishList}
         min={min}
         max={max}
         category={category}
-        searchTerm={searchTerm}
         organic={organic}
         openPollinated={openPollinated}
         hybrid={hybrid}

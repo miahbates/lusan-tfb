@@ -25,7 +25,7 @@ export default function Contact() {
       <FontAwesomeIcon icon={faFacebook} className="icon"></FontAwesomeIcon>
       <a href="mailto:rachel@growlusan.com">
         <FontAwesomeIcon icon={faEnvelope} className="icon"></FontAwesomeIcon>
-        <p>lusan@lusan.com</p>
+        <p>rachel@growlusan.com</p>
       </a>
       <FontAwesomeIcon icon={faPhone} className="icon"></FontAwesomeIcon>
       <p>01903 765431</p>

@@ -3,8 +3,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import StyledSearchBar from "./styled-components/StyledSearchBar";
+import { SearchContext, useSearchContext } from "./context/SearchbarContext";
 
-export default function SearchBar({ setSearchTerm }) {
+//previous searchbar
+export default function SearchBar() {
+  const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
+
   return (
     <StyledSearchBar>
       <div className="search-border">

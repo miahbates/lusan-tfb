@@ -13,12 +13,6 @@ const StyledProductCard = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  .title-wishlist {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .info-container {
     padding: 1rem 1rem 1.5rem 1rem;
     flex: 1;

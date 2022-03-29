@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import products from "../../database/products";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -5,12 +6,20 @@ import { generateTags } from "../../database/database-functions";
 import StyledProductPage from "../../components/styled-components/StyledProductPage";
 import Link from "next/link";
 import StyledLink from "../../components/styled-components/StyledLink";
+import {
+  useWishListContext,
+  WishListContext,
+} from "../../components/context/WishListContext";
+import WishlistToggle from "../../components/WishlistToggle";
 
-const ProductPages = () => {
+export default function ProductPages() {
   const router = useRouter();
 
   const [variety, setVariety] = useState(null);
-  const [productDetailsObject, setproductDetailsObject] = useState(null);
+  const [product, setProduct] = useState(null);
+  const [wishList, setWishList] = useWishListContext(WishListContext);
+  const capitalisedVariety =
+    variety && variety.replace(/^\w/, (c) => c.toUpperCase());
 
   useEffect(() => {
     if (router.isReady) {
@@ -18,62 +27,70 @@ const ProductPages = () => {
     }
   }, [router]);
 
-  console.log(variety, "variety");
-
-  const capitalisedVariety =
-    variety && variety.replace(/^\w/, (c) => c.toUpperCase());
-
   useEffect(() => {
-    setproductDetailsObject(findContent(capitalisedVariety));
+    setProduct(findContent(capitalisedVariety));
   }, [variety, capitalisedVariety]);
 
-  // useEffect(() => {
-  //   console.log("roma", object);
-  // }, [object]);
+  useEffect(() => {
+    setWishList(() => {
+      const saved = JSON.parse(localStorage.getItem("wishlist"));
+      return saved || [];
+    });
+  }, [setWishList]);
+
+  useEffect(
+    () => console.log("wishlist in product page", wishList),
+    [wishList]
+  );
 
   return (
     <StyledProductPage>
       <div className="flex-row">
-        <img src={productDetailsObject && productDetailsObject.imgs[0]}></img>
-        <img src={productDetailsObject && productDetailsObject.imgs[1]}></img>
-        <img src={productDetailsObject && productDetailsObject.imgs[2]}></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[0]}
+        ></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[1]}
+        ></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[2]}
+        ></img>
       </div>
       <div>
-        <h2>
-          {capitalisedVariety}{" "}
-          {productDetailsObject && productDetailsObject.subCategory}
-        </h2>
-
-        <p>
-          From £
-          {productDetailsObject && productDetailsObject.providers[0].price}
-        </p>
-
+        <div className="title-wishlist">
+          <h2>
+            {capitalisedVariety} {product && product.subCategory}
+          </h2>
+          <WishlistToggle
+            product={product && product}
+            wishList={wishList}
+            setWishList={setWishList}
+            variety={product && product.variety}
+          />
+        </div>
+        <p>From €{product && product.providers[0].price}</p>
         <div className="tag-container">
-          {productDetailsObject &&
-            generateTags(productDetailsObject.type).map((tag) => {
+          {product &&
+            generateTags(product.type).map((tag) => {
               return (
                 <span className="type-tag" key={tag}>
                   {tag}
                 </span>
               );
             })}
-          <p>{productDetailsObject && productDetailsObject.description}</p>
         </div>
+        <p>{product && product.description}</p>
 
-        <div>
-          <Link href="/all-seeds" passHref>
-            <StyledLink>Back to search</StyledLink>
-          </Link>
-
-          <Link href="/wishlist" passHref>
-            <StyledLink>Add to wishlist</StyledLink>
-          </Link>
-        </div>
+        <Link href="/all-seeds" passHref>
+          <StyledLink>Back to search</StyledLink>
+        </Link>
       </div>
     </StyledProductPage>
   );
-};
+}
 
 function findContent(capitalisedVariety) {
   // find variety
@@ -82,5 +99,3 @@ function findContent(capitalisedVariety) {
   });
   return foundObject;
 }
-
-export default ProductPages;
