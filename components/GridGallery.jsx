@@ -3,11 +3,14 @@ import React from "react";
 import Image from "next/image";
 import StyledGridTile from "./styled-components/StyledGridTile";
 import StyledGridCover from "./styled-components/StyledGridCover";
+import { SearchContext, useSearchContext } from "./context/SearchbarContext";
 
 export default function GridGallery() {
+  const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
+  console.log("grid tiles", searchTerm);
   return (
     <div className="container">
-      <Link href="/all-seeds">
+      <Link href="/all-seeds" onClick={() => setSearchTerm("sweetpeas")}>
         <StyledGridCover className="box-one background-sweetpea">
           <StyledGridTile className="box-one inside-grid">
             <a>Sweet Peas</a>
