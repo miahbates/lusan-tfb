@@ -18,8 +18,6 @@ const ProductPages = () => {
     }
   }, [router]);
 
-  console.log(variety, "variety");
-
   const capitalisedVariety =
     variety && variety.replace(/^\w/, (c) => c.toUpperCase());
 
