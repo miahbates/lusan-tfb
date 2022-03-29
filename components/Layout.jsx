@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { SearchContext, SearchbarProvider } from "./context/SearchbarContext";
 import { useEffect, useState, useContext } from "react";
-
+import { WishListProvider } from "./context/WishListContext.jsx";
 
 export default function Layout({ children }) {
   const state = useContext(SearchContext);
@@ -18,34 +18,36 @@ export default function Layout({ children }) {
   // console.log(12, state.searchState.searchTerm);
   return (
     <SearchbarProvider>
-      <div className="layout">
-        <Head>
-          <title>Lusan</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-        </Head>
-        <div className="flex-row navbar">
-          <Navbar></Navbar>
-          <div className="search-wishlist-icons">
-            <Link href="/all-seeds">
-              <a>
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                  className="icon-search"
-                />
-              </a>
-            </Link>
-            <Link href="/wishlist">
-              <a>
-                <FontAwesomeIcon icon={faHeart} className="icon-wishlist" />
-              </a>
-            </Link>
+      <WishListProvider>
+        <div className="layout">
+          <Head>
+            <title>Lusan</title>
+            <meta
+              name="viewport"
+              content="initial-scale=1.0, width=device-width"
+            />
+          </Head>
+          <div className="flex-row navbar">
+            <Navbar></Navbar>
+            <div className="search-wishlist-icons">
+              <Link href="/all-seeds">
+                <a>
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    className="icon-search"
+                  />
+                </a>
+              </Link>
+              <Link href="/wishlist">
+                <a>
+                  <FontAwesomeIcon icon={faHeart} className="icon-wishlist" />
+                </a>
+              </Link>
+            </div>
           </div>
+          <main>{children}</main>
         </div>
-        <main>{children}</main>
-      </div>
+      </WishListProvider>
     </SearchbarProvider>
   );
 }

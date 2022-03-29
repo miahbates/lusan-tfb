@@ -8,12 +8,6 @@ const StyledProductCard = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin: 2rem;
 
-  .title-wishlist {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .info-container {
     padding: 1rem 1rem 1.5rem 1rem;
   }
