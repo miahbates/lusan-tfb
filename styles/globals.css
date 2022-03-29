@@ -76,18 +76,16 @@ ul {
 .text-box {
   font-size: 1rem;
   color: #016b58;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
   text-align: center;
+  margin: 2rem;
 }
 
 .text {
-  width: 200px;
+  width: 100%;
   white-space: normal;
   font-weight: bold;
-  margin: 2rem;
 }
 
 .flex-row {
