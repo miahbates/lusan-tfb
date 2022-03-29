@@ -39,14 +39,12 @@ export default function AllSeeds() {
   // wishlist
   const [wishList, setWishList] = useWishListContext(WishListContext);
 
-
-  useEffect(() => {
+ useEffect(() => {
     setWishList(() => {
       const saved = JSON.parse(localStorage.getItem("wishlist"));
       return saved || [];
-      
-    }, [setWishList]
-                });
+    });
+  }, [setWishList]);
 
   useEffect(() => {
     console.log("wishlist", wishList);
