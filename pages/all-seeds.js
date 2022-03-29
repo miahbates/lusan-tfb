@@ -46,10 +46,6 @@ export default function AllSeeds() {
     });
   }, [setWishList]);
 
-  useEffect(() => {
-    console.log("wishlist", wishList);
-  });
-
   return (
     <div>
       <CategoryFilters
