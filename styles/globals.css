@@ -115,7 +115,7 @@ ul {
 }
 
 .search-wishlist-icons {
-  padding-top: 1rem;
+  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -125,7 +125,14 @@ ul {
   width: auto;
   color: var(--dark-color);
   margin: 0;
-  padding: 0.4rem;
+  padding: 0.5rem;
+}
+
+.icon-search:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 400ms;
+  color: var(--mid-color);
 }
 
 .icon-wishlist {
@@ -133,12 +140,14 @@ ul {
   width: auto;
   color: var(--dark-color);
   margin: 0;
+  padding: 0.5rem;
 }
 
 .icon-wishlist:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all 400ms;
+  color: var(--mid-color);
 }
 
 .icon-seedling {
