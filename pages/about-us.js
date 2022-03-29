@@ -25,11 +25,11 @@ export default function AboutPage() {
           Lusan translates to plants from Scottish Gaelic to English
         </p>
         <em>
-          Fhad 's a tha mi air falbh, na díochuimhnich biadh a thoirt don chat
-          agam agus uisge a thoirt dha na lusan
+          Fhad &apos;s a tha mi air falbh, na díochuimhnich biadh a thoirt don
+          chat agam agus uisge a thoirt dha na lusan
         </em>
         <p>
-          While I am gone, please don't forget to feed my cat and water the
+          While I am gone, please don&apos;t forget to feed my cat and water the
           plants
         </p>
       </div>
