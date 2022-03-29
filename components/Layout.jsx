@@ -13,7 +13,7 @@ import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
 import { SearchContext, SearchbarProvider } from "./context/SearchbarContext";
 import { useEffect, useState, useContext } from "react";
-
+import { WishListProvider } from "./context/WishListContext.jsx";
 
 export default function Layout({ children }) {
   const state = useContext(SearchContext);
@@ -22,6 +22,7 @@ export default function Layout({ children }) {
   // console.log(12, state.searchState.searchTerm);
   return (
   <SearchbarProvider>
+    <WishListProvider>
     <div className="layout">
       <Head>
         <title>Lusan</title>
@@ -88,6 +89,7 @@ export default function Layout({ children }) {
         </div>
       </StyledFooter>
     </div>
+    </WishListProvider>
    </SearchbarProvider>
   );
 }

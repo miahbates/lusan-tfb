@@ -28,10 +28,6 @@ const StyledProductPage = styled.div`
     flex-direction: column;
     justify-content: center;
   }
-
-  a {
-    margin: 0.5rem;
-  }
 `;
 
 export default StyledProductPage;
