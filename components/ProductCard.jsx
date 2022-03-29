@@ -2,6 +2,8 @@ import StyledLink from "./styled-components/StyledLink";
 import StyledProductCard from "./styled-components/StyledProductCard";
 import Link from "next/link";
 import WishlistToggle from "./WishlistToggle";
+import Bin from "./Bin";
+import { useRouter } from "next/router";
 
 // pass in an array of tags to render
 export default function ProductCard({
@@ -17,22 +19,29 @@ export default function ProductCard({
   wishList,
   setWishList,
 }) {
+  // get current url path (i.e /all-seeds)
+  const router = useRouter();
+  const path = router.pathname;
+
   return (
     <div>
       <StyledProductCard>
         <img alt={subCategory} src={img} />
         <div className="info-container">
-
           <div className="title-wishlist">
             <h2>
               {variety} {subCategory}
             </h2>
-            <WishlistToggle
-            product={product}
-            wishList={wishList}
-            setWishList={setWishList}
-            variety={variety}
-          ></WishlistToggle>
+            {path === "/all-seeds" ? (
+              <WishlistToggle
+                product={product}
+                wishList={wishList}
+                setWishList={setWishList}
+                variety={variety}
+              />
+            ) : (
+              <Bin variety={variety} setWishList={setWishList} />
+            )}
           </div>
           <p>From £{price}</p>
 
