@@ -26,7 +26,7 @@ export default function ProductCard({
 
   return (
     <StyledProductCard>
-      <Link href={`/products/${variety}`} key={variety} passHref>
+      <Link href={`/products/${variety}`} passHref>
         <a className="product-img-link">
           <img alt={subCategory} src={img} />
         </a>
