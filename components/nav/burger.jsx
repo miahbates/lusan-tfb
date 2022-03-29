@@ -8,13 +8,17 @@ const StyledBurger = styled.div`
   align-items: center;
   box-shadow: 1px -1px 1px var(--light-color);
 
+  :hover {
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
     display: flex;
     width: 4rem;
     height: 2rem;
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 0.5rem;
+    left: 0.5rem;
     justify-content: space-around;
     flex-flow: column nowrap;
     z-index: 999;
