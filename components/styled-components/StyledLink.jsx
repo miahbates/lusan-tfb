@@ -9,6 +9,9 @@ const StyledLink = styled.a`
   text-align: center;
   transition: all 400ms;
   border: 2px solid var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  flex-direction: space-between;
 
   :hover {
     background: var(--dark-color);

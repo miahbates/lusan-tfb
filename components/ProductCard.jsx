@@ -20,64 +20,68 @@ export default function ProductCard({
   wishList,
   setWishList,
 }) {
-  // get current url path (i.e /all-seeds)
+    // get current url path (i.e /all-seeds)
   const router = useRouter();
   const path = router.pathname;
 
   return (
-    <div>
-      <StyledProductCard>
-        <img alt={subCategory} src={img} />
-        <div className="info-container">
-          <div className="title-wishlist">
-            <h2>
-              {variety} {subCategory}
-            </h2>
+    <Link href={`/products/${variety}`} key={variety} passHref>
+      <a>
+        <StyledProductCard>
+          <img alt={subCategory} src={img} />
+          <div className="info-container">
+            <div className="title-wishlist">
+              <h2>
+                {variety} {subCategory}
+              </h2>
             {path === "/all-seeds" ? (
+
               <WishlistToggle
                 product={product}
                 wishList={wishList}
                 setWishList={setWishList}
                 variety={variety}
-              />
+
+              ></WishlistToggle>
+            
             ) : (
               <Bin variety={variety} setWishList={setWishList} />
             )}
           </div>
           <p>From £{price}</p>
 
-          <div className="tag-container">
-            {typeTags &&
-              typeTags.map((tag) => (
-                <span key={tag} className="type-tag">
-                  {tag.replace(/^\w/, (c) => c.toUpperCase())}
-                </span>
-              ))}
-            {climateTags &&
-              climateTags.map((tag) => (
-                <span key={tag} className="climate-tag">
-                  {tag.replace(/^\w/, (c) => c.toUpperCase())}
-                </span>
-              ))}
-            {waterTags &&
-              waterTags.map((tag) => (
-                <span key={tag} className="water-tag">
-                  {tag.replace(/^\w/, (c) => c.toUpperCase())}
-                </span>
-              ))}
-            {soilTags &&
-              soilTags.map((tag) => (
-                <span key={tag} className="soil-tag">
-                  {tag.replace(/^\w/, (c) => c.toUpperCase())}
-                </span>
-              ))}
+            <div className="tag-container">
+              {typeTags &&
+                typeTags.map((tag) => (
+                  <span key={tag} className="type-tag">
+                    {tag.replace(/^\w/, (c) => c.toUpperCase())}
+                  </span>
+                ))}
+              {climateTags &&
+                climateTags.map((tag) => (
+                  <span key={tag} className="climate-tag">
+                    {tag.replace(/^\w/, (c) => c.toUpperCase())}
+                  </span>
+                ))}
+              {waterTags &&
+                waterTags.map((tag) => (
+                  <span key={tag} className="water-tag">
+                    {tag.replace(/^\w/, (c) => c.toUpperCase())}
+                  </span>
+                ))}
+              {soilTags &&
+                soilTags.map((tag) => (
+                  <span key={tag} className="soil-tag">
+                    {tag.replace(/^\w/, (c) => c.toUpperCase())}
+                  </span>
+                ))}
+            </div>
           </div>
-
           <Link href={`/products/${variety}`} key={variety} passHref>
             <StyledLink>More info</StyledLink>
           </Link>
-        </div>
-      </StyledProductCard>
-    </div>
+        </StyledProductCard>
+      </a>
+    </Link>
   );
 }

@@ -71,9 +71,7 @@ export default function ProductPages() {
             variety={product && product.variety}
           />
         </div>
-
         <p>From €{product && product.providers[0].price}</p>
-
         <div className="tag-container">
           {product &&
             generateTags(product.type).map((tag) => {
