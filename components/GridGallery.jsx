@@ -2,37 +2,82 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import StyledGridTile from "./styled-components/StyledGridTile";
+import StyledGridCover from "./styled-components/StyledGridCover";
 
 export default function GridGallery() {
   return (
     <div className="container">
-      <StyledGridTile className="box-one background-sweetpea">
-        <a>Sweet Peas</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-two background-beetroot">
-        <a>Beetroot</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-three background-tomatoes">
-        <a>Tomatoes</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-four background-cauliflower">
-        <a>Cauliflower</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-five background-rosemary">
-        <a>Rosemary</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-eight background-petunia">
-        <a>Petunia</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-seven background-carrot">
-        <a>Carrot</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-six background-broccoli">
-        <a>Broccoli</a>
-      </StyledGridTile>
-      <StyledGridTile className="box-nine background-basil">
-        <a>Basil</a>
-      </StyledGridTile>
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-one background-sweetpea">
+          <StyledGridTile className="box-one inside-grid">
+            <a>Sweet Peas</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-two background-beetroot">
+          <StyledGridTile className="box-two inside-grid">
+            <a>Beetroot</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-three background-tomatoes">
+          <StyledGridTile className="box-three inside-grid">
+            <a>Tomatoes</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-four background-cauliflower">
+          <StyledGridTile className="box-four inside-grid">
+            <a>Cauliflower</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-five background-rosemary">
+          <StyledGridTile className="box-five inside-grid">
+            <a>Rosemary</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-eight background-petunia">
+          <StyledGridTile className="box-eight inside-grid">
+            <a>Petunia</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-seven background-carrot">
+          <StyledGridTile className="box-seven inside-grid">
+            <a>Carrot</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-six background-broccoli">
+          <StyledGridTile className="box-six inside-grid">
+            <a>Broccoli</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
+
+      <Link href="/all-seeds">
+        <StyledGridCover className="box-nine background-basil">
+          <StyledGridTile className="box-nine inside-grid">
+            <a>Basil</a>
+          </StyledGridTile>
+        </StyledGridCover>
+      </Link>
     </div>
   );
 }
