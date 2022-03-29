@@ -22,11 +22,15 @@ export default function AboutPage() {
       </div>
       <div className="text-box">
         <p className="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad
-          minim veniam, quis nostrud htyehfki miahsb Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. incididunt ut.
+          Lusan translates to plants from Scottish Gaelic to English
+        </p>
+        <em>
+          Fhad 's a tha mi air falbh, na díochuimhnich biadh a thoirt don chat
+          agam agus uisge a thoirt dha na lusan
+        </em>
+        <p>
+          While I am gone, please don't forget to feed my cat and water the
+          plants
         </p>
       </div>
       <h2>Our Values</h2>

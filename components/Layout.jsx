@@ -9,11 +9,7 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faInstagram,
-  faLinkedin,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
 
 export default function Layout({ children, setOpen, open }) {
@@ -47,36 +43,40 @@ export default function Layout({ children, setOpen, open }) {
           <Link href="/about-us">
             <a className="footer-links">About Us</a>
           </Link>
-          <a aria-label="instagram" href="https://www.instagram.com/growlusan/">
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className="icon footer-links"
-            ></FontAwesomeIcon>
-          </a>
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className="icon footer-links"
-          ></FontAwesomeIcon>
-          <FontAwesomeIcon
-            icon={faFacebook}
-            className="icon footer-links"
-          ></FontAwesomeIcon>
-        </div>
-        <div className="footer-contact">
           <Link href="/contact-us">
             <a className="footer-links">Contact</a>
           </Link>
-          <a className="footer-links" href="mailto:rachel@growlusan.com">
+          <a
+            aria-label="instagram"
+            className="footer-links"
+            href="https://www.instagram.com/growlusan/"
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="icon"
+            ></FontAwesomeIcon>
+          </a>
+          <a
+            aria-label="linkedin"
+            className="footer-links"
+            href="https://www.linkedin.com/in/rep94"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="icon"
+            ></FontAwesomeIcon>
+          </a>
+        </div>
+        <div className="footer-contact">
+          <a href="mailto:rachel@growlusan.com">
             <FontAwesomeIcon
               icon={faEnvelope}
               className="icon"
             ></FontAwesomeIcon>
-            rachel@growlusan.com
+            <p>rachel@growlusan.com</p>
           </a>
-          <p>
-            <FontAwesomeIcon icon={faPhone} className="icon"></FontAwesomeIcon>
-            01903 765431
-          </p>
+          <FontAwesomeIcon icon={faPhone} className="icon"></FontAwesomeIcon>
+          <p>01903 765431</p>
         </div>
       </StyledFooter>
     </div>
