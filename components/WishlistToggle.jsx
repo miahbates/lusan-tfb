@@ -42,6 +42,7 @@ export default function WishlistToggle({
             JSON.stringify(filteredLocalStorage)
           );
           // update state
+          // how to refactor and make this filtered array available to the setWishList?
           setWishList(filteredLocalStorage);
         } else {
           saveToLocalStorage("wishlist", product);
