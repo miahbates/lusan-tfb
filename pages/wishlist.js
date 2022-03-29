@@ -1,7 +1,4 @@
-import Link from "next/link";
 import StyledLink from "../components/styled-components/StyledLink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 import {
   useWishListContext,
@@ -40,7 +37,10 @@ export default function Wishlist() {
     <div className="wishlist">
       <h1>Your Wishlist</h1>
       <ul>
-        {wishList &&
+        {wishList.length === 0 ? (
+          <p>Your wishlist is currently empty</p>
+        ) : (
+          wishList &&
           wishList.map((product) => (
             <li key={product.variety}>
               <ProductCard
@@ -58,9 +58,9 @@ export default function Wishlist() {
                 soilTags={generateTags(product.soil)}
               ></ProductCard>
             </li>
-          ))}
+          ))
+        )}
       </ul>
-      <FontAwesomeIcon icon={faTrashCan} className="icon"></FontAwesomeIcon>
 
       <StyledLink href={"/all-seeds"}>Back to Search Results</StyledLink>
     </div>
