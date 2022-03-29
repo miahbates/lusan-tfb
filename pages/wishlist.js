@@ -5,7 +5,6 @@ import {
   WishListContext,
 } from "../components/context/WishListContext";
 import { generateTags } from "../database/database-functions";
-// import dynamic from "next/dynamic";
 import ProductCard from "../components/ProductCard";
 
 export default function Wishlist() {
@@ -18,20 +17,7 @@ export default function Wishlist() {
     });
   }, [setWishList]);
 
-  // let storedWishlist;
-
-  // if (typeof window !== undefined) {
-  //   storedWishlist = JSON.parse(localStorage.getItem("wishlist"));
-  // }
-
   useEffect(() => console.log("wishlist in wishlist page", wishList));
-
-  // const DynamicProductCard = dynamic(
-  //   () => import("../components/ProductCard"),
-  //   {
-  //     ssr: false,
-  //   }
-  // );
 
   return (
     <div className="wishlist">
