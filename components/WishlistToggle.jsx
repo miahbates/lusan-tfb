@@ -5,6 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { useEffect } from "react";
+import { saveToLocalStorage } from "../helper-functions";
 library.add(fas, far);
 
 export default function WishlistToggle({
@@ -43,15 +44,7 @@ export default function WishlistToggle({
           // update state
           setWishList(filteredLocalStorage);
         } else {
-          // update localstorage
-          const localStorageWishList =
-            JSON.parse(localStorage.getItem("wishlist")) || [];
-          localStorageWishList.push(product);
-          localStorage.setItem(
-            "wishlist",
-            JSON.stringify(localStorageWishList)
-          );
-
+          saveToLocalStorage("wishlist", product);
           // update state
           setWishList((oldState) => [...oldState, product]);
         }
