@@ -32,14 +32,11 @@ export default function Layout({ children }) {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
-
           <div className="flex-row navbar">
             <Navbar></Navbar>
-
             <img className="logo-layout" src="/logo.png" alt="logo" />
-
             <div className="search-wishlist-icons">
-              <Link href="/all-seeds">
+              <Link href="/search/all">
                 <a aria-label="search">
                   <FontAwesomeIcon
                     icon={faMagnifyingGlass}

@@ -16,22 +16,22 @@ export default function LeftNav({ open }) {
         </li>
       </Link>
 
-      <Link href="/all-seeds" passHref>
+      <Link href="/search/all" passHref>
         <li>
           <a>All Seeds</a>
         </li>
       </Link>
-      <Link href="/all-seeds" passHref>
+      <Link href="/search/flowers" passHref>
         <li>
           <a>Flowers</a>
         </li>
       </Link>
-      <Link href="/all-seeds" passHref>
+      <Link href="/search/herbs" passHref>
         <li>
           <a>Herbs</a>
         </li>
       </Link>
-      <Link href="/all-seeds" passHref>
+      <Link href="/search/vegetables" passHref>
         <li>
           <a>Vegetables</a>
         </li>
