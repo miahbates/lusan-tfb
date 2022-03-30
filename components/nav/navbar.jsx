@@ -7,9 +7,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-{
-  /* <Link href="/">
-<a>Lusan</a>
-</Link> */
-}
