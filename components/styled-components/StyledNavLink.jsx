@@ -6,6 +6,7 @@ const StyledNavLink = styled.ul`
   list-style: none;
   border-radius: 2px;
   color: var(--dark-color);
+  z-index: 1;
 
   li {
     justify-content: flex-start;
