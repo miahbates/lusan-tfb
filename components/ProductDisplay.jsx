@@ -41,7 +41,8 @@ export default function ProductDisplay({
             .filter((product) =>
               searchTerm
                 ? product.variety.includes(searchTerm) ||
-                  product.subCategory.includes(searchTerm)
+                  product.subCategory.includes(searchTerm) ||
+                  product.category.includes(searchTerm)
                 : product
             )
             .filter((product) => (organic ? product.type.organic : product))

@@ -21,7 +21,7 @@ export default function SearchBar() {
             )
           }
         />
-        <Link href="/all-seeds">
+        <Link href="//search/all">
           <a>
             <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
           </a>
