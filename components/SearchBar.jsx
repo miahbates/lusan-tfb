@@ -28,6 +28,7 @@ export default function SearchBar() {
             </a>
           </Link>
         </button>
+       
       </div>
     </StyledSearchBar>
   );
