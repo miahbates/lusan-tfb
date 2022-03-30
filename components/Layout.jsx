@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./nav/navbar.jsx";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -31,8 +32,12 @@ export default function Layout({ children }) {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
+
           <div className="flex-row navbar">
             <Navbar></Navbar>
+
+            <img className="logo-layout" src="/logo.png" alt="logo" />
+
             <div className="search-wishlist-icons">
               <Link href="/all-seeds">
                 <a aria-label="search">
