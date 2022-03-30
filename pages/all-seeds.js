@@ -44,8 +44,6 @@ export default function AllSeeds() {
     setWishList(getFromLocalStorage("wishlist"));
   }, [setWishList]);
 
-  useEffect(() => console.log("wishlist in all-seeds", wishList));
-
   return (
     <div>
       <CategoryFilters

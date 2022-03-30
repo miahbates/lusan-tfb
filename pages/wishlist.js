@@ -15,8 +15,6 @@ export default function Wishlist() {
     setWishList(getFromLocalStorage("wishlist"));
   }, [setWishList]);
 
-  useEffect(() => console.log("wishlist page", wishList));
-
   return (
     <div className="wishlist">
       <h1>Your Wishlist</h1>

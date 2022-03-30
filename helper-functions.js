@@ -14,6 +14,7 @@ function removeFromLocalStorage(key, variety) {
   );
   // set local storage to the filtered array
   localStorage.setItem(key, JSON.stringify(filteredLocalStorage));
+  return filteredLocalStorage;
 }
 
 // get from local storage
