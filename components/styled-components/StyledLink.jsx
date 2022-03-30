@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const StyledLink = styled.a`
+  font-family: var(--sora-font);
+  font-size: 1.2rem;
   background: var(--light-color);
   border: 1px solid var(--dark-color);
   color: var(--dark-color);

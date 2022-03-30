@@ -5,8 +5,8 @@ const StyledGridTile = styled.div`
   align-items: center;
   flex-shrink: 1;
   justify-content: center;
-  font-family: "Lora";
-  font-size: 1.2rem;
+  font-family: var(--raj-font);
+  font-size: 1.6rem;
   font-weight: bold;
 
   a {
@@ -20,9 +20,11 @@ const StyledGridTile = styled.div`
   }
 
   a:hover {
-    box-shadow: inset 100px 0 0 0 var(--second-mid-color);
+    box-shadow: inset 200px 0 0 0 var(--second-mid-color);
     color: black;
     cursor: pointer;
+    padding: 1rem;
+    border-radius: 5px;
   }
 `;
 

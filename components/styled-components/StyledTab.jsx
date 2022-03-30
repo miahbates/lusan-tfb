@@ -12,6 +12,8 @@ const StyledTab = styled.div`
     text-align: center;
     transition: all 400ms;
     border: none;
+    font-family: var(--lora-font);
+    font-size: 1.1rem;
   }
 `;
 
