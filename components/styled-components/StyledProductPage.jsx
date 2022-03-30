@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
 const StyledProductPage = styled.div`
-  img:first-child {
-    display: none;
-  }
-
-  img:nth-child(3) {
-    display: none;
-  }
-
   div:nth-child(2) {
     margin: 1rem;
   }

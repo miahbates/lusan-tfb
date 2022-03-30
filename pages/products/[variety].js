@@ -45,24 +45,12 @@ export default function ProductPages() {
   );
 
   return (
-    // <ImageSlider>
     <StyledProductPage>
-      <ImageSlider image1={product && product.imgs[0]}> </ImageSlider>
-      <div className="flex-row">
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[0]}
-        ></img>
-
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[1]}
-        ></img>
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[2]}
-        ></img>
-      </div>
+      <ImageSlider
+        image1={product && product.imgs[0]}
+        image2={product && product.imgs[1]}
+        image3={product && product.imgs[2]}
+      />
 
       <div className="title-wishlist">
         <h2>
