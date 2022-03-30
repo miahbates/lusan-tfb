@@ -12,6 +12,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 20%;
 
   .footer-about {
     display: flex;

@@ -6,6 +6,7 @@ const StyledNavLink = styled.ul`
   list-style: none;
   border-radius: 2px;
   color: var(--dark-color);
+  align-items: center;
 
   li {
     justify-content: flex-start;
@@ -43,6 +44,7 @@ const StyledNavLink = styled.ul`
   li {
     padding: 0.5rem 1rem;
     margin: 0 2rem 0 0.5rem;
+    text-align: center;
   }
 `;
 

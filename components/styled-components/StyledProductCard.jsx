@@ -4,7 +4,7 @@ import styled from "styled-components";
 // padding: 1rem 1rem 1.5rem 1rem;
 
 const StyledProductCard = styled.div`
-  border: 4px solid var(--mid-color);
+  border: 2px solid var(--mid-color);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   height: 100%;
   width: 100%;
