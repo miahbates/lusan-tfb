@@ -21,7 +21,11 @@ export default function SearchBar() {
             )
           }
         />
-        <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+        <Link href="/all-seeds">
+          <a>
+            <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+          </a>
+        </Link>
       </div>
     </StyledSearchBar>
   );
