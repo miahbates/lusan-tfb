@@ -4,10 +4,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
+import { useEffect } from "react";
+import {
+  removeFromLocalStorage,
+  saveToLocalStorage,
+} from "../helper-functions";
 library.add(fas, far);
 
-export default function WishlistToggle({ product, setWishList, variety }) {
+export default function WishlistToggle({
+  product,
+  wishList,
+  setWishList,
+  variety,
+}) {
   const [heartToggle, setHeartToggle] = useState(false);
+
+  // check if product is already in wishList and set state accordingly
+  useEffect(() => {
+    const isInWishlist = Boolean(
+      wishList.filter((product) => product.variety === variety).length
+    );
+    setHeartToggle(isInWishlist);
+  }, [wishList, variety]);
 
   return (
     <StyledToggleButton
@@ -15,29 +33,16 @@ export default function WishlistToggle({ product, setWishList, variety }) {
         // toggle heart icon
         setHeartToggle(!heartToggle);
 
-        // if the product has been added to wishlist already:
-        // get the current local storage array and filter to remove the product
-        // set local storage to the filtered array
+        // remove from wishlist if already added
         if (heartToggle) {
-          const filteredLocalStorage = JSON.parse(
-            localStorage.getItem("wishlist")
-          ).filter((product) => product.variety !== variety);
-          localStorage.setItem(
+          const filteredLocalStorage = removeFromLocalStorage(
             "wishlist",
-            JSON.stringify(filteredLocalStorage)
+            variety
           );
           // update state
           setWishList(filteredLocalStorage);
         } else {
-          // update localstorage
-          const localStorageWishList =
-            JSON.parse(localStorage.getItem("wishlist")) || [];
-          localStorageWishList.push(product);
-          localStorage.setItem(
-            "wishlist",
-            JSON.stringify(localStorageWishList)
-          );
-
+          saveToLocalStorage("wishlist", product);
           // update state
           setWishList((oldState) => [...oldState, product]);
         }

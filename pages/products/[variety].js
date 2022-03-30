@@ -63,6 +63,7 @@ export default function ProductPages() {
           variety={product && product.variety}
         />
       </div>
+      
       <p>From €{product && product.providers[0].price}</p>
       <div className="tag-container">
         {product &&
@@ -80,7 +81,6 @@ export default function ProductPages() {
         <StyledLink>Back to search</StyledLink>
       </Link>
     </StyledProductPage>
-    // </ImageSlider>
   );
 }
 

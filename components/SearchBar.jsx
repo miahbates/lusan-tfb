@@ -8,20 +8,24 @@ import { SearchContext, useSearchContext } from "./context/SearchbarContext";
 //previous searchbar
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
-
+  console.log("search 13", searchTerm);
   return (
     <StyledSearchBar>
       <div className="search-border">
         <input
           type="text"
-          placeholder="Enter a crop name"
+          placeholder={searchTerm === null ? "Enter a crop name" : searchTerm}
           onChange={(event) =>
             setSearchTerm(
               event.target.value.replace(/^\w/, (c) => c.toUpperCase())
             )
           }
         />
-        <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+        <Link href="/search/all">
+          <a>
+            <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+          </a>
+        </Link>
       </div>
     </StyledSearchBar>
   );

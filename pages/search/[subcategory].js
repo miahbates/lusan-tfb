@@ -1,17 +1,19 @@
-import CategoryFilters from "../components/CategoryFilters";
-import SearchBar from "../components/SearchBar";
-import ConditionFilters from "../components/ConditionFilters";
-import PriceFilters from "../components/PriceFilters";
-import ProductDisplay from "../components/ProductDisplay";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import CategoryFilters from "../../components/CategoryFilters";
+import SearchBar from "../../components/SearchBar";
+import ConditionFilters from "../../components/ConditionFilters";
+import PriceFilters from "../../components/PriceFilters";
+import ProductDisplay from "../../components/ProductDisplay";
 import {
   useSearchContext,
   SearchContext,
-} from "../components/context/SearchbarContext";
+} from "../../components/context/SearchbarContext";
 import {
   useWishListContext,
   WishListContext,
-} from "../components/context/WishListContext";
+} from "../../components/context/WishListContext";
 
 export default function AllSeeds() {
   const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
@@ -39,16 +41,30 @@ export default function AllSeeds() {
   // wishlist
   const [wishList, setWishList] = useWishListContext(WishListContext);
 
- useEffect(() => {
+  useEffect(() => {
     setWishList(() => {
       const saved = JSON.parse(localStorage.getItem("wishlist"));
       return saved || [];
     });
   }, [setWishList]);
 
+  const router = useRouter();
+
   useEffect(() => {
-    console.log("wishlist", wishList);
-  });
+    if (router.isReady) {
+      if (router.query.subcategory === "all") {
+        setSearchTerm(null);
+      } else {
+        const capitalisedSubcategory = router.query.subcategory.replace(
+          /^\w/,
+          (c) => c.toUpperCase()
+        );
+        setSearchTerm(capitalisedSubcategory);
+      }
+    }
+  }, [router]);
+
+  console.log("searchterm", searchTerm);
 
   return (
     <div>
