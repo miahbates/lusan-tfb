@@ -90,28 +90,28 @@ export default function ProductPages() {
           </Link>
         </div>
       </StyledProductPage>
-      <div>
-        <span>Provider</span>
-        <span>Price</span>
-        <span>SPP</span>
-        <span>In Stock</span>
-      </div>
-      <p>
+
+      <StyledComparisonGrid>
+        <div>
+          <p>Provider</p>
+          <p>Price</p>
+          <p>SPP</p>
+          <p>In Stock</p>
+          <p>Link</p>
+        </div>
         {product &&
           product.providers.map((provider) => {
             return (
-              <StyledComparisonGrid key={provider}>
-                <span key={provider.name}>{provider.name}</span>
-                <span key={provider.price}>{provider.price}</span>
+              <div key={provider}>
+                <p key={provider.name}>{provider.name}</p>
+                <p key={provider.price}>{provider.price}</p>
                 <span key={provider.spp}>{provider.spp}</span>
-                <span key={provider.inStock}>
-                  {provider.inStock.toString()}
-                </span>
-                <span key={provider.url}>{provider.url}</span>
-              </StyledComparisonGrid>
+                <p key={provider.inStock}>{provider.inStock.toString()}</p>
+                <p key={provider.url}>{provider.url}</p>
+              </div>
             );
           })}
-      </p>
+      </StyledComparisonGrid>
     </div>
   );
 }
