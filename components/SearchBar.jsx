@@ -14,7 +14,7 @@ export default function SearchBar() {
       <div className="search-border">
         <input
           type="text"
-          placeholder="Enter a crop name"
+          placeholder={searchTerm === null ? "Enter a crop name" : searchTerm}
           onChange={(event) =>
             setSearchTerm(
               event.target.value.replace(/^\w/, (c) => c.toUpperCase())
