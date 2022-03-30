@@ -33,7 +33,7 @@ export default function ProductDisplay({
   return (
     <div>
       <h2>Results</h2>
-      <ul>
+      <ul className="product-grid">
         {products &&
           products
             .filter((product) =>
@@ -66,7 +66,7 @@ export default function ProductDisplay({
                 product.providers[0].price <= max
             )
             .map((product) => (
-              <li key={product.variety}>
+              <li className="product-card" key={product.variety}>
                 <DynamicProductCard
                   product={product}
                   wishList={wishList}

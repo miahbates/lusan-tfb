@@ -8,10 +8,13 @@ import {
   useSearchContext,
   SearchContext,
 } from "../components/context/SearchbarContext";
+import {
+  useWishListContext,
+  WishListContext,
+} from "../components/context/WishListContext";
 
 export default function AllSeeds() {
   const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
-  console.log("all seeds 11", searchTerm);
   const [category, setCategory] = useState("All");
   // type states
   const [organic, setOrganic] = useState(false);
@@ -34,18 +37,14 @@ export default function AllSeeds() {
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(10);
   // wishlist
-  const [wishList, setWishList] = useState([]);
+  const [wishList, setWishList] = useWishListContext(WishListContext);
 
-  useEffect(() => {
+ useEffect(() => {
     setWishList(() => {
       const saved = JSON.parse(localStorage.getItem("wishlist"));
       return saved || [];
     });
-  }, []);
-
-  useEffect(() => {
-    console.log("wishlist", wishList);
-  });
+  }, [setWishList]);
 
   return (
     <div>
