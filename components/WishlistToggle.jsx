@@ -5,6 +5,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { useEffect } from "react";
+import {
+  removeFromLocalStorage,
+  saveToLocalStorage,
+} from "../helper-functions";
 library.add(fas, far);
 
 export default function WishlistToggle({
@@ -29,29 +33,16 @@ export default function WishlistToggle({
         // toggle heart icon
         setHeartToggle(!heartToggle);
 
-        // if the product has been added to wishlist already:
-        // get the current local storage array and filter to remove the product
-        // set local storage to the filtered array
+        // remove from wishlist if already added
         if (heartToggle) {
-          const filteredLocalStorage = JSON.parse(
-            localStorage.getItem("wishlist")
-          ).filter((product) => product.variety !== variety);
-          localStorage.setItem(
+          const filteredLocalStorage = removeFromLocalStorage(
             "wishlist",
-            JSON.stringify(filteredLocalStorage)
+            variety
           );
           // update state
           setWishList(filteredLocalStorage);
         } else {
-          // update localstorage
-          const localStorageWishList =
-            JSON.parse(localStorage.getItem("wishlist")) || [];
-          localStorageWishList.push(product);
-          localStorage.setItem(
-            "wishlist",
-            JSON.stringify(localStorageWishList)
-          );
-
+          saveToLocalStorage("wishlist", product);
           // update state
           setWishList((oldState) => [...oldState, product]);
         }

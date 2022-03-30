@@ -2,6 +2,7 @@ import React from "react";
 import products from "../database/products";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
+import { SearchbarConsumer } from "./context/SearchbarContext";
 
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,

@@ -12,6 +12,7 @@ import {
   useWishListContext,
   WishListContext,
 } from "../components/context/WishListContext";
+import { getFromLocalStorage } from "../helper-functions";
 
 export default function AllSeeds() {
   const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
@@ -39,11 +40,8 @@ export default function AllSeeds() {
   // wishlist
   const [wishList, setWishList] = useWishListContext(WishListContext);
 
- useEffect(() => {
-    setWishList(() => {
-      const saved = JSON.parse(localStorage.getItem("wishlist"));
-      return saved || [];
-    });
+  useEffect(() => {
+    setWishList(getFromLocalStorage("wishlist"));
   }, [setWishList]);
 
   return (
