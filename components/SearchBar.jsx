@@ -8,7 +8,7 @@ import { SearchContext, useSearchContext } from "./context/SearchbarContext";
 //previous searchbar
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
-
+  console.log("search 13", searchTerm);
   return (
     <StyledSearchBar>
       <div className="search-border">
@@ -21,11 +21,14 @@ export default function SearchBar() {
             )
           }
         />
-        <Link href="/all-seeds">
-          <a>
-            <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
-          </a>
-        </Link>
+        <button>
+          <Link href="/all-seeds">
+            <a>
+              <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+            </a>
+          </Link>
+        </button>
+       
       </div>
     </StyledSearchBar>
   );
