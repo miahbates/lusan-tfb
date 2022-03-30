@@ -36,8 +36,6 @@ export default function Layout({ children }) {
           <div className="flex-row navbar">
             <Navbar></Navbar>
 
-            <img className="logo-layout" src="/logo.png" alt="logo" />
-
             <div className="search-wishlist-icons">
               <Link href="/all-seeds">
                 <a aria-label="search">
