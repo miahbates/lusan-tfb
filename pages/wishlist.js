@@ -6,15 +6,13 @@ import {
 } from "../components/context/WishListContext";
 import { generateTags } from "../database/database-functions";
 import ProductCard from "../components/ProductCard";
+import { getFromLocalStorage } from "../helper-functions";
 
 export default function Wishlist() {
   const [wishList, setWishList] = useWishListContext(WishListContext);
 
   useEffect(() => {
-    setWishList(() => {
-      const saved = JSON.parse(localStorage.getItem("wishlist"));
-      return saved || [];
-    });
+    setWishList(getFromLocalStorage("wishlist"));
   }, [setWishList]);
 
   return (

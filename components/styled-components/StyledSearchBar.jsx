@@ -17,6 +17,19 @@ const StyledSearchBar = styled.div`
     border: none;
   }
 
+  form {
+    border: none;
+  }
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
   .search-border {
     border: 4px solid var(--dark-color);
     display: flex;

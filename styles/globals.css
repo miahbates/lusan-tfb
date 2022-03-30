@@ -2,7 +2,9 @@
 
 html body {
   padding: 0;
-  margin: 0;
+  margin: 0.5rem 0 0 0;
+  background-color: var(--light-color);
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --dark-color: #016b58;
@@ -107,13 +109,14 @@ ul {
 }
 
 .navbar {
-  margin-bottom: 0.5rem;
+  padding: 0.5rem;
   background-color: var(--light-color);
   align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 
 .search-wishlist-icons {
-  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -434,7 +437,7 @@ ul {
 
 /* ------------------ GRID FOR PRODUCT DISPLAY PAGE/MIDDLE GRID FOR HOMEPAGE ------------------- */
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 769px) {
   .container {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(2, 1fr);
@@ -468,6 +471,11 @@ ul {
     gap: 2rem;
     transition: transform 0.5s, box-shadow 0.5s;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
+  }
+
+  .logo-layout {
+    position: absolute;
+    left: 5%;
   }
 }
 
@@ -591,4 +599,16 @@ ul {
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
+}
+
+/* ----------------------------- LOGO LAYOUT ---------------------------*/
+
+.logo-layout {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
 }

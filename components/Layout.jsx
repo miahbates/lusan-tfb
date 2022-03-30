@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./nav/navbar.jsx";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -9,17 +10,17 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  SearchContext,
+  SearchbarProvider,
+  useSearchContext,
+} from "./context/SearchbarContext";
+import { useEffect, useState, useContext } from "react";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
-import { SearchContext, SearchbarProvider } from "./context/SearchbarContext";
-import { useEffect, useState, useContext } from "react";
 import { WishListProvider } from "./context/WishListContext.jsx";
 
 export default function Layout({ children }) {
-  const state = useContext(SearchContext);
-  // const searchValue = state.searchState.searchTerm;
-  //console.log("11 state", state.setSearchTerm);
-  // console.log(12, state.searchState.searchTerm);
   return (
     <SearchbarProvider>
       <WishListProvider>
@@ -33,8 +34,9 @@ export default function Layout({ children }) {
           </Head>
           <div className="flex-row navbar">
             <Navbar></Navbar>
+            <img className="logo-layout" src="/logo.png" alt="logo" />
             <div className="search-wishlist-icons">
-              <Link href="//search/all">
+              <Link href="/search/all">
                 <a aria-label="search">
                   <FontAwesomeIcon
                     icon={faMagnifyingGlass}
@@ -85,13 +87,13 @@ export default function Layout({ children }) {
                   icon={faEnvelope}
                   className="icon"
                 ></FontAwesomeIcon>
-                <p>rachel@growlusan.com</p>
+                <span>rachel@growlusan.com</span>
               </a>
               <FontAwesomeIcon
                 icon={faPhone}
                 className="icon"
               ></FontAwesomeIcon>
-              <p>01903 765431</p>
+              <span>01903 765431</span>
             </div>
           </StyledFooter>
         </div>
