@@ -14,12 +14,12 @@ const StyledProductPage = styled.div`
   }
 
   h2 {
-    font-family: "Lora";
+    font-family: var(--sora-font);
     font-size: 1.3rem;
   }
 
   p {
-    font-family: "Poppins";
+    font-family: var(--poppins-font);
     font-size: 0.8rem;
   }
 
