@@ -1,59 +1,26 @@
-// import React, { useState } from "react";
-// import { SliderData } from "./SliderData";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faArrowCircleRight,
-//   faArrowCircleLeft,
-// } from "@fortawesome/free-solid-svg-icons";
-// import Image from "next/image";
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+// import { imgs } from "../../database/products";
 
-// export default function ImageSlider(slides) {
-//   const [current, setCurrent] = useState(0);
-//   const length = slides.length;
-
-//   const nextSlide = () => {
-//     setCurrent(current === length - 1 ? 0 : current + 1);
-//   };
-
-//   const prevSlide = () => {
-//     setCurrent(current === 0 ? length - 1 : current - 1);
-//   };
-
-//   // console.log(current);
-
-//   if (!Array.isArray(slides) || slides.length <= 0) {
-//     return null;
-//   }
-//   return (
-//     <section className="slider">
-//       <FontAwesomeIcon
-//         icon={faArrowCircleLeft}
-//         className="left-arrow"
-//         onClick={prevSlide}
-//       ></FontAwesomeIcon>
-//       <FontAwesomeIcon
-//         icon={faArrowCircleRight}
-//         className="right-arrow"
-//         onClick={nextSlide}
-//       ></FontAwesomeIcon>
-//       {SliderData.map((slide, index) => {
-//         return (
-//           <div
-//             className={index === current ? "slide active" : "slide"}
-//             key={index}
-//           >
-//             {index === current && (
-//               <Image
-//                 src={slide.image}
-//                 alt="seeds"
-//                 className="image"
-//                 width={200}
-//                 height={200}
-//               />
-//             )}
-//           </div>
-//         );
-//       })}
-//     </section>
-//   );
-// }
+export default function ImageSlider({ image1, image2, image3 }) {
+  return (
+    <Carousel
+      image1={image1}
+      image2={image2}
+      image3={image3}
+      showThumbs={false}
+      className="slider"
+    >
+      <div>
+        <img src={image1} alt="seeds" />
+      </div>
+      <div>
+        <img src={image2} alt="seeds" />
+      </div>
+      <div>
+        <img src={image3} alt="seeds" />
+      </div>
+    </Carousel>
+  );
+}

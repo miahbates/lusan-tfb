@@ -11,8 +11,7 @@ import {
   WishListContext,
 } from "../../components/context/WishListContext";
 import WishlistToggle from "../../components/WishlistToggle";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import ImageSlider from "../../components/ImageSlider";
 
 export default function ProductPages() {
   const router = useRouter();
@@ -46,53 +45,54 @@ export default function ProductPages() {
   );
 
   return (
+    // <ImageSlider>
     <StyledProductPage>
+      <ImageSlider image1={product && product.imgs[0]}> </ImageSlider>
       <div className="flex-row">
-        <Carousel className="slider">
-          <img
-            alt={product && product.subCategory}
-            src={product && product.imgs[0]}
-          ></img>
-          <img
-            alt={product && product.subCategory}
-            src={product && product.imgs[1]}
-          ></img>
-          <img
-            alt={product && product.subCategory}
-            src={product && product.imgs[2]}
-          ></img>
-        </Carousel>
-      </div>
-      <div>
-        <div className="title-wishlist">
-          <h2>
-            {capitalisedVariety} {product && product.subCategory}
-          </h2>
-          <WishlistToggle
-            product={product && product}
-            wishList={wishList}
-            setWishList={setWishList}
-            variety={product && product.variety}
-          />
-        </div>
-        <p>From €{product && product.providers[0].price}</p>
-        <div className="tag-container">
-          {product &&
-            generateTags(product.type).map((tag) => {
-              return (
-                <span className="type-tag" key={tag}>
-                  {tag}
-                </span>
-              );
-            })}
-        </div>
-        <p>{product && product.description}</p>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[0]}
+        ></img>
 
-        <Link href="/all-seeds" passHref>
-          <StyledLink>Back to search</StyledLink>
-        </Link>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[1]}
+        ></img>
+        <img
+          alt={product && product.subCategory}
+          src={product && product.imgs[2]}
+        ></img>
       </div>
+
+      <div className="title-wishlist">
+        <h2>
+          {capitalisedVariety} {product && product.subCategory}
+        </h2>
+        <WishlistToggle
+          product={product && product}
+          wishList={wishList}
+          setWishList={setWishList}
+          variety={product && product.variety}
+        />
+      </div>
+      <p>From €{product && product.providers[0].price}</p>
+      <div className="tag-container">
+        {product &&
+          generateTags(product.type).map((tag) => {
+            return (
+              <span className="type-tag" key={tag}>
+                {tag}
+              </span>
+            );
+          })}
+      </div>
+      <p>{product && product.description}</p>
+
+      <Link href="/all-seeds" passHref>
+        <StyledLink>Back to search</StyledLink>
+      </Link>
     </StyledProductPage>
+    // </ImageSlider>
   );
 }
 
