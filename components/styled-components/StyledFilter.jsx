@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 
 const StyledFilterForm = styled.form`
+  display: flex;
   background-color: var(--light-color);
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   opacity: ${({ open }) => (open ? "1" : "0")};

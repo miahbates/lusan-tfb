@@ -70,7 +70,6 @@ export default function ConditionFilters({
         </button>
         <button
           onClick={() => {
-            console.log("water clicked", openWater);
             setWaterOpen(!openWater);
             setCatOpen(false);
             setClimateOpen(false);
@@ -81,7 +80,6 @@ export default function ConditionFilters({
         </button>
         <button
           onClick={() => {
-            console.log("water clicked", openSoil);
             setSoilOpen(!openSoil);
             setCatOpen(false);
             setClimateOpen(false);

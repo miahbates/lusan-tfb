@@ -125,8 +125,8 @@ fieldset {
   margin: 1rem;
   padding: 1rem;
   border-bottom-style: solid;
-  border-color: var(--light-secondary-color);
-  background-color: white;
+  border-color: var(--mid-color);
+  background-color: var(--light--color);
 }
 
 .filter-icon {
