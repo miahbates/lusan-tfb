@@ -79,7 +79,7 @@ export default function ProductPages() {
         </div>
         <p>{product && product.description}</p>
 
-        <Link href="/all-seeds" passHref>
+        <Link href={`/search/${product && product.subCategory}`} passHref>
           <StyledLink>Back to search</StyledLink>
         </Link>
       </StyledProductPage>
