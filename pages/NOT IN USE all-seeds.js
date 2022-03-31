@@ -31,7 +31,7 @@ export default function AllSeeds() {
   // soil states
   const [clay, setClay] = useState(false);
   const [drained, setDrained] = useState(false);
-  const [chalky, setChalkey] = useState(false);
+  const [chalky, setChalky] = useState(false);
   const [peaty, setPeaty] = useState(false);
   const [sandy, setSandy] = useState(false);
   // price states
@@ -62,7 +62,7 @@ export default function AllSeeds() {
         setDry={setDry}
         setClay={setClay}
         setDrained={setDrained}
-        setChalkey={setChalkey}
+        setChalky={setChalky}
         setPeaty={setPeaty}
         setSandy={setSandy}
       ></ConditionFilters>

@@ -5,15 +5,19 @@ const StyledTab = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin: 1rem 1rem 0 1rem;
+  padding: 0;
 
-  button {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    text-align: center;
-    transition: all 400ms;
-    border: none;
-    font-family: var(--lora-font);
-    font-size: 1.1rem;
+  div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+  }
+  div:hover {
+    cursor: pointer;
+    background-color: var(--dark-color);
+    color: var(--light-color);
   }
 `;
 

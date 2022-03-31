@@ -49,10 +49,18 @@ label {
   font-family: var(--poppins-font);
 }
 
+fieldset {
+  border: solid var(--mid-color);
+  border-radius: 5px;
+  max-width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .box {
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid black;
+  border: none;
 }
 
 .icon {
@@ -112,13 +120,6 @@ label {
 
 .cond-filter {
   transition: all 400ms;
-}
-.filter-box {
-  margin: 1rem;
-  padding: 1rem;
-  border-bottom-style: solid;
-  border-color: var(--light-secondary-color);
-  background-color: white;
 }
 
 .filter-icon {
