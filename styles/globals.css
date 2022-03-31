@@ -684,3 +684,7 @@ fieldset {
 .carousel button.control-prev.control-arrow:before {
   border-right: 12px solid var(--light-color);
 }
+
+/* .carousel * {
+  height: 55vh;
+} */

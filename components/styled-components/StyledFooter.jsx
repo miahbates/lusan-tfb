@@ -15,7 +15,7 @@ const StyledFooter = styled.footer`
     transition: 200ms ease-in;
   }
 
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 678px) {
     .footer {
       justify-content: space-evenly;
       &:hover {
@@ -52,15 +52,17 @@ const StyledFooter = styled.footer`
     &:hover {
       color: var(--mid-color);
       transition: 200ms ease-in;
+      cursor: pointer;
     }
   }
 
-  .icon {
+  span .icon {
     padding: 0.5rem;
     color: white;
     &:hover {
       color: var(--mid-color);
       transition: 200ms ease-in;
+      cursor: pointer;
     }
   }
 `;

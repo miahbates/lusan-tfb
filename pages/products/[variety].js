@@ -15,7 +15,6 @@ import { findContent } from "../../helper-functions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-
 export default function ProductPages() {
   const router = useRouter();
 
@@ -67,7 +66,7 @@ export default function ProductPages() {
           />
         </div>
 
-        <p>From €{product && product.providers[0].price}</p>
+        <p>From £{product && product.providers[0].price}</p>
         <div className="tag-container">
           {product &&
             generateTags(product.type).map((tag) => {
