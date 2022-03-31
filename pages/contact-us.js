@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faLinkedin,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
@@ -21,8 +17,9 @@ export default function Contact() {
       <a href="https://www.instagram.com/growlusan/">
         <FontAwesomeIcon icon={faInstagram} className="icon"></FontAwesomeIcon>
       </a>
-      <FontAwesomeIcon icon={faLinkedin} className="icon"></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faFacebook} className="icon"></FontAwesomeIcon>
+      <a href="https://www.linkedin.com/in/rep94">
+        <FontAwesomeIcon icon={faLinkedin} className="icon"></FontAwesomeIcon>
+      </a>
       <a href="mailto:rachel@growlusan.com">
         <FontAwesomeIcon icon={faEnvelope} className="icon"></FontAwesomeIcon>
         <p>rachel@growlusan.com</p>
