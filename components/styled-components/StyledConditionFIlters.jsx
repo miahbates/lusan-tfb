@@ -22,6 +22,11 @@ const StyledConditionFilters = styled.div`
     font-size: 1.1rem;
   }
 
+  p {
+    text-align: center;
+    color: var(--dark-color);
+  }
+
   .clear-filter {
     border-radius: 5%;
   }
@@ -52,14 +57,7 @@ const StyledConditionFilters = styled.div`
   .label-div {
     display: flex;
     flex-direction: column;
-  }
-
-  .label {
-    opacity: 0;
-  }
-
-  .label:hover {
-    opacity: 1;
+    justify-content: center;
   }
 
   div {
@@ -70,9 +68,12 @@ const StyledConditionFilters = styled.div`
     justify-content: center;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     .label {
       display: none;
+    }
+    button {
+      font-size: 0.8rem;
     }
   }
 `;

@@ -73,6 +73,7 @@ fieldset {
   border: none;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .icon {
@@ -132,6 +133,8 @@ fieldset {
 
 .cond-filter {
   transition: all 400ms;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter-icon {
@@ -147,6 +150,11 @@ fieldset {
 }
 
 .filter-box {
+  display: flex;
+  justify-content: center;
+}
+
+.forms {
   display: flex;
   justify-content: center;
 }
