@@ -255,7 +255,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -274,7 +274,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -292,7 +292,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -310,7 +310,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -327,7 +327,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -346,7 +346,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -364,7 +364,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -382,7 +382,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -400,7 +400,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 .landing-row {
@@ -514,7 +514,7 @@ fieldset {
   }
 
   .background-veg {
-    height: 50vh;
+    height: 70vh;
   }
 
   .product-grid {

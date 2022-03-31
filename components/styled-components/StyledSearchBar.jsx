@@ -38,7 +38,7 @@ const StyledSearchBar = styled.div`
     flex-direction: row;
     border-radius: 10px;
     background-color: var(--light-color);
-    margin-top: 2rem;
+    margin: 0;
   }
   .icon-searchbar {
     height: 1.8rem;

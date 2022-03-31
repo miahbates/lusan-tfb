@@ -11,6 +11,7 @@ export default function IntroLusan() {
     <div className="background-veg">
       <StyledIntro className="inside-grid">
         <SearchBar></SearchBar>
+
         <h1>Selecting seeds made simple</h1>
         <div className="landing-row">
           <div className="flex-column">
