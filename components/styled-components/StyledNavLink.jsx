@@ -13,6 +13,7 @@ const StyledNavLink = styled.ul`
     font-family: var(--sora-font);
     font-size: 1.1rem;
   }
+
   li:hover {
     color: var(--dark-secondary-color);
     transform: scale(1.025);
@@ -41,8 +42,7 @@ const StyledNavLink = styled.ul`
   }
 
   li {
-    padding: 0.5rem 1rem;
-    margin: 0 2rem 0 0.5rem;
+    padding: 0rem 1rem 0.5rem 1rem;
   }
 `;
 

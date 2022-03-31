@@ -42,6 +42,7 @@ li {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 label {
@@ -118,6 +119,26 @@ label {
   align-items: center;
   position: relative;
   margin-bottom: 0.5rem;
+}
+
+.lusan-logo {
+  height: 60px;
+  width: 60px;
+  margin: 0 0.5rem;
+}
+
+.burger-and-logo {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .lusan-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .search-wishlist-icons {
@@ -476,11 +497,6 @@ label {
     transition: transform 0.5s, box-shadow 0.5s;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
   }
-
-  .logo-layout {
-    position: absolute;
-    left: 5%;
-  }
 }
 
 @media screen and (min-width: 900px) {
@@ -603,16 +619,4 @@ label {
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
-}
-
-/* ----------------------------- LOGO LAYOUT ---------------------------*/
-
-.logo-layout {
-  height: 90px;
-  width: 90px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1rem;
 }

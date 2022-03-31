@@ -1,21 +1,14 @@
 import Head from "next/head";
 import Navbar from "./nav/navbar.jsx";
 import Link from "next/link";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
-  faBars,
   faHeart,
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  SearchContext,
-  SearchbarProvider,
-  useSearchContext,
-} from "./context/SearchbarContext";
-import { useEffect, useState, useContext } from "react";
+import { SearchbarProvider } from "./context/SearchbarContext";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
 import { WishListProvider } from "./context/WishListContext.jsx";
@@ -34,7 +27,6 @@ export default function Layout({ children }) {
           </Head>
           <div className="flex-row navbar">
             <Navbar></Navbar>
-            <img className="logo-layout" src="/logo.png" alt="logo" />
             <div className="search-wishlist-icons">
               <Link href="/search/all">
                 <a aria-label="search">
