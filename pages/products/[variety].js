@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-import products from "../../database/products";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { generateTags } from "../../database/database-functions";
+import { generateTags } from "../../helper-functions";
 import StyledProductPage from "../../components/styled-components/StyledProductPage";
 import Link from "next/link";
 import StyledLink from "../../components/styled-components/StyledLink";
@@ -13,7 +11,7 @@ import {
 import WishlistToggle from "../../components/WishlistToggle";
 import StyledComparisonGrid from "../../components/styled-components/StyledComparisonGrid";
 import ImageSlider from "../../components/ImageSlider";
-
+import { findContent } from "../../helper-functions";
 
 export default function ProductPages() {
   const router = useRouter();
@@ -47,75 +45,65 @@ export default function ProductPages() {
 
   return (
     <div>
-     
-    <StyledProductPage>
-      <ImageSlider
-        image1={product && product.imgs[0]}
-        image2={product && product.imgs[1]}
-        image3={product && product.imgs[2]}
-      />
-
-      <div className="title-wishlist">
-        <h2>
-          {capitalisedVariety} {product && product.subCategory}
-        </h2>
-        <WishlistToggle
-          product={product && product}
-          wishList={wishList}
-          setWishList={setWishList}
-          variety={product && product.variety}
+      <StyledProductPage>
+        <ImageSlider
+          image1={product && product.imgs[0]}
+          image2={product && product.imgs[1]}
+          image3={product && product.imgs[2]}
         />
-      </div>
-      
-      <p>From €{product && product.providers[0].price}</p>
-      <div className="tag-container">
-        {product &&
-          generateTags(product.type).map((tag) => {
+
+        <div className="title-wishlist">
+          <h2>
+            {capitalisedVariety} {product && product.subCategory}
+          </h2>
+          <WishlistToggle
+            product={product && product}
+            wishList={wishList}
+            setWishList={setWishList}
+            variety={product && product.variety}
+          />
+        </div>
+
+        <p>From €{product && product.providers[0].price}</p>
+        <div className="tag-container">
+          {product &&
+            generateTags(product.type).map((tag) => {
+              return (
+                <span className="type-tag" key={tag}>
+                  {tag}
+                </span>
+              );
+            })}
+        </div>
+        <p>{product && product.description}</p>
+
+        <Link href="/all-seeds" passHref>
+          <StyledLink>Back to search</StyledLink>
+        </Link>
+      </StyledProductPage>
+
+      {product && (
+        <StyledComparisonGrid count={product ? product.providers.length : 1}>
+          <div>
+            <p>Provider</p>
+            <p>Price</p>
+            <p>SPP</p>
+            <p>In Stock</p>
+            <p>Link</p>
+          </div>
+          {product.providers.map((provider) => {
             return (
-              <span className="type-tag" key={tag}>
-                {tag}
-              </span>
+              <div key={provider}>
+                <p key={provider.name}>{provider.name}</p>
+                <p key={provider.price}>{provider.price}</p>
+                <p key={provider.spp}>{provider.spp}</p>
+                <p key={provider.inStock}>{provider.inStock.toString()}</p>
+                <p key={provider.url}>{provider.url}</p>
+              </div>
             );
           })}
-      </div>
-      <p>{product && product.description}</p>
-
-      <Link href="/all-seeds" passHref>
-        <StyledLink>Back to search</StyledLink>
-      </Link>
-    </StyledProductPage>
-
-{product && (
-  <StyledComparisonGrid count={product ? product.providers.length : 1}>
-    <div>
-      <p>Provider</p>
-      <p>Price</p>
-      <p>SPP</p>
-      <p>In Stock</p>
-      <p>Link</p>
+        </StyledComparisonGrid>
+      )}
     </div>
-    {product.providers.map((provider) => {
-      return (
-        <div key={provider}>
-          <p key={provider.name}>{provider.name}</p>
-          <p key={provider.price}>{provider.price}</p>
-          <p key={provider.spp}>{provider.spp}</p>
-          <p key={provider.inStock}>{provider.inStock.toString()}</p>
-          <p key={provider.url}>{provider.url}</p>
-        </div>
-      );
-    })}
-  </StyledComparisonGrid>
-)}
-</div>
-
   );
-}
-
-function findContent(capitalisedVariety) {
-  // find variety
-  const foundObject = products.find((productObject) => {
-    return productObject.variety === capitalisedVariety;
-  });
-  return foundObject;
 }
