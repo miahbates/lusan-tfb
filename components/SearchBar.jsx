@@ -4,14 +4,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import StyledSearchBar from "./styled-components/StyledSearchBar";
 import { SearchContext, useSearchContext } from "./context/SearchbarContext";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 //previous searchbar
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
-  console.log("search 13", searchTerm);
+  const router = useRouter();
+
   return (
     <StyledSearchBar>
-      <div className="search-border">
+      <form
+        className="search-border"
+        onSubmit={(e) => {
+          e.preventDefault();
+          router.push(`/search/${searchTerm}`);
+        }}
+      >
         <input
           type="text"
           placeholder={searchTerm === null ? "Enter a crop name" : searchTerm}
@@ -21,12 +30,14 @@ export default function SearchBar() {
             )
           }
         />
-        <Link href={`/search/${searchTerm}`}>
-          <a>
-            <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
-          </a>
-        </Link>
-      </div>
+        <button type="submit">
+          <Link href={`/search/${searchTerm}`}>
+            <a>
+              <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+            </a>
+          </Link>
+        </button>
+      </form>
     </StyledSearchBar>
   );
 }
