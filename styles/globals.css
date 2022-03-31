@@ -208,14 +208,22 @@ label {
 }
 
 /*-------------------------------------  LANDING-PG ------------------------------*/
-
 .background-veg {
-  background-image: url("../public/background.jpg");
-  height: 30vh;
+  position: relative;
+}
+
+.background-veg::before {
+  background-image: url("../public/background1.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  filter: brightness(50%);
+  transition: all 0.2s linear;
 }
 
 .inside-grid {
@@ -236,7 +244,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -256,7 +263,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -275,7 +281,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -294,7 +299,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -312,7 +316,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -332,7 +335,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -351,7 +353,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -370,7 +371,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }
@@ -389,7 +389,6 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  filter: contrast(120%);
   filter: brightness(60%);
   transition: all 0.2s linear;
 }

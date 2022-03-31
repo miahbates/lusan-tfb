@@ -8,23 +8,25 @@ import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 export default function IntroLusan() {
   return (
-    <StyledIntro className="background-veg">
-      <SearchBar></SearchBar>
-      <h1>Selecting seeds made simple</h1>
-      <div className="landing-row">
-        <div className="flex-column">
-          <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
-          <p>Eco-friendly</p>
+    <div className="background-veg">
+      <StyledIntro className="inside-grid">
+        <SearchBar></SearchBar>
+        <h1>Selecting seeds made simple</h1>
+        <div className="landing-row">
+          <div className="flex-column">
+            <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
+            <p>Eco-friendly</p>
+          </div>
+          <div className="flex-column">
+            <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
+            <p>Biodiversity</p>
+          </div>
+          <div className="flex-column">
+            <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
+            <p>Organic</p>
+          </div>
         </div>
-        <div className="flex-column">
-          <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
-          <p>Biodiversity</p>
-        </div>
-        <div className="flex-column">
-          <FontAwesomeIcon className="icon-seedling" icon={faSeedling} />
-          <p>Organic</p>
-        </div>
-      </div>
-    </StyledIntro>
+      </StyledIntro>
+    </div>
   );
 }

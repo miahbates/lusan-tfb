@@ -6,7 +6,7 @@ const StyledGridTile = styled.div`
   flex-shrink: 1;
   justify-content: center;
   font-family: var(--raj-font);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
 
   a {
@@ -25,6 +25,10 @@ const StyledGridTile = styled.div`
     cursor: pointer;
     padding: 1rem;
     border-radius: 5px;
+  }
+
+  @media screen and (min-width: 639px) {
+    font-size: 1.8rem;
   }
 `;
 
