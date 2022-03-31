@@ -12,6 +12,8 @@ import {
 } from "../../components/context/WishListContext";
 import WishlistToggle from "../../components/WishlistToggle";
 import StyledComparisonGrid from "../../components/styled-components/StyledComparisonGrid";
+import ImageSlider from "../../components/ImageSlider";
+
 
 export default function ProductPages() {
   const router = useRouter();
@@ -45,75 +47,68 @@ export default function ProductPages() {
 
   return (
     <div>
-      <StyledProductPage>
-        <div className="flex-row">
-          <img
-            alt={product && product.subCategory}
-            src={product && product.imgs[0]}
-          ></img>
-          <img
-            alt={product && product.subCategory}
-            src={product && product.imgs[1]}
-          ></img>
-          <img
-            alt={product && product.subCategory}
-            src={product && product.imgs[2]}
-          ></img>
-        </div>
-        <div>
-          <div className="title-wishlist">
-            <h2>
-              {capitalisedVariety} {product && product.subCategory}
-            </h2>
-            <WishlistToggle
-              product={product && product}
-              wishList={wishList}
-              setWishList={setWishList}
-              variety={product && product.variety}
-            />
-          </div>
-          <p>From £{product && product.providers[0].price}</p>
-          <div className="tag-container">
-            {product &&
-              generateTags(product.type).map((tag) => {
-                return (
-                  <span className="type-tag" key={tag}>
-                    {tag}
-                  </span>
-                );
-              })}
-          </div>
-          <p>{product && product.description}</p>
+     
+    <StyledProductPage>
+      <ImageSlider
+        image1={product && product.imgs[0]}
+        image2={product && product.imgs[1]}
+        image3={product && product.imgs[2]}
+      />
 
-          <Link href="/all-seeds" passHref>
-            <StyledLink>Back to search</StyledLink>
-          </Link>
-        </div>
-      </StyledProductPage>
-
-      {product && (
-        <StyledComparisonGrid count={product ? product.providers.length : 1}>
-          <div>
-            <p>Provider</p>
-            <p>Price</p>
-            <p>SPP</p>
-            <p>In Stock</p>
-            <p>Link</p>
-          </div>
-          {product.providers.map((provider) => {
+      <div className="title-wishlist">
+        <h2>
+          {capitalisedVariety} {product && product.subCategory}
+        </h2>
+        <WishlistToggle
+          product={product && product}
+          wishList={wishList}
+          setWishList={setWishList}
+          variety={product && product.variety}
+        />
+      </div>
+      
+      <p>From €{product && product.providers[0].price}</p>
+      <div className="tag-container">
+        {product &&
+          generateTags(product.type).map((tag) => {
             return (
-              <div key={provider}>
-                <p key={provider.name}>{provider.name}</p>
-                <p key={provider.price}>{provider.price}</p>
-                <p key={provider.spp}>{provider.spp}</p>
-                <p key={provider.inStock}>{provider.inStock.toString()}</p>
-                <p key={provider.url}>{provider.url}</p>
-              </div>
+              <span className="type-tag" key={tag}>
+                {tag}
+              </span>
             );
           })}
-        </StyledComparisonGrid>
-      )}
+      </div>
+      <p>{product && product.description}</p>
+
+      <Link href="/all-seeds" passHref>
+        <StyledLink>Back to search</StyledLink>
+      </Link>
+    </StyledProductPage>
+
+{product && (
+  <StyledComparisonGrid count={product ? product.providers.length : 1}>
+    <div>
+      <p>Provider</p>
+      <p>Price</p>
+      <p>SPP</p>
+      <p>In Stock</p>
+      <p>Link</p>
     </div>
+    {product.providers.map((provider) => {
+      return (
+        <div key={provider}>
+          <p key={provider.name}>{provider.name}</p>
+          <p key={provider.price}>{provider.price}</p>
+          <p key={provider.spp}>{provider.spp}</p>
+          <p key={provider.inStock}>{provider.inStock.toString()}</p>
+          <p key={provider.url}>{provider.url}</p>
+        </div>
+      );
+    })}
+  </StyledComparisonGrid>
+)}
+</div>
+
   );
 }
 

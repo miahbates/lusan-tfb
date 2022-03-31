@@ -7,7 +7,7 @@ const StyledSearchBar = styled.div`
   align-items: center;
 
   input[type="text"] {
-    font-family: "Poppins";
+    font-family: var(--poppins-font);
     font-size: 0.8rem;
     padding: 0.25rem 1rem;
     border-radius: 10px;
@@ -15,6 +15,19 @@ const StyledSearchBar = styled.div`
     color: var(--dark-secondary-color);
     max-width: 100%;
     border: none;
+  }
+
+  form {
+    border: none;
+  }
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
   }
 
   .search-border {
@@ -25,6 +38,7 @@ const StyledSearchBar = styled.div`
     flex-direction: row;
     border-radius: 10px;
     background-color: var(--light-color);
+    margin-top: 2rem;
   }
   .icon-searchbar {
     height: 1.8rem;
@@ -36,8 +50,8 @@ const StyledSearchBar = styled.div`
 
   @media only screen and (min-width: 678px) {
     .search-border {
-      margin-top: 3rem;
       margin-bottom: 1.5rem;
+      margin-top: 3rem;
     }
     input[type="text"] {
       font-size: 1.2rem;

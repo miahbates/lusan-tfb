@@ -2,6 +2,7 @@ import React from "react";
 import products from "../database/products";
 import { generateTags } from "../database/database-functions";
 import dynamic from "next/dynamic";
+import { SearchbarConsumer } from "./context/SearchbarContext";
 
 const DynamicProductCard = dynamic(() => import("./ProductCard"), {
   ssr: false,
@@ -41,7 +42,8 @@ export default function ProductDisplay({
             .filter((product) =>
               searchTerm
                 ? product.variety.includes(searchTerm) ||
-                  product.subCategory.includes(searchTerm)
+                  product.subCategory.includes(searchTerm) ||
+                  product.category.includes(searchTerm)
                 : product
             )
             .filter((product) => (organic ? product.type.organic : product))

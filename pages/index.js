@@ -10,7 +10,7 @@ export default function Home({ props }) {
     <div className="landing-page">
       <IntroLusan></IntroLusan>
       <div className="landing-row landing-gap stack">
-        <StyledLink href="/all-seeds">
+        <StyledLink href="/search/all">
           <a>Click here for all seeds</a>
         </StyledLink>
       </div>

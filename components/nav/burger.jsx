@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import React from "react";
 import LeftNav from "./leftNav.jsx";
@@ -17,8 +18,8 @@ const StyledBurger = styled.div`
     width: 4rem;
     height: 2rem;
     position: fixed;
-    top: 0.5rem;
-    left: 0.5rem;
+    top: 1.3rem;
+    left: 1rem;
     justify-content: space-around;
     flex-flow: column nowrap;
     z-index: 999;
@@ -48,7 +49,7 @@ const StyledBurger = styled.div`
 export default function Burger() {
   const [open, setOpen] = React.useState(false);
   return (
-    <div>
+    <>
       <StyledBurger
         open={open}
         onClick={() => {
@@ -59,7 +60,8 @@ export default function Burger() {
         <div />
         <div />
       </StyledBurger>
+      <img className="lusan-logo" src="/logo.png" alt="logo" />
       <LeftNav open={open}></LeftNav>
-    </div>
+    </>
   );
 }

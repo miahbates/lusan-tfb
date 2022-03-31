@@ -2,34 +2,54 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   background-color: var(--dark-color);
-  position: sticky;
   bottom: 0;
   width: 100%;
-  margin-top: 3rem;
-  padding-bottom: 1rem;
-  font-size: 1rem;
+  padding-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 20%;
+  &:hover {
+    color: var(--mid-color);
+    transition: 200ms ease-in;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: row;
+      padding-top: 0.5rem;
+
+      &:hover {
+        color: var(--mid-color);
+        transition: 200ms ease-in;
+      }
+    }
+    .span {
+      font-size: 0.5rem;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .footer {
+      flex-direction: row;
+      padding-top: 0.5rem;
+
+      &:hover {
+        color: var(--mid-color);
+        transition: 200ms ease-in;
+      }
+    }
+    .span {
+      font-size: 0.5rem;
+    }
+  }
 
   .footer-about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
     text-decoration: none;
     text-align: center;
   }
 
   .footer-contact {
-    text-decoration: none;
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .footer-links {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -42,10 +62,26 @@ const StyledFooter = styled.footer`
     }
   }
 
-  p {
+  .footer-links {
+    color: white;
+    text-decoration: none;
+    text-align: center;
     font-size: 1rem;
+    padding: 1rem;
+    font-family: var(--poppins-font);
+
+    &:hover {
+      color: var(--mid-color);
+      transition: 200ms ease-in;
+    }
+  }
+
+  span {
+    font-family: var(--sora-font);
+    font-size: 0.9rem;
     color: white;
     font-weight: bold;
+    padding: 0.5rem;
     &:hover {
       color: var(--mid-color);
       transition: 200ms ease-in;
