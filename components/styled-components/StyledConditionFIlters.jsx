@@ -16,11 +16,13 @@ const StyledConditionFilters = styled.div`
     transition: all 400ms;
     border: none;
   }
+
   .filter-button:hover {
     background-color: var(--dark-color);
     color: var(--light-color);
     cursor: pointer;
   }
+
   button:hover {
     cursor: pointer;
   }
