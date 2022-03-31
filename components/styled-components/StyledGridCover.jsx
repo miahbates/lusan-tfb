@@ -10,6 +10,10 @@ const StyledGridCover = styled.div`
   :hover {
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 634px) {
+    margin-bottom: 0.25rem;
+  }
 `;
 
 export default StyledGridCover;

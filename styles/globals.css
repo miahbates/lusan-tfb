@@ -4,7 +4,6 @@ html body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  background-color: var(--light-color);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --dark-color: #016b58;
@@ -151,10 +150,10 @@ fieldset {
 
 .navbar {
   padding: 0.5rem;
-  background-color: var(--light-color);
+  background-color: var(--mid-secondary-color);
   align-items: center;
   position: relative;
-  margin-bottom: 0.5rem;
+  border-bottom: 1px var(--dark-color) solid;
 }
 
 .lusan-logo {
@@ -255,7 +254,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -274,7 +273,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -292,7 +291,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -310,7 +309,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -327,7 +326,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -346,7 +345,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -364,7 +363,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -382,7 +381,7 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 
@@ -400,13 +399,14 @@ fieldset {
   top: 0;
   left: 0;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(50%);
   transition: all 0.2s linear;
 }
 .landing-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: space-between;
 }
 
 .landing-search {
@@ -429,6 +429,7 @@ fieldset {
 }
 .type-tag {
   background-color: var(--mid-color);
+  margin: 0.25rem 0;
 }
 
 .water-tag {
@@ -484,7 +485,6 @@ fieldset {
 }
 
 .product-grid {
-  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -514,14 +514,13 @@ fieldset {
   }
 
   .background-veg {
-    height: 50vh;
+    height: 70vh;
   }
 
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 0.5rem));
     gap: 1rem;
-    margin: 4rem;
   }
 
   .product-card {
@@ -601,6 +600,12 @@ fieldset {
     grid-template-columns: repeat(3, calc(33% - 0.5rem));
     gap: 2rem;
     justify-content: center;
+  }
+
+  main {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

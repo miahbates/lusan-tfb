@@ -104,8 +104,8 @@ export default function ProductPages() {
                 <p key={provider.spp}>{provider.spp}</p>
                 <p key={provider.inStock}>{provider.inStock.toString()}</p>
                 <p key={provider.url}>
-                  <Link href="{provider.url}" passHref>
-                    <a>
+                  <Link href={provider.url} passHref>
+                    <a target="_blank">
                       {provider.name} <FontAwesomeIcon icon={faLink} />
                     </a>
                   </Link>
