@@ -6,6 +6,7 @@ const StyledNavLink = styled.ul`
   list-style: none;
   border-radius: 2px;
   color: var(--dark-color);
+  align-items: center;
   z-index: 1;
 
   li {
