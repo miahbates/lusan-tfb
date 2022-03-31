@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 const StyledIntro = styled.div`
   gap: 1rem;
-  height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: space-between;
 
   h1 {

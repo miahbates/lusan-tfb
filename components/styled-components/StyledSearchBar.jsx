@@ -6,6 +6,8 @@ const StyledSearchBar = styled.div`
   justify-content: center;
   align-items: center;
 
+  margin-top: 2rem;
+
   input[type="text"] {
     font-family: var(--poppins-font);
     font-size: 0.8rem;
