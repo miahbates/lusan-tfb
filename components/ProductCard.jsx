@@ -20,7 +20,7 @@ export default function ProductCard({
   wishList,
   setWishList,
 }) {
-  // get current url path (i.e /all-seeds)
+  // get current url path (i.e //search/all)
   const router = useRouter();
   const path = router.pathname;
 
@@ -37,15 +37,15 @@ export default function ProductCard({
           <h2>
             {variety} {subCategory}
           </h2>
-          {path === "/all-seeds" ? (
+          {path === "/wishlist" ? (
+            <Bin variety={variety} setWishList={setWishList} />
+          ) : (
             <WishlistToggle
               product={product}
               wishList={wishList}
               setWishList={setWishList}
               variety={variety}
             ></WishlistToggle>
-          ) : (
-            <Bin variety={variety} setWishList={setWishList} />
           )}
         </div>
         <p>From £{price}</p>

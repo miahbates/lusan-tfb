@@ -21,14 +21,11 @@ export default function SearchBar() {
             )
           }
         />
-        <button>
-          <Link href="/all-seeds">
-            <a>
-              <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
-            </a>
-          </Link>
-        </button>
-       
+        <Link href="/search/all">
+          <a>
+            <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
+          </a>
+        </Link>
       </div>
     </StyledSearchBar>
   );

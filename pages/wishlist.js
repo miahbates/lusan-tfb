@@ -44,7 +44,7 @@ export default function Wishlist() {
         )}
       </ul>
 
-      <StyledLink href={"/all-seeds"}>Back to Search Results</StyledLink>
+      <StyledLink href={"//search/all"}>Back to Search Results</StyledLink>
     </div>
   );
 }
