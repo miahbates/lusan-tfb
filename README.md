@@ -17,7 +17,7 @@ An e-commerce style site to streamline buying seeds by signposting to sellers.
 
 ## How to install 🛠️
 
-- Git clone `https://github.com/fac23/lusan`
+- Git clone `https://github.com/fac-23/lusan-tfb`
 - Run command `npm install` in terminal.
 - Start sever run command `npm run dev`.
 - Run cypress testing run command `npm run test`.
