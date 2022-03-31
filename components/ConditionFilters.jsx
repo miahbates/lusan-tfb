@@ -10,6 +10,7 @@ import {
 import { updateObjState } from "../helper-functions";
 import StyledFilterForm from "./styled-components/StyledFilter";
 import StyledButton from "./styled-components/StyledButton";
+import StyledConditionFilters from "./styled-components/StyledConditionFIlters";
 
 export default function ConditionFilters({
   organic,
@@ -47,7 +48,7 @@ export default function ConditionFilters({
 
   return (
     <div className="filter-box">
-      <div className="filter-icon-bar">
+      <StyledConditionFilters className="filter-icon-bar">
         <button
           onClick={() => {
             setCatOpen(!openCat);
@@ -107,7 +108,7 @@ export default function ConditionFilters({
         >
           Clear filters
         </StyledButton>
-      </div>
+      </StyledConditionFilters>
       <div className="type-filter cond-filter">
         <StyledFilterForm open={openCat}>
           <div className="box">

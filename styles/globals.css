@@ -121,13 +121,6 @@ fieldset {
 .cond-filter {
   transition: all 400ms;
 }
-.filter-box {
-  margin: 1rem;
-  padding: 1rem;
-  border-bottom-style: solid;
-  border-color: var(--mid-color);
-  background-color: var(--light--color);
-}
 
 .filter-icon {
   height: 1.8rem;
