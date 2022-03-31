@@ -47,68 +47,87 @@ export default function ConditionFilters({
   const [checked, setChecked] = React.useState(false);
 
   return (
-    <div className="filter-box">
-      <StyledConditionFilters className="filter-icon-bar">
-        <button
-          onClick={() => {
-            setCatOpen(!openCat);
-            setClimateOpen(false);
-            setWaterOpen(false);
-            setSoilOpen(false);
-          }}
-        >
-          <FontAwesomeIcon className="filter-icon" icon={faList} />
-        </button>
-        <button
-          onClick={() => {
-            setClimateOpen(!openClimate);
-            setCatOpen(false);
-            setWaterOpen(false);
-            setSoilOpen(false);
-          }}
-        >
-          <FontAwesomeIcon className="filter-icon" icon={faCloudSunRain} />
-        </button>
-        <button
-          onClick={() => {
-            setWaterOpen(!openWater);
-            setCatOpen(false);
-            setClimateOpen(false);
-            setSoilOpen(false);
-          }}
-        >
-          <FontAwesomeIcon className="filter-icon" icon={faDroplet} />
-        </button>
-        <button
-          onClick={() => {
-            setSoilOpen(!openSoil);
-            setCatOpen(false);
-            setClimateOpen(false);
-            setWaterOpen(false);
-          }}
-        >
-          <FontAwesomeIcon className="filter-icon" icon={faEarthEurope} />
-        </button>
-        <StyledButton
-          onClick={() => {
-            setOrganic(false);
-            setOpenPollinated(false);
-            setHybrid(false);
-            setSunny(false);
-            setShady(false);
-            setHumid(false);
-            setDry(false);
-            setLotsOfWater(false);
-            setClay(false);
-            setDrained(false);
-            setChalky(false);
-            setPeaty(false);
-            setSandy(false);
-          }}
-        >
-          Clear filters
-        </StyledButton>
-      </StyledConditionFilters>
+    <div>
+      <div className="filter-box">
+        <StyledConditionFilters className="filter-icon-bar">
+          <div className="label-div">
+            <p className="label">Category</p>
+            <button
+              className="filter-button"
+              onClick={() => {
+                setCatOpen(!openCat);
+                setClimateOpen(false);
+                setWaterOpen(false);
+                setSoilOpen(false);
+              }}
+            >
+              <FontAwesomeIcon className="filter-icon" icon={faList} />
+            </button>
+          </div>
+          <div className="label-div">
+            <p className="label">Climate</p>
+            <button
+              className="filter-button"
+              onClick={() => {
+                setClimateOpen(!openClimate);
+                setCatOpen(false);
+                setWaterOpen(false);
+                setSoilOpen(false);
+              }}
+            >
+              <FontAwesomeIcon className="filter-icon" icon={faCloudSunRain} />
+            </button>
+          </div>
+          <div className="label-div">
+            <p className="label">Water</p>
+            <button
+              className="filter-button"
+              onClick={() => {
+                setWaterOpen(!openWater);
+                setCatOpen(false);
+                setClimateOpen(false);
+                setSoilOpen(false);
+              }}
+            >
+              <FontAwesomeIcon className="filter-icon" icon={faDroplet} />
+            </button>
+          </div>
+          <div className="label-div">
+            <p className="label"> Soil Type</p>
+            <button
+              className="filter-button"
+              onClick={() => {
+                setSoilOpen(!openSoil);
+                setCatOpen(false);
+                setClimateOpen(false);
+                setWaterOpen(false);
+              }}
+            >
+              <FontAwesomeIcon className="filter-icon" icon={faEarthEurope} />
+            </button>
+          </div>
+          <StyledButton
+            className="clear-filter"
+            onClick={() => {
+              setOrganic(false);
+              setOpenPollinated(false);
+              setHybrid(false);
+              setSunny(false);
+              setShady(false);
+              setHumid(false);
+              setDry(false);
+              setLotsOfWater(false);
+              setClay(false);
+              setDrained(false);
+              setChalky(false);
+              setPeaty(false);
+              setSandy(false);
+            }}
+          >
+            Clear filters
+          </StyledButton>
+        </StyledConditionFilters>
+      </div>
       <div className="type-filter cond-filter">
         <StyledFilterForm open={openCat}>
           <div className="box">

@@ -7,6 +7,8 @@ const StyledTab = styled.div`
   justify-content: space-evenly;
   margin: 1rem 1rem 0 1rem;
   padding: 0;
+  border-bottom-style: solid;
+  border-color: var(--light-secondary-color);
 
   div {
     flex-grow: 1;

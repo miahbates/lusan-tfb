@@ -71,6 +71,8 @@ fieldset {
   margin: 1rem;
   padding: 1rem;
   border: none;
+  display: flex;
+  justify-content: center;
 }
 
 .icon {
@@ -142,6 +144,11 @@ fieldset {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.filter-box {
+  display: flex;
+  justify-content: center;
 }
 
 /* --------------------------------- LAYOUT & NAVBAR ---------------------------------*/
