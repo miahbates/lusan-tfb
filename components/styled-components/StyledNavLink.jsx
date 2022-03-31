@@ -44,7 +44,7 @@ const StyledNavLink = styled.ul`
   }
 
   li {
-    padding: 0rem 1rem 0.5rem 1rem;
+    padding: 0rem 2rem 0.5rem 1rem;
   }
 `;
 
