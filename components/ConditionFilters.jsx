@@ -13,6 +13,18 @@ import StyledButton from "./styled-components/StyledButton";
 
 export default function ConditionFilters({
   organic,
+  openPollinated,
+  hybrid,
+  sunny,
+  shady,
+  humid,
+  dry,
+  lotsOfWater,
+  clay,
+  drained,
+  chalky,
+  peaty,
+  sandy,
   setOrganic,
   setOpenPollinated,
   setHybrid,
@@ -23,7 +35,7 @@ export default function ConditionFilters({
   setLotsOfWater,
   setClay,
   setDrained,
-  setChalkey,
+  setChalky,
   setPeaty,
   setSandy,
 }) {
@@ -81,6 +93,18 @@ export default function ConditionFilters({
         <StyledButton
           onClick={() => {
             setOrganic(false);
+            setOpenPollinated(false);
+            setHybrid(false);
+            setSunny(false);
+            setShady(false);
+            setHumid(false);
+            setDry(false);
+            setLotsOfWater(false);
+            setClay(false);
+            setDrained(false);
+            setChalky(false);
+            setPeaty(false);
+            setSandy(false);
           }}
         >
           Clear filters
@@ -106,7 +130,7 @@ export default function ConditionFilters({
               id="type"
               value="openPollinated"
               name="type"
-              checked={checked}
+              checked={openPollinated}
               onChange={(event) => {
                 setOpenPollinated(event.target.checked);
               }}
@@ -118,7 +142,7 @@ export default function ConditionFilters({
               id="type"
               value="hybrid"
               name="type"
-              checked={checked}
+              checked={hybrid}
               onChange={(event) => {
                 setHybrid(event.target.checked);
               }}
@@ -135,7 +159,7 @@ export default function ConditionFilters({
               id="climate"
               value="sunny"
               name="climate"
-              checked={checked}
+              checked={sunny}
               onChange={(event) => {
                 setSunny(event.target.checked);
               }}
@@ -147,7 +171,7 @@ export default function ConditionFilters({
               id="climate"
               value="shady"
               name="climate"
-              checked={checked}
+              checked={shady}
               onChange={(event) => {
                 setShady(event.target.checked);
               }}
@@ -159,7 +183,7 @@ export default function ConditionFilters({
               id="water"
               value="humid"
               name="water"
-              checked={checked}
+              checked={humid}
               onChange={(event) => {
                 setHumid(event.target.checked);
               }}
@@ -176,7 +200,7 @@ export default function ConditionFilters({
               id="water"
               value="lotsOfWater"
               name="water"
-              checked={checked}
+              checked={lotsOfWater}
               onChange={(event) => {
                 setLotsOfWater(event.target.checked);
               }}
@@ -188,7 +212,7 @@ export default function ConditionFilters({
               id="water"
               value="dry"
               name="water"
-              checked={checked}
+              checked={dry}
               onChange={(event) => {
                 setDry(event.target.checked);
               }}
@@ -205,7 +229,7 @@ export default function ConditionFilters({
               id="soil"
               value="clay"
               name="soil"
-              checked={checked}
+              checked={clay}
               onChange={(event) => {
                 setClay(event.target.checked);
               }}
@@ -217,7 +241,7 @@ export default function ConditionFilters({
               id="soil"
               value="wellDrained"
               name="soil"
-              checked={checked}
+              checked={drained}
               onChange={(event) => {
                 setDrained(event.target.checked);
               }}
@@ -229,7 +253,7 @@ export default function ConditionFilters({
               id="soil"
               value="peaty"
               name="soil"
-              checked={checked}
+              checked={peaty}
               onChange={(event) => {
                 setPeaty(event.target.checked);
               }}
@@ -241,9 +265,9 @@ export default function ConditionFilters({
               id="soil"
               value="chalky"
               name="soil"
-              checked={checked}
+              checked={chalky}
               onChange={(event) => {
-                setChalkey(event.target.checked);
+                setChalky(event.target.checked);
               }}
             />
             <label htmlFor="type">Chalky</label>
@@ -253,7 +277,7 @@ export default function ConditionFilters({
               id="soil"
               value="sandy"
               name="soil"
-              checked={checked}
+              checked={sandy}
               onChange={(event) => {
                 setSandy(event.target.checked);
               }}
