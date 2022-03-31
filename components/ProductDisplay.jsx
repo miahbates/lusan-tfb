@@ -1,6 +1,6 @@
 import React from "react";
 import products from "../database/products";
-import { generateTags } from "../database/database-functions";
+import { generateTags } from "../helper-functions";
 import dynamic from "next/dynamic";
 import { SearchbarConsumer } from "./context/SearchbarContext";
 
