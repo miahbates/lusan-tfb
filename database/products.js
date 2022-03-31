@@ -22,9 +22,9 @@ const products = [
     description:
       "A roma tomato is a paste tomato. Paste tomatoes, like roma tomatoes, generally have a thicker fruit wall, fewer seeds, and a denser but more grainy flesh. Roma tomatoes tend to be oblong in shape and heavy for their size. Roma tomatoes are determinate, which means that the fruit ripens at one time, rather than continually through the season. While they can be eaten raw, they are at their best when they are cooked.",
     imgs: [
-      "https://images.unsplash.com/photo-1627022534691-b703158d3024?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
-      "https://images.unsplash.com/photo-1508094427028-b1e27931dddb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1524593166156-312f362cada0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1561155713-50f2a38fde2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1568581789190-ae90a7da930b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -36,9 +36,9 @@ const products = [
     description:
       "Early Girl tomatoes have it all: a classic round shape about tennis-ball size, speedy growth and compatibility with low-watering methods. Moreover, Early Girl tomato care is easy, and you can grow them almost anywhere, including containers.",
     imgs: [
-      "https://images.unsplash.com/photo-1627022534691-b703158d3024?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
-      "https://images.unsplash.com/photo-1508094427028-b1e27931dddb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1524593166156-312f362cada0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1598512752271-33f913a5af13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1594057687713-5fd14eed1c17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80",
+      "https://images.unsplash.com/photo-1508913826512-066cf8127860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -64,9 +64,9 @@ const products = [
     description:
       "Produces a long, slim, cylindrical shaped beetroot, with a dark red colour to both the outer smooth skin and the inner sweet tasting flesh. This is the variety to grow for slicing.",
     imgs: [
-      "https://images.unsplash.com/photo-1533231040102-5ec7a63e6d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1627738668643-1c166aecbf3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://www.simplyseed.co.uk/user/products/Beetroot%20Cylindra.jpg",
+      "https://www.mammothonion.co.uk/wp-content/uploads/2021/01/cylindra-beet14.jpg",
+      "https://www.wilko.com/assets/bWFzdGVyfGltYWdlc3wzNDA3MDV8aW1hZ2UvanBlZ3xpbWFnZXMvaDZjL2hlMS84ODIzNjQ5Nzk2MTI2LmpwZ3xlZDVkYjgyY2E2NWYyOGNhMzRiYTU5NDhiYjQ4M2IyYmQ4ZDdkMDlhZDUxZTlkNGMzYjRkNDc5NTJkOGQ1NTRl/0339077-1.jpg",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -78,9 +78,9 @@ const products = [
     description:
       "A sweet beetroot that can be eaten finely sliced, grated raw or used in smoothies. It can also be roasted, steamed, boiled or pickled, just like purple beets. Use the leaves as a substitute for chard or spinach.",
     imgs: [
-      "https://images.unsplash.com/photo-1533231040102-5ec7a63e6d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1627738668643-1c166aecbf3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://i.etsystatic.com/5423753/r/il/dac5ed/3628443516/il_794xN.3628443516_d7xe.jpg",
+      "https://cdn.shopify.com/s/files/1/0955/4450/products/golden-detroit-beet-seeds-29933079396509_1024x1024.jpg?v=1628011967",
+      "https://cdn.shopify.com/s/files/1/1766/2959/products/Golden_Detroit_2_600x.jpg?v=1535246570",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -94,7 +94,7 @@ const products = [
     imgs: [
       "https://images.unsplash.com/photo-1628773822990-202aed1e567e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
       "https://images.unsplash.com/photo-1628773822503-930a7eaecf80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://www.australiantimes.co.uk/wp-content/uploads/2013/04/purple-brocoli-1200x854.jpg",
+      "https://images.unsplash.com/photo-1587351177732-5b0739d1bd44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1227&q=80",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -106,9 +106,9 @@ const products = [
     description:
       "Purple broccoli plants are extremely cold hardy withstanding temps below 10 degrees F. (-12 C.). This unique attribute is critical to success in growing the plant, as Purple Sprouting broccoli growing will require at least 180 days to mature.",
     imgs: [
-      "https://images.unsplash.com/photo-1628773822990-202aed1e567e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1628773822503-930a7eaecf80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
       "https://www.australiantimes.co.uk/wp-content/uploads/2013/04/purple-brocoli-1200x854.jpg",
+      "https://www.plantsofdistinction.co.uk/stock/mweb/img000066.jpg",
+      "https://www.gardeningknowhow.com/wp-content/uploads/2019/12/purple-sprouting-broccoli-400x533.jpg",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -122,7 +122,7 @@ const products = [
     imgs: [
       "https://images.unsplash.com/photo-1628773822990-202aed1e567e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
       "https://images.unsplash.com/photo-1628773822503-930a7eaecf80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://www.australiantimes.co.uk/wp-content/uploads/2013/04/purple-brocoli-1200x854.jpg",
+      "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=601&q=80",
     ],
     ...generateFilters(),
     providers: generateProviders(),
@@ -171,7 +171,7 @@ const products = [
   },
   {
     category: "Flowers",
-    subCategory: "Sweet Peas",
+    subCategory: "Sweetpeas",
     variety: "Prima Ballerina",
     description:
       "Sweet Peas are care free plants with a bubbly personality and are loved by gardeners the country over, and are a popular addition to our range of flower seeds. Whether scrambling over arches above an entrance to a path or planted around obelisks set in borders, these are beautiful plants.",
@@ -185,7 +185,7 @@ const products = [
   },
   {
     category: "Flowers",
-    subCategory: "Sweet Peas",
+    subCategory: "Sweetpeas",
     variety: "Almost Black",
     description:
       "The flowers are small and plain of a Old Fashioned style, well-scented ,sweet scented, very very dark blue, but gives the appearance of being black. Looks stunning with white Sweet Peas.",
@@ -199,7 +199,7 @@ const products = [
   },
   {
     category: "Flowers",
-    subCategory: "Sweet Peas",
+    subCategory: "Sweetpeas",
     variety: "St George",
     description:
       "Lathyrus odoratus 'St George' is a great mix of red and white Spencer-type sweet peas, the colour of the St George flag. The blooms last well in water, making them excellent for cutting. Lathyrus odoratus 'St George' is an ideal choice for the garden, and will quickly cover a trellis or obelisk.",
@@ -248,7 +248,133 @@ const products = [
     imgs: [
       "https://images.unsplash.com/photo-1513025260-96589997f84c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "https://images.unsplash.com/photo-1604453119896-7bd3eea44575?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "hhttps://images.unsplash.com/photo-1617977123446-551021b85584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "https://images.unsplash.com/photo-1617977123446-551021b85584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Vegetables",
+    subCategory: "Carrots",
+    variety: "Danvers",
+    description:
+      "Danvers carrots are medium sized carrots, often called “half size.” They were once a choice carrot for their flavor, especially when young, because mature roots can become fibrous. Danvers were an early orange cultivar, as previous favored selections were white, red, yellow, and purple.",
+    imgs: [
+      "https://images.unsplash.com/photo-1582515073490-39981397c445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+      "https://images.unsplash.com/photo-1447175008436-054170c2e979?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80",
+      "https://images.unsplash.com/photo-1633380110125-f6e685676160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Vegetables",
+    subCategory: "Carrots",
+    variety: "Nantes",
+    description:
+      "Nantes carrots were first mentioned and described in the 1885 edition of the Henri Vilmorin family seed catalogue. He stated that this carrot variety has a nearly perfect cylindrical root and smooth, almost red, skin that is mild and sweet in flavor.",
+    imgs: [
+      "https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1445282768818-728615cc910a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1626846661139-5c4fbd66cbd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Vegetables",
+    subCategory: "Carrots",
+    variety: "Chantenay",
+    description:
+      "Chantenay carrots are short, stout carrots with light orange flesh and orange-red colored cores. They mature in 65-75 days to 4- to 5-inch (10-13 cm.) long and 2- to 2 ½-inch (5-6.5 cm.) thick roots.",
+    imgs: [
+      "https://images.unsplash.com/photo-1512310557339-4d41c55015f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
+      "https://images.unsplash.com/photo-1590848791238-fb3596a2ba56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNoYW50ZW5heSUyMGNhcnJvdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1579584828095-494884160804?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Herbs",
+    subCategory: "Basil",
+    variety: "Sweet Basil",
+    description:
+      "Sweet basil, annual herb of the mint family (Lamiaceae), grown for its aromatic leaves. Basil is likely native to India and is widely grown as a kitchen herb. The leaves are used fresh or dried to flavour meats, fish, salads, and sauces; basil tea is a stimulant",
+    imgs: [
+      "https://images.unsplash.com/photo-1629157247277-48f870757026?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1527964105263-1ac6265a569f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1619805640532-21cce5fe542b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Herbs",
+    subCategory: "Basil",
+    variety: "Dark Opal",
+    description:
+      "Noted for its striking foliage and delicate licorice scent, Ocimum basilicum or Dark Opal Basil is an annual or biennial herb with stunning deep purple almost black leaves. In summer, attractive spikes of small, tubular cerise flowers arranged in whorls are borne above the foliage.",
+    imgs: [
+      "https://images.immediate.co.uk/production/volatile/sites/10/2018/08/7ac6818e-ae52-44ac-ac84-3eaed81798bc-34d31a5.jpg?quality=90&resize=768%2C574",
+      "https://cdn11.bigcommerce.com/s-er6we2l3gw/images/stencil/1280x1280/products/26508/141993/190245_2__89296.1616089825.jpg?c=1",
+      "https://cdn11.bigcommerce.com/s-er6we2l3gw/images/stencil/1280x1280/products/26313/146514/140079BC_3__27947.1620126004.jpg?c=1",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Herbs",
+    subCategory: "Basil",
+    variety: "Tulsi",
+    description:
+      "Tulsi basil is an herb that grows in a shrub-like habit up to 60 centimeters or taller, depending on the variety, and develops clusters of fragrant pink or violet blossoms when mature.",
+    imgs: [
+      "https://images.unsplash.com/photo-1627738663093-d0779d56e3bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhc2lsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1558070510-504a0db43997?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFzaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1572978577745-245cde7e1da3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Flowers",
+    subCategory: "Petunia",
+    variety: "Grandiflora",
+    description:
+      "Grandifloras are one of the oldest varieties. These petunias grow 8 to 12 inches high and have the large (4 to 5 inch), wavy-edged blossoms that petunias first became known for. The flowers can be single or the more ruffled doubles.",
+    imgs: [
+      "https://images.unsplash.com/photo-1558502187-68acb21ae9b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1629727538955-e65c0b6789fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1558502187-d883ac019745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Flowers",
+    subCategory: "Petunia",
+    variety: "Multiflora",
+    description:
+      "Multiflora petunias are smaller plants with more numerous but smaller blooms. The stems are strong, which makes multiflora petunia varieties suitable for windy climates. The blooms tend to hold up a bit longer than Grandiflora petunia varieties, especially during rainy weather.",
+    imgs: [
+      "https://images.unsplash.com/photo-1557158805-537344b5b9ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1629728098687-e5005a6e54cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1629727434632-34d73efb9cb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    ],
+    ...generateFilters(),
+    providers: generateProviders(),
+  },
+  {
+    category: "Flowers",
+    subCategory: "Petunia",
+    variety: "Milliflora",
+    description:
+      "Milliflora petunias are much smaller than any other petunias on the market. The flowers are only 1 to 1½ inches wide, but they are prolific and last all season! Spreading or Trailing Petunias: These are low-growing and can spread as much as 3 to 4 feet.",
+    imgs: [
+      "https://images.unsplash.com/photo-1629729666027-2fe25a1f0856?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1644316615426-25195b9f3e00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&q=80",
+      "https://images.unsplash.com/photo-1630895101946-00dae2c50b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     ],
     ...generateFilters(),
     providers: generateProviders(),
