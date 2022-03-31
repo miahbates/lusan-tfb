@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledComparisonGrid = styled.div`
-  margin: 1rem;
+  margin: 1rem 0.5rem;
   padding: 0.5rem;
   display: grid;
   grid-template-columns: repeat(${(p) => p.count + 1}, minmax(250px, 1fr));
@@ -9,9 +9,16 @@ const StyledComparisonGrid = styled.div`
   overflow-x: scroll;
   text-align: left;
 
+  a {
+    border-bottom: 1px solid black;
+
+    display: inline-block;
+    width: fit-content;
+  }
+
   p {
     text-align: left;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     margin: 0.125rem;
     font-size: 1rem;
     font-family: var(--sora-font);
@@ -40,12 +47,12 @@ const StyledComparisonGrid = styled.div`
   }
 
   p:nth-child(5) {
-    background: var(--dark-color);
+    background-color: #03826b;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 677px) {
     p {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
   }
 `;
