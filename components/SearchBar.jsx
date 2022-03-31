@@ -21,7 +21,7 @@ export default function SearchBar() {
             )
           }
         />
-        <Link href="/search/all">
+        <Link href={`/search/${searchTerm}`}>
           <a>
             <FontAwesomeIcon className="icon-searchbar" icon={faSearch} />
           </a>

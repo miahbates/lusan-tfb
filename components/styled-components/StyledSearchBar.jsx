@@ -38,6 +38,7 @@ const StyledSearchBar = styled.div`
     flex-direction: row;
     border-radius: 10px;
     background-color: var(--light-color);
+    margin-top: 2rem;
   }
   .icon-searchbar {
     height: 1.8rem;
@@ -49,8 +50,8 @@ const StyledSearchBar = styled.div`
 
   @media only screen and (min-width: 678px) {
     .search-border {
-      margin-top: 3rem;
       margin-bottom: 1.5rem;
+      margin-top: 3rem;
     }
     input[type="text"] {
       font-size: 1.2rem;

@@ -9,8 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { updateObjState } from "../helper-functions";
 import StyledFilterForm from "./styled-components/StyledFilter";
+import StyledButton from "./styled-components/StyledButton";
 
 export default function ConditionFilters({
+  organic,
   setOrganic,
   setOpenPollinated,
   setHybrid,
@@ -29,21 +31,62 @@ export default function ConditionFilters({
   const [openClimate, setClimateOpen] = React.useState(false);
   const [openSoil, setSoilOpen] = React.useState(false);
   const [openWater, setWaterOpen] = React.useState(false);
+  const [checked, setChecked] = React.useState(false);
 
   return (
-    <div className="box">
-      <div className="type-filter">
-        <FontAwesomeIcon
-          className="icon"
-          icon={faList}
+    <div className="filter-box">
+      <div className="filter-icon-bar">
+        <button
           onClick={() => {
-            console.log("icon clicked and Climate stat", openCat, openClimate);
             setCatOpen(!openCat);
             setClimateOpen(false);
             setWaterOpen(false);
             setSoilOpen(false);
           }}
-        />
+        >
+          <FontAwesomeIcon className="filter-icon" icon={faList} />
+        </button>
+        <button
+          onClick={() => {
+            setClimateOpen(!openClimate);
+            setCatOpen(false);
+            setWaterOpen(false);
+            setSoilOpen(false);
+          }}
+        >
+          <FontAwesomeIcon className="filter-icon" icon={faCloudSunRain} />
+        </button>
+        <button
+          onClick={() => {
+            console.log("water clicked", openWater);
+            setWaterOpen(!openWater);
+            setCatOpen(false);
+            setClimateOpen(false);
+            setSoilOpen(false);
+          }}
+        >
+          <FontAwesomeIcon className="filter-icon" icon={faDroplet} />
+        </button>
+        <button
+          onClick={() => {
+            console.log("water clicked", openSoil);
+            setSoilOpen(!openSoil);
+            setCatOpen(false);
+            setClimateOpen(false);
+            setWaterOpen(false);
+          }}
+        >
+          <FontAwesomeIcon className="filter-icon" icon={faEarthEurope} />
+        </button>
+        <StyledButton
+          onClick={() => {
+            setOrganic(false);
+          }}
+        >
+          Clear filters
+        </StyledButton>
+      </div>
+      <div className="type-filter cond-filter">
         <StyledFilterForm open={openCat}>
           <div className="box">
             <input
@@ -51,6 +94,7 @@ export default function ConditionFilters({
               id="type"
               value="organic"
               name="type"
+              checked={organic}
               onChange={(event) => {
                 setOrganic(event.target.checked);
               }}
@@ -62,6 +106,7 @@ export default function ConditionFilters({
               id="type"
               value="openPollinated"
               name="type"
+              checked={checked}
               onChange={(event) => {
                 setOpenPollinated(event.target.checked);
               }}
@@ -73,6 +118,7 @@ export default function ConditionFilters({
               id="type"
               value="hybrid"
               name="type"
+              checked={checked}
               onChange={(event) => {
                 setHybrid(event.target.checked);
               }}
@@ -81,18 +127,7 @@ export default function ConditionFilters({
           </div>
         </StyledFilterForm>
       </div>
-      <div className="type-climate">
-        <FontAwesomeIcon
-          className="icon"
-          icon={faCloudSunRain}
-          onClick={() => {
-            console.log("cloud clicked", openClimate);
-            setClimateOpen(!openClimate);
-            setCatOpen(false);
-            setWaterOpen(false);
-            setSoilOpen(false);
-          }}
-        />
+      <div className="type-climate cond-filter">
         <StyledFilterForm open={openClimate}>
           <div className="box">
             <input
@@ -100,6 +135,7 @@ export default function ConditionFilters({
               id="climate"
               value="sunny"
               name="climate"
+              checked={checked}
               onChange={(event) => {
                 setSunny(event.target.checked);
               }}
@@ -111,6 +147,7 @@ export default function ConditionFilters({
               id="climate"
               value="shady"
               name="climate"
+              checked={checked}
               onChange={(event) => {
                 setShady(event.target.checked);
               }}
@@ -122,6 +159,7 @@ export default function ConditionFilters({
               id="water"
               value="humid"
               name="water"
+              checked={checked}
               onChange={(event) => {
                 setHumid(event.target.checked);
               }}
@@ -130,18 +168,7 @@ export default function ConditionFilters({
           </div>
         </StyledFilterForm>
       </div>
-      <div className="type-water">
-        <FontAwesomeIcon
-          className="icon"
-          icon={faDroplet}
-          onClick={() => {
-            console.log("water clicked", openWater);
-            setWaterOpen(!openWater);
-            setCatOpen(false);
-            setClimateOpen(false);
-            setSoilOpen(false);
-          }}
-        />
+      <div className="type-water cond-filter">
         <StyledFilterForm open={openWater}>
           <div className="box">
             <input
@@ -149,6 +176,7 @@ export default function ConditionFilters({
               id="water"
               value="lotsOfWater"
               name="water"
+              checked={checked}
               onChange={(event) => {
                 setLotsOfWater(event.target.checked);
               }}
@@ -160,6 +188,7 @@ export default function ConditionFilters({
               id="water"
               value="dry"
               name="water"
+              checked={checked}
               onChange={(event) => {
                 setDry(event.target.checked);
               }}
@@ -168,18 +197,7 @@ export default function ConditionFilters({
           </div>
         </StyledFilterForm>
       </div>
-      <div className="type-soil">
-        <FontAwesomeIcon
-          className="icon"
-          icon={faEarthEurope}
-          onClick={() => {
-            console.log("water clicked", openSoil);
-            setSoilOpen(!openSoil);
-            setCatOpen(false);
-            setClimateOpen(false);
-            setWaterOpen(false);
-          }}
-        />
+      <div className="type-soil  cond-filter">
         <StyledFilterForm open={openSoil}>
           <div className="box">
             <input
@@ -187,6 +205,7 @@ export default function ConditionFilters({
               id="soil"
               value="clay"
               name="soil"
+              checked={checked}
               onChange={(event) => {
                 setClay(event.target.checked);
               }}
@@ -198,6 +217,7 @@ export default function ConditionFilters({
               id="soil"
               value="wellDrained"
               name="soil"
+              checked={checked}
               onChange={(event) => {
                 setDrained(event.target.checked);
               }}
@@ -209,6 +229,7 @@ export default function ConditionFilters({
               id="soil"
               value="peaty"
               name="soil"
+              checked={checked}
               onChange={(event) => {
                 setPeaty(event.target.checked);
               }}
@@ -220,6 +241,7 @@ export default function ConditionFilters({
               id="soil"
               value="chalky"
               name="soil"
+              checked={checked}
               onChange={(event) => {
                 setChalkey(event.target.checked);
               }}
@@ -231,6 +253,7 @@ export default function ConditionFilters({
               id="soil"
               value="sandy"
               name="soil"
+              checked={checked}
               onChange={(event) => {
                 setSandy(event.target.checked);
               }}

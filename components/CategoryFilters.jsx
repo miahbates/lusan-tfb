@@ -4,7 +4,7 @@ import StyledTab from "./styled-components/StyledTab";
 
 export default function CategoryFilters({ setCategory }) {
   return (
-    <StyledTab className="box">
+    <StyledTab className="filter-box">
       <button id="all" onClick={() => setCategory("All")}>
         All
       </button>
