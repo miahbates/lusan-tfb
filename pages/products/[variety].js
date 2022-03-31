@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-import products from "../../database/products";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { generateTags } from "../../database/database-functions";
+import { generateTags } from "../../helper-functions";
 import StyledProductPage from "../../components/styled-components/StyledProductPage";
 import Link from "next/link";
 import StyledLink from "../../components/styled-components/StyledLink";
@@ -13,8 +11,10 @@ import {
 import WishlistToggle from "../../components/WishlistToggle";
 import StyledComparisonGrid from "../../components/styled-components/StyledComparisonGrid";
 import ImageSlider from "../../components/ImageSlider";
+import { findContent } from "../../helper-functions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function ProductPages() {
   const router = useRouter();
@@ -84,6 +84,7 @@ export default function ProductPages() {
           <StyledLink>Back to search</StyledLink>
         </Link>
       </StyledProductPage>
+
       <h3>Compare your seeds</h3>
 
       {product && (
@@ -116,12 +117,4 @@ export default function ProductPages() {
       )}
     </div>
   );
-}
-
-function findContent(capitalisedVariety) {
-  // find variety
-  const foundObject = products.find((productObject) => {
-    return productObject.variety === capitalisedVariety;
-  });
-  return foundObject;
 }
