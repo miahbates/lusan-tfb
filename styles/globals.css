@@ -620,3 +620,20 @@ label {
   align-items: center;
   padding-bottom: 50px;
 }
+
+/*-------------------------------------  INDIVIDUAL PRODUCT IMAGE SLIDER ------------------------------*/
+
+.slider {
+  height: 500px;
+}
+
+.carousel.carousel-slider button.control-arrow {
+  padding: 20px;
+}
+
+.carousel button.control-next.control-arrow:before {
+  border-left: 12px solid var(--light-color);
+}
+.carousel button.control-prev.control-arrow:before {
+  border-right: 12px solid var(--light-color);
+}

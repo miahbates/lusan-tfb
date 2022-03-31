@@ -20,7 +20,6 @@ export default function ProductCard({
   wishList,
   setWishList,
 }) {
-  // get current url path (i.e //search/all)
   const router = useRouter();
   const path = router.pathname;
 

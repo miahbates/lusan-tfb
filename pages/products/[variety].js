@@ -11,6 +11,7 @@ import {
   WishListContext,
 } from "../../components/context/WishListContext";
 import WishlistToggle from "../../components/WishlistToggle";
+import ImageSlider from "../../components/ImageSlider";
 
 export default function ProductPages() {
   const router = useRouter();
@@ -45,49 +46,40 @@ export default function ProductPages() {
 
   return (
     <StyledProductPage>
-      <div className="flex-row">
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[0]}
-        ></img>
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[1]}
-        ></img>
-        <img
-          alt={product && product.subCategory}
-          src={product && product.imgs[2]}
-        ></img>
-      </div>
-      <div>
-        <div className="title-wishlist">
-          <h2>
-            {capitalisedVariety} {product && product.subCategory}
-          </h2>
-          <WishlistToggle
-            product={product && product}
-            wishList={wishList}
-            setWishList={setWishList}
-            variety={product && product.variety}
-          />
-        </div>
-        <p>From €{product && product.providers[0].price}</p>
-        <div className="tag-container">
-          {product &&
-            generateTags(product.type).map((tag) => {
-              return (
-                <span className="type-tag" key={tag}>
-                  {tag}
-                </span>
-              );
-            })}
-        </div>
-        <p>{product && product.description}</p>
+      <ImageSlider
+        image1={product && product.imgs[0]}
+        image2={product && product.imgs[1]}
+        image3={product && product.imgs[2]}
+      />
 
-        <Link href="//search/all" passHref>
-          <StyledLink>Back to search</StyledLink>
-        </Link>
+      <div className="title-wishlist">
+        <h2>
+          {capitalisedVariety} {product && product.subCategory}
+        </h2>
+        <WishlistToggle
+          product={product && product}
+          wishList={wishList}
+          setWishList={setWishList}
+          variety={product && product.variety}
+        />
       </div>
+      
+      <p>From €{product && product.providers[0].price}</p>
+      <div className="tag-container">
+        {product &&
+          generateTags(product.type).map((tag) => {
+            return (
+              <span className="type-tag" key={tag}>
+                {tag}
+              </span>
+            );
+          })}
+      </div>
+      <p>{product && product.description}</p>
+
+      <Link href="/all-seeds" passHref>
+        <StyledLink>Back to search</StyledLink>
+      </Link>
     </StyledProductPage>
   );
 }
