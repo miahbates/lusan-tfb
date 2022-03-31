@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 const StyledProductPage = styled.div`
-  div:nth-child(2) {
-    margin: 1rem;
+  div:nth-child(2),
+  p,
+  .tag-container,
+  a {
+    margin: 0.5rem 1rem;
   }
 
   h2 {
@@ -19,6 +22,24 @@ const StyledProductPage = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 677px) {
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
+
+    div:nth-child(2),
+    p,
+    .tag-container {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+
+    a {
+      margin: 3rem 0;
+      padding: 1rem;
+    }
   }
 `;
 

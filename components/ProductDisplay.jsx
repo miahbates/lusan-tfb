@@ -32,7 +32,6 @@ export default function ProductDisplay({
   // useEffect(() => console.log(openPollinated));
   return (
     <div>
-      <h2>Results</h2>
       <ul className="product-grid">
         {products &&
           products

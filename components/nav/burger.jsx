@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import React from "react";
 import LeftNav from "./leftNav.jsx";
+import Link from "next/link";
 
 const StyledBurger = styled.div`
   background-color: var(--light-color);
@@ -18,8 +19,8 @@ const StyledBurger = styled.div`
     width: 4rem;
     height: 2rem;
     position: fixed;
-    top: 1.3rem;
-    left: 1rem;
+    top: 1rem;
+    left: 0.5rem;
     justify-content: space-around;
     flex-flow: column nowrap;
     z-index: 999;
@@ -60,7 +61,11 @@ export default function Burger() {
         <div />
         <div />
       </StyledBurger>
-      <img className="lusan-logo" src="/logo.png" alt="logo" />
+      <Link href="/" passHref>
+        <a>
+          <img className="lusan-logo" src="/logo.png" alt="logo" />
+        </a>
+      </Link>
       <LeftNav open={open}></LeftNav>
     </>
   );

@@ -36,6 +36,16 @@ img {
   object-fit: cover;
 }
 
+h3 {
+  font-family: var(--lora-font);
+  color: var(--dark-color);
+  margin: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--dark-color);
+  text-align: left;
+  display: inline-block;
+}
+
 li {
   list-style: none;
 }
@@ -49,10 +59,18 @@ label {
   font-family: var(--poppins-font);
 }
 
+fieldset {
+  border: solid var(--mid-color);
+  border-radius: 5px;
+  max-width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .box {
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid black;
+  border: none;
 }
 
 .icon {
@@ -112,13 +130,6 @@ label {
 
 .cond-filter {
   transition: all 400ms;
-}
-.filter-box {
-  margin: 1rem;
-  padding: 1rem;
-  border-bottom-style: solid;
-  border-color: var(--light-secondary-color);
-  background-color: white;
 }
 
 .filter-icon {
@@ -191,7 +202,7 @@ label {
   width: auto;
   color: var(--dark-color);
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .icon-wishlist:hover {
@@ -521,6 +532,13 @@ label {
     transition: transform 0.5s, box-shadow 0.5s;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
   }
+
+  h3 {
+    margin: 1rem 2rem;
+    padding-bottom: 1rem;
+
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -648,7 +666,7 @@ label {
 /*-------------------------------------  INDIVIDUAL PRODUCT IMAGE SLIDER ------------------------------*/
 
 .slider {
-  height: 500px;
+  height: 20%;
 }
 
 .carousel.carousel-slider button.control-arrow {

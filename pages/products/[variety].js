@@ -12,6 +12,9 @@ import WishlistToggle from "../../components/WishlistToggle";
 import StyledComparisonGrid from "../../components/styled-components/StyledComparisonGrid";
 import ImageSlider from "../../components/ImageSlider";
 import { findContent } from "../../helper-functions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function ProductPages() {
   const router = useRouter();
@@ -82,23 +85,31 @@ export default function ProductPages() {
         </Link>
       </StyledProductPage>
 
+      <h3>Compare your seeds</h3>
+
       {product && (
         <StyledComparisonGrid count={product ? product.providers.length : 1}>
           <div>
             <p>Provider</p>
             <p>Price</p>
-            <p>SPP</p>
+            <p>Seeds per packet (SPP)</p>
             <p>In Stock</p>
-            <p>Link</p>
+            <p>Link to buy seeds</p>
           </div>
           {product.providers.map((provider) => {
             return (
               <div key={provider}>
                 <p key={provider.name}>{provider.name}</p>
-                <p key={provider.price}>{provider.price}</p>
+                <p key={provider.price}>£{provider.price}</p>
                 <p key={provider.spp}>{provider.spp}</p>
                 <p key={provider.inStock}>{provider.inStock.toString()}</p>
-                <p key={provider.url}>{provider.url}</p>
+                <p key={provider.url}>
+                  <Link href="{provider.url}" passHref>
+                    <a>
+                      {provider.name} <FontAwesomeIcon icon={faLink} />
+                    </a>
+                  </Link>
+                </p>
               </div>
             );
           })}
