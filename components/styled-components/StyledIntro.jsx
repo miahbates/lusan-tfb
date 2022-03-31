@@ -5,13 +5,13 @@ const StyledIntro = styled.div`
 
   h1 {
     color: white;
-    font-family: "Lora";
     font-size: 1.2rem;
     text-align: center;
+    font-family: var(--sora-font);
   }
   p {
     color: white;
-    font-family: "Lora";
+    font-family: var(--poppins-font);
     font-size: 1rem;
   }
   @media only screen and (min-width: 678px) {

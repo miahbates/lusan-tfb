@@ -68,6 +68,7 @@ const StyledFooter = styled.footer`
     text-align: center;
     font-size: 1rem;
     padding: 1rem;
+    font-family: var(--poppins-font);
 
     &:hover {
       color: var(--mid-color);
@@ -76,6 +77,7 @@ const StyledFooter = styled.footer`
   }
 
   span {
+    font-family: var(--sora-font);
     font-size: 0.9rem;
     color: white;
     font-weight: bold;
