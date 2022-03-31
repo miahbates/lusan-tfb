@@ -2,8 +2,8 @@
 
 html body {
   padding: 0;
-  margin: 0.5rem 0 0 0;
-  background-color: var(--light-color);
+  margin: 0;
+
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -17,7 +17,7 @@ html body {
   --title-font: Helvetica;
   --body-font: Roboto;
   --sora-font: "Sora";
-  --rokkitt-font: "Rokkitt";
+  --poppins-font: "Poppins";
   --raj-font: "Rajdhani";
 }
 
@@ -42,6 +42,11 @@ li {
 
 ul {
   padding: 0;
+  margin: 0;
+}
+
+label {
+  font-family: var(--poppins-font);
 }
 
 .box {
@@ -114,6 +119,26 @@ ul {
   align-items: center;
   position: relative;
   margin-bottom: 0.5rem;
+}
+
+.lusan-logo {
+  height: 60px;
+  width: 60px;
+  margin: 0 0.5rem;
+}
+
+.burger-and-logo {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .lusan-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .search-wishlist-icons {
@@ -437,7 +462,7 @@ ul {
 
 /* ------------------ GRID FOR PRODUCT DISPLAY PAGE/MIDDLE GRID FOR HOMEPAGE ------------------- */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 639px) {
   .container {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(2, 1fr);
@@ -471,11 +496,6 @@ ul {
     gap: 2rem;
     transition: transform 0.5s, box-shadow 0.5s;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0);
-  }
-
-  .logo-layout {
-    position: absolute;
-    left: 5%;
   }
 }
 
@@ -544,7 +564,7 @@ ul {
 
 /* ------------ PRODUCT DISPLAY GRID LARGER SCREENS MEDIA QUERY --------------- */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1490px) {
   .product-grid {
     display: grid;
     grid-template-columns: repeat(4, calc(25% - 0.5rem));
@@ -554,15 +574,15 @@ ul {
   }
 }
 
-@media screen and (min-width: 1490px) {
+/* @media screen and (min-width: 1490px) {
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(5, calc(20% - 0.5rem));
+    grid-template-columns: repeat(4, calc(20% - 0.5rem));
     gap: 2rem;
     justify-content: center;
     margin: 3rem;
   }
-}
+} */
 
 /*-------------------------------------  CONTACT ------------------------------*/
 
