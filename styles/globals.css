@@ -70,6 +70,9 @@ fieldset {
   margin: 1rem;
   padding: 1rem;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
@@ -129,6 +132,8 @@ fieldset {
 
 .cond-filter {
   transition: all 400ms;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter-icon {
@@ -141,6 +146,16 @@ fieldset {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.filter-box {
+  display: flex;
+  justify-content: center;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
 }
 
 /* --------------------------------- LAYOUT & NAVBAR ---------------------------------*/
