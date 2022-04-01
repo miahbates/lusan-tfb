@@ -148,6 +148,11 @@ fieldset {
   justify-content: space-between;
 }
 
+
+.label {
+  color: var(--dark-color);
+}
+
 .filter-box {
   display: flex;
   justify-content: center;
