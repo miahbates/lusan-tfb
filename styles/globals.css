@@ -144,6 +144,10 @@ fieldset {
   justify-content: space-between;
 }
 
+.filter-label {
+  color: var(--dark-color);
+}
+
 /* --------------------------------- LAYOUT & NAVBAR ---------------------------------*/
 .layout {
   background-color: var(--light-color);
