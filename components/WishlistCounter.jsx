@@ -10,6 +10,7 @@ const StyledWishlistCounter = styled.span`
   background-color: var(--second-mid-color);
   border-radius: 15px;
   padding: 1px 5px;
+  color: var(--dark-color);
 `;
 
 export default function WishlistCounter() {
