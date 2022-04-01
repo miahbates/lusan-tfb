@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   background-color: var(--dark-color);
+  margin-top: 1.5rem;
   bottom: 0;
   width: 100vw;
   height: auto;
