@@ -12,8 +12,14 @@ import { SearchbarProvider } from "./context/SearchbarContext";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
 import { WishListProvider } from "./context/WishListContext.jsx";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+  const path = router.pathname;
+
+  console.log("layout", path);
+
   return (
     <SearchbarProvider>
       <WishListProvider>

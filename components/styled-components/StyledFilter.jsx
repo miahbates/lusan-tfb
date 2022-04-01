@@ -13,6 +13,7 @@ const StyledFilterForm = styled.form`
   flex-direction: row;
   flex-grow: 1;
   width: 100%;
+  flex-wrap: wrap;
 
   input[type="checkbox"] {
     margin: 0;
@@ -31,6 +32,12 @@ const StyledFilterForm = styled.form`
   @media (max-width: 400px) {
     div {
       flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    span {
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;

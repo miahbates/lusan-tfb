@@ -8,6 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutPage() {
+  let prevPath = Document.referrer;
+  console.log("about", prevPath);
   return (
     <div className="about">
       <h1>About Us</h1>
