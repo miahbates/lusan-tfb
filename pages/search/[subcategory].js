@@ -73,6 +73,12 @@ export default function AllSeeds() {
         setCategory={setCategory}
       ></CategoryFilters>
       <SearchBar></SearchBar>
+      <PriceFilters
+        min={min}
+        setMin={setMin}
+        max={max}
+        setMax={setMax}
+      ></PriceFilters>
       <ConditionFilters
         setOrganic={setOrganic}
         setOpenPollinated={setOpenPollinated}
@@ -101,12 +107,6 @@ export default function AllSeeds() {
         peaty={peaty}
         sandy={sandy}
       ></ConditionFilters>
-      <PriceFilters
-        min={min}
-        setMin={setMin}
-        max={max}
-        setMax={setMax}
-      ></PriceFilters>
       <ProductDisplay
         searchTerm={searchTerm}
         wishList={wishList}

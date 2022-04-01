@@ -2,12 +2,14 @@ import Link from "next/link";
 import React from "react";
 import StyledTab from "./styled-components/StyledTab";
 import StyledTabButton from "./styled-components/StyledTabButton";
+import { useSearchContext, SearchContext } from "./context/SearchbarContext";
 
 export default function CategoryFilters({ setCategory, category }) {
   const [allClicked, isAllClicked] = React.useState(false);
   const [vegClicked, isVegClicked] = React.useState(false);
   const [flowerClicked, isFlowerClicked] = React.useState(false);
   const [herbClicked, isHerbClicked] = React.useState(false);
+  const [searchTerm, setSearchTerm] = useSearchContext(SearchContext);
 
   return (
     <StyledTab className="filter-box">
@@ -22,6 +24,7 @@ export default function CategoryFilters({ setCategory, category }) {
             isVegClicked(false);
             isFlowerClicked(false);
             isHerbClicked(false);
+            setSearchTerm(null);
           }}
         >
           All
@@ -38,6 +41,7 @@ export default function CategoryFilters({ setCategory, category }) {
             isVegClicked(!vegClicked);
             isFlowerClicked(false);
             isHerbClicked(false);
+            setSearchTerm(null);
           }}
         >
           Veg
@@ -54,6 +58,7 @@ export default function CategoryFilters({ setCategory, category }) {
             isVegClicked(false);
             isFlowerClicked(!flowerClicked);
             isHerbClicked(false);
+            setSearchTerm(null);
           }}
         >
           Flowers
@@ -70,6 +75,7 @@ export default function CategoryFilters({ setCategory, category }) {
             isVegClicked(false);
             isFlowerClicked(false);
             isHerbClicked(!herbClicked);
+            setSearchTerm(null);
           }}
         >
           Herbs

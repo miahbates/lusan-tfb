@@ -3,9 +3,12 @@ import styled from "styled-components";
 const StyledProductPage = styled.div`
   div:nth-child(2),
   p,
-  .tag-container,
-  a {
+  .tag-container {
     margin: 0.5rem 1rem;
+  }
+
+  a {
+    margin: 2rem 1rem;
   }
 
   h2 {

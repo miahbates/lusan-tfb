@@ -4,7 +4,7 @@ import {
   useWishListContext,
   WishListContext,
 } from "../components/context/WishListContext";
-import { generateTags } from "../database/database-functions";
+import { generateTags } from "../helper-functions";
 import ProductCard from "../components/ProductCard";
 import { getFromLocalStorage } from "../helper-functions";
 
@@ -44,7 +44,7 @@ export default function Wishlist() {
         )}
       </ul>
 
-      <StyledLink href={"//search/all"}>Back to Search Results</StyledLink>
+      <StyledLink href={"/search/all"}>Back to Search Results</StyledLink>
     </div>
   );
 }

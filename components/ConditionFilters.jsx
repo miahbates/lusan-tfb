@@ -51,7 +51,8 @@ export default function ConditionFilters({
       <div className="filter-box">
         <StyledConditionFilters className="filter-icon-bar">
           <div className="label-div">
-            <p className="filter-label">Category</p>
+            <p className="label">Category</p>
+
             <button
               className="filter-button"
               onClick={() => {
@@ -65,7 +66,7 @@ export default function ConditionFilters({
             </button>
           </div>
           <div className="label-div">
-            <p className="filter-label">Climate</p>
+            <p className="label">Climate</p>
             <button
               className="filter-button"
               onClick={() => {
@@ -79,7 +80,8 @@ export default function ConditionFilters({
             </button>
           </div>
           <div className="label-div">
-            <p className="filter-label">Water</p>
+
+            <p className="label">Water</p>
             <button
               className="filter-button"
               onClick={() => {
@@ -93,7 +95,7 @@ export default function ConditionFilters({
             </button>
           </div>
           <div className="label-div">
-            <p className="filter-label"> Soil Type</p>
+            <p className="label"> Soil Type</p>
             <button
               className="filter-button"
               onClick={() => {
@@ -132,6 +134,7 @@ export default function ConditionFilters({
         <div className="type-filter cond-filter">
           <StyledFilterForm open={openCat}>
             <div className="box">
+
               <span>
                 <input
                   type="checkbox"
@@ -220,6 +223,7 @@ export default function ConditionFilters({
                 />
                 <label htmlFor="type">Humid</label>
               </span>
+
             </div>
           </StyledFilterForm>
         </div>
@@ -253,6 +257,7 @@ export default function ConditionFilters({
                 />
                 <label htmlFor="type">Dry</label>
               </span>
+
             </div>
           </StyledFilterForm>
         </div>

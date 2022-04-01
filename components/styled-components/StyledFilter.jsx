@@ -14,10 +14,12 @@ const StyledFilterForm = styled.form`
   width: 100%;
   flex-wrap: wrap;
 
+
   input[type="checkbox"] {
     margin: 0;
     padding-left: 10rem;
   }
+
   label {
     padding-right: 3rem;
     padding-left: 0.25rem;
@@ -27,6 +29,7 @@ const StyledFilterForm = styled.form`
   div {
     width: 100%;
   }
+  
   @media (max-width: 400px) {
     div {
       flex-wrap: wrap;

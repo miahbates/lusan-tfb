@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-import products from "../../database/products";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { generateTags } from "../../database/database-functions";
+import { generateTags } from "../../helper-functions";
 import StyledProductPage from "../../components/styled-components/StyledProductPage";
 import Link from "next/link";
 import StyledLink from "../../components/styled-components/StyledLink";
@@ -13,6 +11,7 @@ import {
 import WishlistToggle from "../../components/WishlistToggle";
 import StyledComparisonGrid from "../../components/styled-components/StyledComparisonGrid";
 import ImageSlider from "../../components/ImageSlider";
+import { findContent } from "../../helper-functions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
@@ -67,7 +66,7 @@ export default function ProductPages() {
           />
         </div>
 
-        <p>From €{product && product.providers[0].price}</p>
+        <p>From £{product && product.providers[0].price}</p>
         <div className="tag-container">
           {product &&
             generateTags(product.type).map((tag) => {
@@ -80,10 +79,11 @@ export default function ProductPages() {
         </div>
         <p>{product && product.description}</p>
 
-        <Link href="/all-seeds" passHref>
+        <Link href={`/search/${product && product.subCategory}`} passHref>
           <StyledLink>Back to search</StyledLink>
         </Link>
       </StyledProductPage>
+
       <h3>Compare your seeds</h3>
 
       {product && (
@@ -103,8 +103,8 @@ export default function ProductPages() {
                 <p key={provider.spp}>{provider.spp}</p>
                 <p key={provider.inStock}>{provider.inStock.toString()}</p>
                 <p key={provider.url}>
-                  <Link href="{provider.url}" passHref>
-                    <a>
+                  <Link href={provider.url} passHref>
+                    <a target="_blank">
                       {provider.name} <FontAwesomeIcon icon={faLink} />
                     </a>
                   </Link>
@@ -116,12 +116,4 @@ export default function ProductPages() {
       )}
     </div>
   );
-}
-
-function findContent(capitalisedVariety) {
-  // find variety
-  const foundObject = products.find((productObject) => {
-    return productObject.variety === capitalisedVariety;
-  });
-  return foundObject;
 }

@@ -45,48 +45,52 @@ export default function Layout({ children }) {
           </div>
           <main>{children}</main>
           <StyledFooter className="footer">
-            <div className="footer-about">
-              <Link href="/about-us">
-                <a className="footer-links">About Us</a>
-              </Link>
-              <Link href="/contact-us">
-                <a className="footer-links">Contact</a>
-              </Link>
-              <a
-                aria-label="instagram"
-                className="footer-links"
-                href="https://www.instagram.com/growlusan/"
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="icon"
-                ></FontAwesomeIcon>
-              </a>
-              <a
-                aria-label="linkedin"
-                className="footer-links"
-                href="https://www.linkedin.com/in/rep94"
-              >
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="icon"
-                ></FontAwesomeIcon>
-              </a>
-            </div>
-            <div className="footer-contact">
-              <a href="mailto:rachel@growlusan.com">
+            <Link href="/about-us">
+              <a className="footer-links">About Us</a>
+            </Link>
+            <Link href="/contact-us">
+              <a className="footer-links">Contact</a>
+            </Link>
+            <a
+              aria-label="instagram"
+              className="footer-links"
+              href="https://www.instagram.com/growlusan/"
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="icon"
+              ></FontAwesomeIcon>
+            </a>
+            <a
+              aria-label="linkedin"
+              className="footer-links"
+              href="https://www.linkedin.com/in/rep94"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="icon"
+              ></FontAwesomeIcon>
+            </a>
+            <a
+              aria-label="email"
+              className="footer-links"
+              href="mailto:rachel@growlusan.com"
+            >
+              <span>
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className="icon"
                 ></FontAwesomeIcon>
-                <span>rachel@growlusan.com</span>
-              </a>
+                rachel@growlusan.com
+              </span>
+            </a>
+            <span>
               <FontAwesomeIcon
                 icon={faPhone}
                 className="icon"
               ></FontAwesomeIcon>
-              <span>01903 765431</span>
-            </div>
+              01903 765431
+            </span>
           </StyledFooter>
         </div>
       </WishListProvider>

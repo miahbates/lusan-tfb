@@ -3,66 +3,30 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   background-color: var(--dark-color);
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  height: auto;
   padding-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   &:hover {
     color: var(--mid-color);
     transition: 200ms ease-in;
   }
 
-  @media screen and (max-width: 768px) {
+  @media only screen and (min-width: 678px) {
     .footer {
-      flex-direction: row;
-      padding-top: 0.5rem;
-
+      justify-content: space-evenly;
       &:hover {
         color: var(--mid-color);
         transition: 200ms ease-in;
       }
-    }
-    .span {
-      font-size: 0.5rem;
-    }
-  }
-
-  @media screen and (max-width: 320px) {
-    .footer {
-      flex-direction: row;
-      padding-top: 0.5rem;
-
-      &:hover {
-        color: var(--mid-color);
-        transition: 200ms ease-in;
-      }
-    }
-    .span {
-      font-size: 0.5rem;
-    }
-  }
-
-  .footer-about {
-    text-decoration: none;
-    text-align: center;
-  }
-
-  .footer-contact {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1rem;
-    padding: 1rem;
-
-    &:hover {
-      color: var(--mid-color);
-      transition: 200ms ease-in;
     }
   }
 
   .footer-links {
+    font-weight: semi-bold;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -78,21 +42,27 @@ const StyledFooter = styled.footer`
 
   span {
     font-family: var(--sora-font);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: white;
     font-weight: bold;
     padding: 0.5rem;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
     &:hover {
       color: var(--mid-color);
       transition: 200ms ease-in;
+      cursor: pointer;
     }
   }
 
-  .icon {
+  span .icon {
+    padding: 0.5rem;
     color: white;
     &:hover {
       color: var(--mid-color);
       transition: 200ms ease-in;
+      cursor: pointer;
     }
   }
 `;

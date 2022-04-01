@@ -11,24 +11,26 @@ export default function PriceFilters({ min, max, setMin, setMax }) {
           <input
             type="range"
             id="min-price"
-            min="0.5"
+            min="1"
             max="10"
-            step="0.25"
+            step="1"
             value={min}
             onChange={(event) => setMin(event.target.value)}
           />
+          <div className="pricing-slider-value">£{min}</div>
         </label>
         <label htmlFor="max-price">
           Max price
           <input
             type="range"
             id="max-price"
-            min="0.5"
+            min="1"
             max="10"
-            step="0.25"
+            step="1"
             value={max}
             onChange={(event) => setMax(event.target.value)}
           />
+          <div className="pricing-slider-value">£{max}</div>
         </label>
       </fieldset>
     </div>
