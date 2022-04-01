@@ -16,9 +16,8 @@ const StyledFooter = styled.footer`
     transition: 200ms ease-in;
   }
 
-  @media only screen and (min-width: 678px) {
-    .footer {
-      justify-content: space-evenly;
+  @media only screen and (max-width: 678px) {
+      flex-direction: column;
       &:hover {
         color: var(--mid-color);
         transition: 200ms ease-in;
