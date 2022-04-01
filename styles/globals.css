@@ -151,6 +151,7 @@ fieldset {
 
 .label {
   color: var(--dark-color);
+}
 
 .filter-box {
   display: flex;
