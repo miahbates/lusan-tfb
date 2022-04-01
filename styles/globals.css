@@ -671,7 +671,7 @@ fieldset {
 /*-------------------------------------  INDIVIDUAL PRODUCT IMAGE SLIDER ------------------------------*/
 
 .slider {
-  height: 20%;
+  height: 45vh;
 }
 
 .carousel.carousel-slider button.control-arrow {
@@ -684,7 +684,3 @@ fieldset {
 .carousel button.control-prev.control-arrow:before {
   border-right: 12px solid var(--light-color);
 }
-
-/* .carousel * {
-  height: 55vh;
-} */
