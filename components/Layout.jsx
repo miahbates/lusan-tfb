@@ -12,6 +12,7 @@ import { SearchbarProvider } from "./context/SearchbarContext";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import StyledFooter from "./styled-components/StyledFooter";
 import { WishListProvider } from "./context/WishListContext.jsx";
+import WishlistCounter from "./WishlistCounter.jsx";
 
 export default function Layout({ children }) {
   return (
@@ -39,6 +40,7 @@ export default function Layout({ children }) {
               <Link href="/wishlist">
                 <a aria-label="wishlist">
                   <FontAwesomeIcon icon={faHeart} className="icon-wishlist" />
+                  <WishlistCounter/>
                 </a>
               </Link>
             </div>

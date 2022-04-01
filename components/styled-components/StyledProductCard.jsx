@@ -6,6 +6,7 @@ const StyledProductCard = styled.div`
   height: 100%;
   width: 100%;
   max-width: 300px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
