@@ -179,6 +179,11 @@ fieldset {
 .search-wishlist-icons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.search-wishlist-icons a {
+  margin-right: 15px;
 }
 
 .icon-search {
@@ -186,7 +191,6 @@ fieldset {
   width: auto;
   color: var(--dark-color);
   margin: 0;
-  padding: 0.5rem;
 }
 
 .icon-search:hover {
@@ -201,7 +205,6 @@ fieldset {
   width: auto;
   color: var(--dark-color);
   margin: 0;
-  padding: 0.5rem 0;
 }
 
 .icon-wishlist:hover {
@@ -209,6 +212,10 @@ fieldset {
   transform: scale(1.1);
   transition: all 400ms;
   color: var(--mid-color);
+}
+
+a[aria-label="wishlist"] {
+  position: relative;
 }
 
 .icon-seedling {
@@ -598,7 +605,7 @@ fieldset {
   .product-grid {
     display: grid;
     grid-template-columns: repeat(3, calc(33% - 0.5rem));
-    gap: 2rem;
+    grid-gap: 4rem;
     justify-content: center;
   }
 
@@ -686,6 +693,7 @@ fieldset {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
   }
 }
