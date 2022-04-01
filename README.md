@@ -1,7 +1,10 @@
 # [Founders and Coders](https://www.foundersandcoders.com/) 
-## [Our tech for better project](https://www.foundersandcoders.com/tech-for-better/).
+## [Our Tech for Better project](https://www.foundersandcoders.com/tech-for-better/)
+The final project of our 12 week coding bootcamp.
 
-![Lusan](https://user-images.githubusercontent.com/78933903/161233812-cecb3c49-9287-4c66-b213-f90747bc31ca.png)
+[Deployed version here!](https://lusan-tfb-ltfb.vercel.app/)
+
+![Lusan-circle](https://user-images.githubusercontent.com/78933903/161251108-b975cd75-c94c-4ed2-9e18-06e8f57bc1ce.png)
 
 _Co-authored by [Juliette](https://github.com/julietteorpen), [Milly](https://github.com/millipede-cpu), [Orian](https://github.com/OrianP) and [Miah](https://github.com/miahbates)._
 
@@ -9,9 +12,16 @@ _Co-authored by [Juliette](https://github.com/julietteorpen), [Milly](https://gi
 An e-commerce style site to streamline buying seeds by signposting and comparing seed providers.
 
 ## What did we build?
-We focused on building the front-end of the site as the data is being prepared. We used next.js so the next development team will be able to encorporate a back-end.
+We focused on building the front-end of the site as the data is being prepared. We used next.js so the next development team will be able to incorporate a back-end.
 
-[Deployed version here!](https://lusan-tfb-ltfb.vercel.app/)
+## Tech stack
+* Next.js
+* React
+* Styled-components
+* Chance (to generate dummy data)
+* React-responsive-carousel
+* Cypress
+* Vercel deployment
 
 ## Team members
 - Miah- Scrum Facilitator.
@@ -26,14 +36,13 @@ We focused on building the front-end of the site as the data is being prepared. 
 - Run cypress testing run command `npm run test`.
 
 ## User Stories :busts_in_silhouette:
-- As a user i want to find out my growing conditions.
-- As a user i want to view my wishlist.
-- As a user i want to add products to my wishlist.
-- As a user i want to compare the same products from different providers.
-- As a user i want to filter search results.
-- As a user i want to search seeds.
+- As a user I want to filter search results.
+- As a user I want to search seeds.
+- As a user I want to view my wishlist.
+- As a user I want to add products to my wishlist.
+- As a user I want to compare the same products from different providers.
 
-## Features: 🌟
+## Features 🌟
 * Filtering: filter by catgergory, condition, price.
 * Search bar.
 * Grid gallery.
@@ -43,7 +52,26 @@ We focused on building the front-end of the site as the data is being prepared. 
 * About us and contact us pages.
 * Burger menu.
 
-## Screenshots:
+## Challenges: 
+* Building a front end only application with next.js to allow for a database to be implemented later.
+
+## Learning 🌱
+* Understanding of state management, using context to share state between next.js pages.
+* Communication with product owner.
+* Project scoping.
+* Use of local storage.
+* Next.js useRouter and understanding of dynamic routes.
+* Chance library to generate dummy data.
+* Incorporating npm libraries into project.
+
+## Future ideas 🔮
+These were out of the scope of this project but with more time we would have implemented the following.
+* Move filters to a left sidebar on desktop view.
+* Attach database.
+* Transform wishlist into a shopping cart.
+* User authentication.
+
+## Screenshots: 📷
 
 <img width="1427" alt="Screenshot 2022-04-01 at 10 53 19" src="https://user-images.githubusercontent.com/78933903/161241177-7112b55c-89e4-4ec6-9447-3bf7d3ed8d8e.png">
 
