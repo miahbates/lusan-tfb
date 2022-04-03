@@ -14,7 +14,7 @@ An e-commerce style site to streamline buying seeds by signposting and comparing
 ## What did we build?
 We focused on building the front-end of the site as the data is being prepared. We used next.js so the next development team will be able to incorporate a back-end.
 
-## Tech stack
+## Tech stack 💻
 * Next.js
 * React
 * Styled-components
@@ -23,7 +23,7 @@ We focused on building the front-end of the site as the data is being prepared. 
 * Cypress
 * Vercel deployment
 
-## Team members
+## Team members 🧑‍🤝‍🧑
 - Miah- Scrum Facilitator.
 - Milly - DevOps.
 - Orian - Quality Assurance.
@@ -52,8 +52,13 @@ We focused on building the front-end of the site as the data is being prepared. 
 * About us and contact us pages.
 * Burger menu.
 
-## Challenges: 
+## Challenges 🏋️‍♀️
 * Building a front end only application with next.js to allow for a database to be implemented later.
+* Managing a merger conflict with a conflicting package lock.
+* Using react components with next.js, using the document to manage server side rendering.
+* Generating dummy data in a timely manner.
+* Managing shared state amongst several react compnents/pages, this was fixed by using context.
+* Creating dynamic routes with appropriate content.
 
 ## Learning 🌱
 * Understanding of state management, using context to share state between next.js pages.
