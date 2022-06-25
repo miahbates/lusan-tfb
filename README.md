@@ -1,27 +1,14 @@
-# [Founders and Coders](https://www.foundersandcoders.com/) 
-## [Our Tech for Better project](https://www.foundersandcoders.com/tech-for-better/)
-The final project of our 12 week coding bootcamp.
+# [Founders and Coders](https://www.foundersandcoders.com/) (apprenticeship) 
 
-[Deployed version here!](https://lusan-tfb-ltfb.vercel.app/)
-
-![Lusan-circle](https://user-images.githubusercontent.com/78933903/161251108-b975cd75-c94c-4ed2-9e18-06e8f57bc1ce.png)
+## [Our Tech for Better project](https://www.foundersandcoders.com/tech-for-better/) 👼
 
 _Co-authored by [Juliette](https://github.com/julietteorpen), [Milly](https://github.com/millipede-cpu), [Orian](https://github.com/OrianP) and [Miah](https://github.com/miahbates)._
 
-## What is Lusan?
-An e-commerce style site to streamline buying seeds by signposting and comparing seed providers.
+[Deployed version here!](https://lusan-tfb-ltfb.vercel.app/)
 
-## What did we build?
-We focused on building the front-end of the site as the data is being prepared. We used next.js so the next development team will be able to incorporate a back-end.
+The final project of our 12 week coding bootcamp. We designed an built an e-commerce style site to streamline buying seeds by signposting and comparing seed providers.
 
-## Tech stack 💻
-* Next.js
-* React
-* Styled-components
-* Chance (to generate dummy data)
-* React-responsive-carousel
-* Cypress
-* Vercel deployment
+![Lusan-circle](https://user-images.githubusercontent.com/78933903/161251108-b975cd75-c94c-4ed2-9e18-06e8f57bc1ce.png)
 
 ## Team members 🧑‍🤝‍🧑
 - Miah- Scrum Facilitator.
@@ -34,6 +21,18 @@ We focused on building the front-end of the site as the data is being prepared. 
 - Run command `npm install` in terminal.
 - Start sever run command `npm run dev`.
 - Run cypress testing run command `npm run test`.
+
+## What did we build?
+We focused on building the front-end of the site as the data is being prepared. We used next.js so the next development team will be able to incorporate a back-end.
+
+## Tech stack 💻
+* Next.js
+* React
+* Styled-components
+* Chance (to generate dummy data)
+* React-responsive-carousel
+* Cypress
+* Vercel deployment
 
 ## User Stories :busts_in_silhouette:
 - As a user I want to filter search results.
