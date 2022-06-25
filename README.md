@@ -6,7 +6,7 @@ _Co-authored by [Juliette](https://github.com/julietteorpen), [Milly](https://gi
 
 [Deployed version here!](https://lusan-tfb-ltfb.vercel.app/)
 
-The final project of our 12 week coding bootcamp. We designed an built an e-commerce style site to streamline buying seeds by signposting and comparing seed providers.
+The final project of our 12 week full-stack coding bootcamp. We designed an built an e-commerce style site to streamline buying seeds by signposting and comparing seed providers.
 
 ![Lusan-circle](https://user-images.githubusercontent.com/78933903/161251108-b975cd75-c94c-4ed2-9e18-06e8f57bc1ce.png)
 
